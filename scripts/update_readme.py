@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Refresh the dynamic sections of the profile README.
+"""Regenerate the profile's branded assets and the dynamic README sections.
 
-- STATS:   contributions this year, public repos, repos pushed in the last 30 days
-- RECENT:  most recently pushed public, non-fork repos that have a description
-- Cache-busts third-party stat card URLs and stamps the update time.
+- assets/header-{dark,light}.svg  drafting-sheet header (REV = current month)
+- assets/stats-{dark,light}.svg   build log: contributions, heatmap, language mix
+- README BUILDLOG block           most recently pushed public repos
 
 Uses only the standard library. Reads GITHUB_TOKEN from the environment.
 """
@@ -11,26 +11,38 @@ Uses only the standard library. Reads GITHUB_TOKEN from the environment.
 import json
 import os
 import re
-import time
+import sys
 import urllib.request
-from datetime import datetime, timedelta, timezone
-from urllib.parse import quote
+from datetime import date, datetime, timedelta, timezone
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from brand import THEMES, render_header, render_stats  # noqa: E402
 
 USERNAME = os.environ.get("PROFILE_USER", "xkazm04")
 README = "README.md"
+ASSETS = "assets"
 RECENT_COUNT = 8
 SKIP_REPOS = {USERNAME}
+# Markup, config and build glue that would drown out the real languages.
+NON_CODE = {"HTML", "CSS", "SCSS", "Shell", "PowerShell", "Batchfile", "Dockerfile", "NSIS",
+            "Just", "HCL", "Go Template", "Makefile", "CMake", "ShaderLab", "HLSL", "PLpgSQL"}
 
 QUERY = """
 query($login: String!) {
   user(login: $login) {
-    contributionsCollection { contributionCalendar { totalContributions } }
+    contributionsCollection {
+      contributionCalendar {
+        totalContributions
+        weeks { contributionDays { contributionCount date } }
+      }
+    }
     repositories(ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false,
                  first: 100, orderBy: {field: PUSHED_AT, direction: DESC}) {
       totalCount
       nodes {
-        name url description pushedAt stargazerCount
+        name url description pushedAt
         primaryLanguage { name }
+        languages(first: 10) { edges { size node { name } } }
       }
     }
   }
@@ -54,69 +66,89 @@ def graphql(query, variables):
     return body["data"]
 
 
-def badge(label, value):
-    enc_label = quote(label).replace("-", "--")
-    value = quote(f"{value:,}" if isinstance(value, int) else str(value))
-    return (
-        f"![{label}](https://img.shields.io/badge/{enc_label}-{value}"
-        f"-2dd4bf?style=flat-square&labelColor=0d1117)"
-    )
-
-
 def replace_block(content, name, body):
     pattern = rf"<!-- {name}:START -->.*?<!-- {name}:END -->"
     block = f"<!-- {name}:START -->\n{body}\n<!-- {name}:END -->"
     return re.sub(pattern, lambda _: block, content, flags=re.DOTALL)
 
 
+def current_streak(days):
+    today = date.today().isoformat()
+    streak = 0
+    for d in sorted(days, key=lambda d: d["date"], reverse=True):
+        if d["date"] > today:
+            continue
+        if d["contributionCount"] > 0:
+            streak += 1
+        elif d["date"] != today:  # today may simply not have activity yet
+            break
+    return streak
+
+
+def language_mix(repos, top=6):
+    sizes = {}
+    for r in repos:
+        for e in r["languages"]["edges"]:
+            name = e["node"]["name"]
+            if name not in NON_CODE:
+                sizes[name] = sizes.get(name, 0) + e["size"]
+    total = sum(sizes.values()) or 1
+    ranked = sorted(sizes.items(), key=lambda kv: -kv[1])
+    mix = [(n, s * 100 / total) for n, s in ranked[: top - 1]]
+    rest = 100 - sum(p for _, p in mix)
+    if rest > 0.5:
+        mix.append(("Other", rest))
+    return mix
+
+
 def main():
     user = graphql(QUERY, {"login": USERNAME})["user"]
-    total_contrib = user["contributionsCollection"]["contributionCalendar"]["totalContributions"]
+    cal = user["contributionsCollection"]["contributionCalendar"]
     repos = user["repositories"]
     now = datetime.now(timezone.utc)
-    cutoff = now - timedelta(days=30)
 
     def pushed(r):
         return datetime.fromisoformat(r["pushedAt"].replace("Z", "+00:00"))
 
-    recent_30d = sum(1 for r in repos["nodes"] if pushed(r) >= cutoff)
+    weeks = [[d["contributionCount"] for d in w["contributionDays"]] for w in cal["weeks"]]
+    days = [d for w in cal["weeks"] for d in w["contributionDays"]]
+    stats = {
+        "year": now.year,
+        "total": cal["totalContributions"],
+        "repos": repos["totalCount"],
+        "pushed_30d": sum(1 for r in repos["nodes"] if pushed(r) >= now - timedelta(days=30)),
+        "streak": current_streak(days),
+        "weeks": weeks,
+        "langs": language_mix(repos["nodes"]),
+        "updated": f"{now:%Y-%m-%d}",
+    }
 
-    stats = "\n".join([
-        '<div align="center">',
-        "",
-        badge(f"Contributions in {now.year}", total_contrib),
-        badge("Public repos", repos["totalCount"]),
-        badge("Repos pushed (30d)", recent_30d),
-        "",
-        "</div>",
-    ])
+    os.makedirs(ASSETS, exist_ok=True)
+    for theme in THEMES:
+        with open(f"{ASSETS}/header-{theme}.svg", "w", encoding="utf-8", newline="\n") as f:
+            f.write(render_header(theme, f"{now:%Y.%m}"))
+        with open(f"{ASSETS}/stats-{theme}.svg", "w", encoding="utf-8", newline="\n") as f:
+            f.write(render_stats(theme, stats))
 
-    rows = ["| Repo | Language | Pushed | About |", "|------|:--------:|:------:|-------|"]
+    lines = []
     shown = [r for r in repos["nodes"] if r["description"] and r["name"] not in SKIP_REPOS]
     for r in shown[:RECENT_COUNT]:
-        lang = (r["primaryLanguage"] or {}).get("name", "-")
-        desc = r["description"].replace("|", "\\|")
-        rows.append(f"| [**{r['name']}**]({r['url']}) | {lang} | {pushed(r):%Y-%m-%d} | {desc} |")
-    recent = "\n".join(rows) + "\n\n<sub>Auto-updated daily by GitHub Actions.</sub>"
+        lang = (r["primaryLanguage"] or {}).get("name", "n/a")
+        lines.append(f"`{pushed(r):%Y-%m-%d}` &nbsp;**[{r['name']}]({r['url']})** &nbsp;<sub>{lang.upper()}</sub><br/>")
+        lines.append(f"{r['description']}")
+        lines.append("")
+    buildlog = "\n".join(lines).rstrip()
 
     with open(README, encoding="utf-8") as f:
         content = f.read()
-
-    content = replace_block(content, "STATS", stats)
-    content = replace_block(content, "RECENT", recent)
-
-    ts = int(time.time())
-    content = re.sub(r"([?&])cache=\d+", rf"\g<1>cache={ts}", content)
-    content = re.sub(
-        r"<!-- Last updated:.*?-->",
-        f"<!-- Last updated: {now:%Y-%m-%d %H:%M:%S} UTC -->",
-        content,
-    )
-
+    content = replace_block(content, "BUILDLOG", buildlog)
+    # Bust GitHub's image cache for the regenerated SVGs.
+    content = re.sub(r"(assets/(?:header|stats)-(?:dark|light)\.svg)(\?v=\d+)?", rf"\1?v={now:%Y%m%d}", content)
     with open(README, "w", encoding="utf-8", newline="\n") as f:
         f.write(content)
 
-    print(f"contributions={total_contrib} repos={repos['totalCount']} pushed30d={recent_30d}")
+    print(f"contributions={stats['total']} repos={stats['repos']} pushed30d={stats['pushed_30d']} "
+          f"streak={stats['streak']} langs={[n for n, _ in stats['langs']]}")
 
 
 if __name__ == "__main__":
