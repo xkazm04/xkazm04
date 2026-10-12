@@ -54,9 +54,9 @@ impl Default for Kazii {
 <!-- STATS:START -->
 <div align="center">
 
-![Contributions in 2026](https://img.shields.io/badge/Contributions%20in%202026-25%2C555-2dd4bf?style=flat-square&labelColor=0d1117)
-![Public repos](https://img.shields.io/badge/Public%20repos-55-2dd4bf?style=flat-square&labelColor=0d1117)
-![Repos pushed (30d)](https://img.shields.io/badge/Repos%20pushed%20%2830d%29-25-2dd4bf?style=flat-square&labelColor=0d1117)
+![Contributions in 2026](https://img.shields.io/badge/Contributions%20in%202026-25%2C556-2dd4bf?style=flat-square&labelColor=0d1117)
+![Public repos](https://img.shields.io/badge/Public%20repos-56-2dd4bf?style=flat-square&labelColor=0d1117)
+![Repos pushed (30d)](https://img.shields.io/badge/Repos%20pushed%20%2830d%29-26-2dd4bf?style=flat-square&labelColor=0d1117)
 
 </div>
 <!-- STATS:END -->
@@ -180,8 +180,8 @@ impl Default for Kazii {
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=xkazm04&theme=tokyonight&hide_border=true&background=0D1117&stroke=2dd4bf&ring=2dd4bf&fire=2dd4bf&currStreakLabel=2dd4bf&cache=1791832881" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=xkazm04&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=2dd4bf&icon_color=2dd4bf&text_color=c9d1d9&cache=1791832881" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=xkazm04&theme=tokyonight&hide_border=true&background=0D1117&stroke=2dd4bf&ring=2dd4bf&fire=2dd4bf&currStreakLabel=2dd4bf&cache=1791833908" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=xkazm04&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=2dd4bf&icon_color=2dd4bf&text_color=c9d1d9&cache=1791833908" />
 
 <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=xkazm04&bg_color=0D1117&color=2dd4bf&line=2dd4bf&point=2dd4bf&area=true&hide_border=true" />
 
@@ -200,7 +200,7 @@ impl Default for Kazii {
 <summary><b>More Stats</b></summary>
 <div align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=xkazm04&theme=github_dark&cache=1791832881" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=xkazm04&theme=github_dark&cache=1791833908" />
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=xkazm04&theme=github_dark" />
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=xkazm04&theme=github_dark" />
@@ -218,4 +218,4 @@ impl Default for Kazii {
 
 </div>
 
-<!-- Last updated: 2026-10-12 19:21:21 UTC -->
+<!-- Last updated: 2026-10-12 19:38:28 UTC -->
