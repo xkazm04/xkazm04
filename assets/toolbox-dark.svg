@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="426" viewBox="0 0 1200 426" role="img" aria-label="Toolbox: languages, apps, data, AI and XR tools">
+<style>
+  text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace; }
+  .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.6s ease-out .2s forwards; }
+  .cursor { animation: blink 1.1s steps(1) infinite; }
+  .fade { opacity: 0; animation: fade .8s ease-out forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes fade { to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .draw, .cursor, .fade { animation: none; stroke-dashoffset: 0; opacity: 1; }
+  }
+</style>
+
+<defs>
+  <pattern id="minor" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#151A21" stroke-width="1"/>
+  </pattern>
+  <pattern id="major" width="120" height="120" patternUnits="userSpaceOnUse">
+    <rect width="120" height="120" fill="url(#minor)"/>
+    <path d="M120 0H0V120" fill="none" stroke="#1E252E" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="1200" height="426" fill="#0B0D10"/>
+<rect width="1200" height="426" fill="url(#major)"/>
+<rect x="16.5" y="16.5" width="1167" height="393" fill="none" stroke="#2D3540"/>
+<path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 392V410H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 392V410H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<text x="56" y="64" font-size="13" letter-spacing="3" fill="#F59E0B">FIG. 07 / TOOLBOX</text>
+<text x="56" y="124" font-size="11" letter-spacing="2" fill="#8B949E">LANGUAGES</text>
+<g class="fade" style="animation-delay:0.00s"><rect x="190.5" y="92.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M190 100V92H198" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="212" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">TS</text><text x="246" y="119" font-size="13" fill="#E7E5E4">TypeScript</text></g>
+<g class="fade" style="animation-delay:0.04s"><rect x="380.5" y="92.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M380 100V92H388" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="402" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Rs</text><text x="436" y="119" font-size="13" fill="#E7E5E4">Rust</text></g>
+<g class="fade" style="animation-delay:0.08s"><rect x="570.5" y="92.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M570 100V92H578" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="592" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Py</text><text x="626" y="119" font-size="13" fill="#E7E5E4">Python</text></g>
+<g class="fade" style="animation-delay:0.12s"><rect x="760.5" y="92.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M760 100V92H768" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="782" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">C++</text><text x="816" y="119" font-size="13" fill="#E7E5E4">C++</text></g>
+<g class="fade" style="animation-delay:0.16s"><rect x="950.5" y="92.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M950 100V92H958" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="972" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">C#</text><text x="1006" y="119" font-size="13" fill="#E7E5E4">C#</text></g>
+<text x="56" y="186" font-size="11" letter-spacing="2" fill="#8B949E">APPS</text>
+<g class="fade" style="animation-delay:0.20s"><rect x="190.5" y="154.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M190 162V154H198" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="212" y="182" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Re</text><text x="246" y="181" font-size="13" fill="#E7E5E4">React 19</text></g>
+<g class="fade" style="animation-delay:0.24s"><rect x="380.5" y="154.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M380 162V154H388" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="402" y="182" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Nx</text><text x="436" y="181" font-size="13" fill="#E7E5E4">Next.js 16</text></g>
+<g class="fade" style="animation-delay:0.28s"><rect x="570.5" y="154.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M570 162V154H578" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="592" y="182" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Ta</text><text x="626" y="181" font-size="13" fill="#E7E5E4">Tauri 2</text></g>
+<g class="fade" style="animation-delay:0.32s"><rect x="760.5" y="154.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M760 162V154H768" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="782" y="182" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Tw</text><text x="816" y="181" font-size="13" fill="#E7E5E4">Tailwind v4</text></g>
+<text x="56" y="248" font-size="11" letter-spacing="2" fill="#8B949E">DATA</text>
+<g class="fade" style="animation-delay:0.40s"><rect x="190.5" y="216.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M190 224V216H198" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="212" y="244" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Sq</text><text x="246" y="243" font-size="13" fill="#E7E5E4">SQLite</text></g>
+<g class="fade" style="animation-delay:0.44s"><rect x="380.5" y="216.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M380 224V216H388" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="402" y="244" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Pg</text><text x="436" y="243" font-size="13" fill="#E7E5E4">PostgreSQL</text></g>
+<g class="fade" style="animation-delay:0.48s"><rect x="570.5" y="216.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M570 224V216H578" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="592" y="244" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Fs</text><text x="626" y="243" font-size="13" fill="#E7E5E4">Firestore</text></g>
+<text x="56" y="310" font-size="11" letter-spacing="2" fill="#8B949E">AI</text>
+<g class="fade" style="animation-delay:0.60s"><rect x="190.5" y="278.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M190 286V278H198" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="212" y="306" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">CC</text><text x="246" y="305" font-size="13" fill="#E7E5E4">Claude Code</text></g>
+<g class="fade" style="animation-delay:0.64s"><rect x="380.5" y="278.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M380 286V278H388" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="402" y="306" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">MC</text><text x="436" y="305" font-size="13" fill="#E7E5E4">MCP</text></g>
+<g class="fade" style="animation-delay:0.68s"><rect x="570.5" y="278.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M570 286V278H578" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="592" y="306" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">LJ</text><text x="626" y="305" font-size="13" fill="#E7E5E4">LLM-as-judge</text></g>
+<g class="fade" style="animation-delay:0.72s"><rect x="760.5" y="278.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M760 286V278H768" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="782" y="306" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Ol</text><text x="816" y="305" font-size="13" fill="#E7E5E4">Ollama</text></g>
+<text x="56" y="372" font-size="11" letter-spacing="2" fill="#8B949E">XR</text>
+<g class="fade" style="animation-delay:0.80s"><rect x="190.5" y="340.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M190 348V340H198" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="212" y="368" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">UE</text><text x="246" y="367" font-size="13" fill="#E7E5E4">Unreal 5</text></g>
+<g class="fade" style="animation-delay:0.84s"><rect x="380.5" y="340.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M380 348V340H388" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="402" y="368" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">Un</text><text x="436" y="367" font-size="13" fill="#E7E5E4">Unity</text></g>
+<g class="fade" style="animation-delay:0.88s"><rect x="570.5" y="340.5" width="44" height="44" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><path d="M570 348V340H578" stroke="#F59E0B" stroke-width="2" fill="none"/><text x="592" y="368" text-anchor="middle" font-size="15" font-weight="700" fill="#F59E0B">MQ</text><text x="626" y="367" font-size="13" fill="#E7E5E4">Meta Quest</text></g>
+</svg>

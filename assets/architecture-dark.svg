@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="Local-first architecture: your machine holds SQLite, agents propose, a human approval gate decides">
+<style>
+  text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace; }
+  .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.6s ease-out .2s forwards; }
+  .cursor { animation: blink 1.1s steps(1) infinite; }
+  .fade { opacity: 0; animation: fade .8s ease-out forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes fade { to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .draw, .cursor, .fade { animation: none; stroke-dashoffset: 0; opacity: 1; }
+  }
+</style>
+
+<defs>
+  <pattern id="minor" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#151A21" stroke-width="1"/>
+  </pattern>
+  <pattern id="major" width="120" height="120" patternUnits="userSpaceOnUse">
+    <rect width="120" height="120" fill="url(#minor)"/>
+    <path d="M120 0H0V120" fill="none" stroke="#1E252E" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="1200" height="330" fill="#0B0D10"/>
+<rect width="1200" height="330" fill="url(#major)"/>
+<rect x="16.5" y="16.5" width="1167" height="297" fill="none" stroke="#2D3540"/>
+<path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 296V314H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 296V314H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<text x="56" y="64" font-size="13" letter-spacing="3" fill="#F59E0B">FIG. 02 / LOCAL-FIRST ARCHITECTURE</text>
+<rect x="56.5" y="92.5" width="800" height="196" rx="4" fill="none" stroke="#F59E0B" stroke-dasharray="8 6"/>
+<text x="72" y="112" font-size="11" letter-spacing="2" fill="#F59E0B">YOUR MACHINE</text>
+<text x="884" y="112" font-size="11" letter-spacing="2" fill="#8B949E">OUTSIDE</text>
+<path d="M96 170v70c0 14 24 22 54 22s54 -8 54 -22v-70" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.4"/><ellipse cx="150" cy="170" rx="54" ry="14" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.4"/><text x="150" y="220" text-anchor="middle" font-size="15" font-weight="700" fill="#E7E5E4">SQLite</text><text x="150" y="238" text-anchor="middle" font-size="11" fill="#8B949E">state + history</text>
+<rect x="330.5" y="150.5" width="150" height="80" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><text x="405.0" y="188.0" text-anchor="middle" font-size="15" font-weight="700" fill="#E7E5E4">AGENTS</text><text x="405.0" y="208.0" text-anchor="middle" font-size="11" fill="#8B949E">Claude Code / Ollama</text>
+<rect x="570.5" y="150.5" width="130" height="80" fill="#0B0D10" stroke="#F59E0B" stroke-width="1.8"/><text x="635.0" y="188.0" text-anchor="middle" font-size="15" font-weight="700" fill="#E7E5E4">GATE</text><text x="635.0" y="208.0" text-anchor="middle" font-size="11" fill="#8B949E">human approves</text>
+<rect x="750.5" y="150.5" width="80" height="80" fill="#0B0D10" stroke="#E7E5E4" stroke-width="1.2"/><text x="790.0" y="188.0" text-anchor="middle" font-size="15" font-weight="700" fill="#E7E5E4">ACT</text><text x="790.0" y="208.0" text-anchor="middle" font-size="11" fill="#8B949E">apply</text>
+<path class="draw" d="M204 200L330 190" stroke="#8B949E" stroke-width="1.5" fill="none"/><path d="M330 190l-8 -4v8z" fill="#8B949E" transform="rotate(-4.537772507906652 330 190)"/>
+<path class="draw" d="M480 190L570 190" stroke="#8B949E" stroke-width="1.5" fill="none"/><path d="M570 190l-8 -4v8z" fill="#8B949E" transform="rotate(0.0 570 190)"/>
+<path class="draw" d="M700 190L750 190" stroke="#F59E0B" stroke-width="1.5" fill="none"/><path d="M750 190l-8 -4v8z" fill="#F59E0B" transform="rotate(0.0 750 190)"/>
+<path class="draw" d="M790 230V264H150V246" fill="none" stroke="#8B949E" stroke-width="1.2" stroke-dasharray="5 5"/>
+<text x="470" y="258" font-size="11" fill="#8B949E">result written back locally</text>
+<circle r="5" fill="#F59E0B" class="token"><animateMotion dur="5s" repeatCount="indefinite" path="M204 200L330 190L480 190L570 190L700 190L790 190"/></circle>
+<rect x="884.5" y="150.5" width="260" height="80" fill="none" stroke="#2D3540" stroke-dasharray="4 4"/>
+<text x="1014" y="186" text-anchor="middle" font-size="14" fill="#E7E5E4">cloud / third parties</text>
+<text x="1014" y="208" text-anchor="middle" font-size="11" fill="#8B949E">only what you send</text>
+<path d="M830 190H884" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3 5"/>
+<text x="857" y="180" text-anchor="middle" font-size="16" fill="#F59E0B">?</text>
+<text x="56" y="312" font-size="11" fill="#8B949E">Agents do the work, people approve it. Nothing leaves unless you send it.</text>
+</svg>

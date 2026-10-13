@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="310" viewBox="0 0 1200 310" role="img" aria-label="Timeline of recent repository pushes">
+<style>
+  text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace; }
+  .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.6s ease-out .2s forwards; }
+  .cursor { animation: blink 1.1s steps(1) infinite; }
+  .fade { opacity: 0; animation: fade .8s ease-out forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes fade { to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .draw, .cursor, .fade { animation: none; stroke-dashoffset: 0; opacity: 1; }
+  }
+</style>
+
+<defs>
+  <pattern id="minor" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#151A21" stroke-width="1"/>
+  </pattern>
+  <pattern id="major" width="120" height="120" patternUnits="userSpaceOnUse">
+    <rect width="120" height="120" fill="url(#minor)"/>
+    <path d="M120 0H0V120" fill="none" stroke="#1E252E" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="1200" height="310" fill="#0B0D10"/>
+<rect width="1200" height="310" fill="url(#major)"/>
+<rect x="16.5" y="16.5" width="1167" height="277" fill="none" stroke="#2D3540"/>
+<path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 276V294H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 276V294H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<text x="56" y="64" font-size="13" letter-spacing="3" fill="#F59E0B">FIG. 04 / PUSH TIMELINE / LAST 12 MONTHS</text>
+<path d="M70 190H1130" stroke="#E7E5E4" stroke-width="1.5"/>
+<path d="M70 184V196" stroke="#8B949E"/>
+<text x="70" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Oct</text>
+<path d="M158 184V196" stroke="#8B949E"/>
+<text x="158" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Nov</text>
+<path d="M247 184V196" stroke="#8B949E"/>
+<text x="247" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Dec</text>
+<path d="M335 184V196" stroke="#8B949E"/>
+<text x="335" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Jan</text>
+<path d="M423 184V196" stroke="#8B949E"/>
+<text x="423" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Feb</text>
+<path d="M512 184V196" stroke="#8B949E"/>
+<text x="512" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Mar</text>
+<path d="M600 184V196" stroke="#8B949E"/>
+<text x="600" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Apr</text>
+<path d="M688 184V196" stroke="#8B949E"/>
+<text x="688" y="214" text-anchor="middle" font-size="10" fill="#8B949E">May</text>
+<path d="M777 184V196" stroke="#8B949E"/>
+<text x="777" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Jun</text>
+<path d="M865 184V196" stroke="#8B949E"/>
+<text x="865" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Jul</text>
+<path d="M953 184V196" stroke="#8B949E"/>
+<text x="953" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Aug</text>
+<path d="M1042 184V196" stroke="#8B949E"/>
+<text x="1042" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Sep</text>
+<path d="M1130 184V196" stroke="#8B949E"/>
+<text x="1130" y="214" text-anchor="middle" font-size="10" fill="#8B949E">Oct</text>
+<path d="M1130 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="1130" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M1130 190V163" stroke="#5B6672" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.1s" cx="1130" cy="163" r="4.5" fill="#5B6672"/>
+<path d="M1130 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.2s" cx="1130" cy="150" r="4.5" fill="#F59E0B"/>
+<path d="M1130 190V137" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.3s" cx="1130" cy="137" r="4.5" fill="#8B949E"/>
+<path d="M1130 190V124" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.4s" cx="1130" cy="124" r="4.5" fill="#F59E0B"/>
+<path d="M1119 190V176" stroke="#E2683C" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.5s" cx="1119" cy="176" r="4.5" fill="#E2683C"/>
+<path d="M1119 190V163" stroke="#E2683C" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.6s" cx="1119" cy="163" r="4.5" fill="#E2683C"/>
+<path d="M1119 190V150" stroke="#E2683C" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.7s" cx="1119" cy="150" r="4.5" fill="#E2683C"/>
+<path d="M1119 190V137" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1119" cy="137" r="4.5" fill="#F59E0B"/>
+<path d="M1119 190V124" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1119" cy="124" r="4.5" fill="#F59E0B"/>
+<path d="M1108 190V176" stroke="#D6C6A5" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1108" cy="176" r="4.5" fill="#D6C6A5"/>
+<path d="M1108 190V163" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1108" cy="163" r="4.5" fill="#8B949E"/>
+<path d="M1108 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1108" cy="150" r="4.5" fill="#F59E0B"/>
+<path d="M1108 190V137" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1108" cy="137" r="4.5" fill="#F59E0B"/>
+<path d="M1108 190V124" stroke="#E2683C" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1108" cy="124" r="4.5" fill="#E2683C"/>
+<path d="M1097 190V176" stroke="#7DA7C9" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1097" cy="176" r="4.5" fill="#7DA7C9"/>
+<path d="M1097 190V163" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1097" cy="163" r="4.5" fill="#8B949E"/>
+<path d="M1097 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1097" cy="150" r="4.5" fill="#F59E0B"/>
+<path d="M1094 190V137" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1094" cy="137" r="4.5" fill="#F59E0B"/>
+<path d="M1085 190V124" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1085" cy="124" r="4.5" fill="#F59E0B"/>
+<path d="M1074 190V176" stroke="#E2683C" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1074" cy="176" r="4.5" fill="#E2683C"/>
+<path d="M1115 190V176" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="1115" cy="176" r="4.5" fill="#8B949E"/>
+<path d="M1110 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.1s" cx="1110" cy="163" r="4.5" fill="#F59E0B"/>
+<path d="M1092 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="1092" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M1069 190V176" stroke="#7DA7C9" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="1069" cy="176" r="4.5" fill="#7DA7C9"/>
+<path d="M927 190V176" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="927" cy="176" r="4.5" fill="#8B949E"/>
+<path d="M903 190V176" stroke="#7DA7C9" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="903" cy="176" r="4.5" fill="#7DA7C9"/>
+<path d="M895 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="895" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M892 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.1s" cx="892" cy="163" r="4.5" fill="#F59E0B"/>
+<path d="M892 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.2s" cx="892" cy="150" r="4.5" fill="#F59E0B"/>
+<path d="M784 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="784" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M706 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="706" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M706 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.1s" cx="706" cy="163" r="4.5" fill="#F59E0B"/>
+<path d="M706 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.2s" cx="706" cy="150" r="4.5" fill="#F59E0B"/>
+<path d="M587 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="587" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M564 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="564" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M445 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="445" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M439 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.1s" cx="439" cy="163" r="4.5" fill="#F59E0B"/>
+<path d="M436 190V150" stroke="#5B6672" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.2s" cx="436" cy="150" r="4.5" fill="#5B6672"/>
+<path d="M416 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="416" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M395 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="395" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M381 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.1s" cx="381" cy="163" r="4.5" fill="#F59E0B"/>
+<path d="M381 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.2s" cx="381" cy="150" r="4.5" fill="#F59E0B"/>
+<path d="M349 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="349" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M323 190V176" stroke="#7DA7C9" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="323" cy="176" r="4.5" fill="#7DA7C9"/>
+<path d="M282 190V176" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="282" cy="176" r="4.5" fill="#8B949E"/>
+<path d="M250 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="250" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M233 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="233" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M230 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.1s" cx="230" cy="163" r="4.5" fill="#F59E0B"/>
+<path d="M227 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.2s" cx="227" cy="150" r="4.5" fill="#F59E0B"/>
+<path d="M1130 224V270H1106" stroke="#2D3540" fill="none"/>
+<text x="1096" y="274" text-anchor="end" font-size="12" fill="#E7E5E4"><tspan fill="#F59E0B">LATEST</tspan>  bp · ai-registry · personas-web · goat · systedo-case · lighttrack</text>
+<circle cx="61" cy="96" r="5" fill="#F59E0B"/><text x="72" y="100" font-size="11" fill="#8B949E">TypeScript</text>
+<circle cx="171" cy="96" r="5" fill="#5B6672"/><text x="182" y="100" font-size="11" fill="#8B949E">JavaScript</text>
+<circle cx="281" cy="96" r="5" fill="#8B949E"/><text x="292" y="100" font-size="11" fill="#8B949E">HTML</text>
+<circle cx="343" cy="96" r="5" fill="#E2683C"/><text x="354" y="100" font-size="11" fill="#8B949E">Rust</text>
+<circle cx="405" cy="96" r="5" fill="#D6C6A5"/><text x="416" y="100" font-size="11" fill="#8B949E">C#</text>
+<circle cx="451" cy="96" r="5" fill="#8B949E"/><text x="462" y="100" font-size="11" fill="#8B949E">C++</text>
+<text x="1130" y="64" text-anchor="end" font-size="11" fill="#8B949E">55 repos pushed</text>
+</svg>

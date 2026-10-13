@@ -17,11 +17,13 @@ from datetime import date, datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from brand import THEMES, render_header, render_stats  # noqa: E402
+import panels  # noqa: E402
 
 USERNAME = os.environ.get("PROFILE_USER", "xkazm04")
 README = "README.md"
 ASSETS = "assets"
 RECENT_COUNT = 8
+LANG_ORDER = ["TypeScript", "Rust", "Python", "C#", "C++", "JavaScript"]
 SKIP_REPOS = {USERNAME}
 # Markup, config and build glue that would drown out the real languages.
 NON_CODE = {"HTML", "CSS", "SCSS", "Shell", "PowerShell", "Batchfile", "Dockerfile", "NSIS",
@@ -130,6 +132,24 @@ def main():
         with open(f"{ASSETS}/stats-{theme}.svg", "w", encoding="utf-8", newline="\n") as f:
             f.write(render_stats(theme, stats))
 
+    pushed_by_name = {r["name"]: pushed(r) for r in repos["nodes"]}
+    timeline_repos = [(r["name"], pushed(r), (r["primaryLanguage"] or {}).get("name", "n/a"))
+                      for r in repos["nodes"] if r["name"] not in SKIP_REPOS]
+    for theme in THEMES:
+        lang_color = dict(zip(LANG_ORDER, THEMES[theme]["langs"]))
+        out = {
+            "architecture": panels.render_architecture(theme),
+            "cards": panels.render_cards(theme, pushed_by_name, now),
+            "timeline": panels.render_timeline(theme, timeline_repos, lang_color, now),
+            "pulse": panels.render_pulse(theme, weeks, stats["langs"]),
+            "vr": panels.render_vr(theme),
+            "toolbox": panels.render_toolbox(theme),
+            "civic": panels.render_civic(theme),
+        }
+        for name, svg in out.items():
+            with open(f"{ASSETS}/{name}-{theme}.svg", "w", encoding="utf-8", newline="\n") as f:
+                f.write(svg)
+
     lines = []
     shown = [r for r in repos["nodes"] if r["description"] and r["name"] not in SKIP_REPOS]
     for r in shown[:RECENT_COUNT]:
@@ -143,7 +163,7 @@ def main():
         content = f.read()
     content = replace_block(content, "BUILDLOG", buildlog)
     # Bust GitHub's image cache for the regenerated SVGs.
-    content = re.sub(r"(assets/(?:header|stats)-(?:dark|light)\.svg)(\?v=\d+)?", rf"\1?v={now:%Y%m%d}", content)
+    content = re.sub(r"(assets/(?:header|stats|architecture|cards|timeline|pulse|vr|toolbox|civic)-(?:dark|light)\.svg)(\?v=\d+)?", rf"\1?v={now:%Y%m%d}", content)
     with open(README, "w", encoding="utf-8", newline="\n") as f:
         f.write(content)
 
