@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=20261012" />
-  <img alt="kazii, The Builder" src="assets/header-dark.svg?v=20261012" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=20261013" />
+  <img alt="kazii, The Builder" src="assets/header-dark.svg?v=20261013" width="100%" />
 </picture>
 
 <p align="center">
@@ -22,11 +22,17 @@ I build local-first software: tools that run on your machine, keep your data the
 ### 02 · Build Log
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=20261012" />
-  <img alt="Contributions this year, contribution heatmap and language mix" src="assets/stats-dark.svg?v=20261012" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=20261013" />
+  <img alt="Contributions this year, contribution heatmap and language mix" src="assets/stats-dark.svg?v=20261013" width="100%" />
 </picture>
 
 <!-- BUILDLOG:START -->
+`2026-10-12` &nbsp;**[systedo-case](https://github.com/xkazm04/systedo-case)** &nbsp;<sub>TYPESCRIPT</sub><br/>
+Adamant — AI ad intelligence on your machine: measure, triage and generate ad assets across Google Ads, Sklik, Meta and TikTok.
+
+`2026-10-12` &nbsp;**[lighttrack](https://github.com/xkazm04/lighttrack)** &nbsp;<sub>RUST</sub><br/>
+Self-hosted LLM observability and LLM-as-judge scoring. Your data stays in your own SQLite, Postgres or Firestore.
+
 `2026-10-12` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub><br/>
 bípípí
 
@@ -44,12 +50,6 @@ Content creation studio prototyped UI-first — Next.js 16, React 19, Tailwind v
 
 `2026-10-12` &nbsp;**[garden-vr](https://github.com/xkazm04/garden-vr)** &nbsp;<sub>C#</sub><br/>
 Two calm, hands-first daily-ritual apps (Unity, Meta Quest) that grow a living garden from real habits. Meta VR Start Developer Competition 2026.
-
-`2026-10-12` &nbsp;**[mage-arena](https://github.com/xkazm04/mage-arena)** &nbsp;<sub>C++</sub><br/>
-Seated, hands-first spell duel for Meta Quest (Unreal Engine 5.8) - Meta VR Start Developer Competition 2026
-
-`2026-10-12` &nbsp;**[personas](https://github.com/xkazm04/personas)** &nbsp;<sub>TYPESCRIPT</sub><br/>
-Local-first desktop app for building AI agents, connecting them to your tools, running them on triggers, and orchestrating teams of them on real software projects.
 <!-- BUILDLOG:END -->
 
 ---
