@@ -109,6 +109,9 @@ Turns licensed sports data into 1 to 3 minute data-visualisation videos.
 **[systedo-case](https://github.com/xkazm04/systedo-case)** &nbsp;<sub>TYPESCRIPT</sub><br/>
 Ad intelligence on your machine across Google Ads, Sklik, Meta and TikTok.
 
+**[MiSu](https://www.youtube.com/watch?v=Kam3LOzbPoI)** &nbsp;<sub>Prompt engineering</sub><br/>
+AI generated music album. I told it to make great music...and it does
+
 </td>
 <td width="50%" valign="top">
 
