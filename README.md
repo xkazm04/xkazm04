@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=20261013" />
-  <img alt="kazii, The Builder" src="assets/header-dark.svg?v=20261013" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=20261014" />
+  <img alt="kazii, The Builder" src="assets/header-dark.svg?v=20261014" width="100%" />
 </picture>
 
 <p align="center">
@@ -18,8 +18,8 @@ I build local-first software: tools that run on your machine, keep your data the
 - **Ship the whole thing.** Desktop app, backend, observability and the site that explains it.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/architecture-light.svg?v=20261013" />
-  <img alt="Local-first architecture: SQLite on your machine, agents, human approval gate" src="assets/architecture-dark.svg?v=20261013" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/architecture-light.svg?v=20261014" />
+  <img alt="Local-first architecture: SQLite on your machine, agents, human approval gate" src="assets/architecture-dark.svg?v=20261014" width="100%" />
 </picture>
 
 ---
@@ -27,44 +27,44 @@ I build local-first software: tools that run on your machine, keep your data the
 ### 02 · Build Log
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=20261013" />
-  <img alt="Contributions this year, contribution heatmap and language mix" src="assets/stats-dark.svg?v=20261013" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=20261014" />
+  <img alt="Contributions this year, contribution heatmap and language mix" src="assets/stats-dark.svg?v=20261014" width="100%" />
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/pulse-light.svg?v=20261013" />
-  <img alt="Weekly contribution pulse and language mix" src="assets/pulse-dark.svg?v=20261013" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/pulse-light.svg?v=20261014" />
+  <img alt="Weekly contribution pulse and language mix" src="assets/pulse-dark.svg?v=20261014" width="100%" />
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/timeline-light.svg?v=20261013" />
-  <img alt="Timeline of recent pushes" src="assets/timeline-dark.svg?v=20261013" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/timeline-light.svg?v=20261014" />
+  <img alt="Timeline of recent pushes" src="assets/timeline-dark.svg?v=20261014" width="100%" />
 </picture>
 
 <!-- BUILDLOG:START -->
-`2026-10-13` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub><br/>
-bípípí
+`2026-10-13` &nbsp;**[athena-portable](https://github.com/xkazm04/athena-portable)** &nbsp;<sub>PYTHON</sub><br/>
+Athena: a personal AI agent that works inside your web apps and asks before it acts. NVIDIA Nemotron on Nebius Token Factory red-teams her gate.
+
+`2026-10-13` &nbsp;**[pof](https://github.com/xkazm04/pof)** &nbsp;<sub>TYPESCRIPT</sub><br/>
+AI-powered companion for building Unreal Engine 5 C++ games — checklists, feature tracking, and quality evaluation from prototype to polish.
 
 `2026-10-13` &nbsp;**[ai-registry](https://github.com/xkazm04/ai-registry)** &nbsp;<sub>JAVASCRIPT</sub><br/>
 Example AI development registry - skills, practices and org memory that ascent onboards, indexes and tracks.
 
-`2026-10-13` &nbsp;**[personas-web](https://github.com/xkazm04/personas-web)** &nbsp;<sub>TYPESCRIPT</sub><br/>
-Marketing site, dashboard and API routes for Personas — a platform for building and orchestrating multi-agent AI pipelines.
+`2026-10-13` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub><br/>
+bípípí
 
-`2026-10-13` &nbsp;**[goat](https://github.com/xkazm04/goat)** &nbsp;<sub>HTML</sub><br/>
-Create and rank custom Top-N lists via an interactive drag-and-drop match system (Next.js).
-
-`2026-10-12` &nbsp;**[systedo-case](https://github.com/xkazm04/systedo-case)** &nbsp;<sub>TYPESCRIPT</sub><br/>
+`2026-10-13` &nbsp;**[systedo-case](https://github.com/xkazm04/systedo-case)** &nbsp;<sub>TYPESCRIPT</sub><br/>
 Adamant — AI ad intelligence on your machine: measure, triage and generate ad assets across Google Ads, Sklik, Meta and TikTok.
 
-`2026-10-12` &nbsp;**[lighttrack](https://github.com/xkazm04/lighttrack)** &nbsp;<sub>RUST</sub><br/>
-Self-hosted LLM observability and LLM-as-judge scoring. Your data stays in your own SQLite, Postgres or Firestore.
+`2026-10-13` &nbsp;**[kp](https://github.com/xkazm04/kp)** &nbsp;<sub>TYPESCRIPT</sub><br/>
+open-source hiring workspace
 
-`2026-10-12` &nbsp;**[pumper](https://github.com/xkazm04/pumper)** &nbsp;<sub>RUST</sub><br/>
+`2026-10-13` &nbsp;**[pumper](https://github.com/xkazm04/pumper)** &nbsp;<sub>RUST</sub><br/>
 Local-first scraping service — one Rust binary, durable SQLite job queue, three pluggable scrape engines (HTTP, browser, Claude Code).
 
-`2026-10-12` &nbsp;**[ascent](https://github.com/xkazm04/ascent)** &nbsp;<sub>TYPESCRIPT</sub><br/>
-Scores how AI-native a team's engineering is — a 0-100 maturity score across 9 weighted dimensions, with evidence and a prioritized path to the next level.
+`2026-10-13` &nbsp;**[garden-vr](https://github.com/xkazm04/garden-vr)** &nbsp;<sub>C#</sub><br/>
+Two calm, hands-first daily-ritual apps (Unity, Meta Quest) that grow a living garden from real habits. Meta VR Start Developer Competition 2026.
 <!-- BUILDLOG:END -->
 
 ---
@@ -72,8 +72,8 @@ Scores how AI-native a team's engineering is — a 0-100 maturity score across 9
 ### 03 · Assemblies
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/cards-light.svg?v=20261013" />
-  <img alt="Flagship project cards" src="assets/cards-dark.svg?v=20261013" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/cards-light.svg?v=20261014" />
+  <img alt="Flagship project cards" src="assets/cards-dark.svg?v=20261014" width="100%" />
 </picture>
 
 <table>
@@ -151,13 +151,13 @@ The Table: agent-to-agent haggling over PayPal.
 </table>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261013" />
-  <img alt="garden-vr and mage-arena example frames" src="assets/vr-dark.svg?v=20261013" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261014" />
+  <img alt="garden-vr and mage-arena example frames" src="assets/vr-dark.svg?v=20261014" width="100%" />
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/civic-light.svg?v=20261013" />
-  <img alt="politicas knowledge graph in numbers" src="assets/civic-dark.svg?v=20261013" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/civic-light.svg?v=20261014" />
+  <img alt="politicas knowledge graph in numbers" src="assets/civic-dark.svg?v=20261014" width="100%" />
 </picture>
 
 
@@ -166,8 +166,8 @@ The Table: agent-to-agent haggling over PayPal.
 ### 04 · Toolbox
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261013" />
-  <img alt="Toolbox: languages, apps, data, AI, XR" src="assets/toolbox-dark.svg?v=20261013" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261014" />
+  <img alt="Toolbox: languages, apps, data, AI, XR" src="assets/toolbox-dark.svg?v=20261014" width="100%" />
 </picture>
 
 ---|---|
