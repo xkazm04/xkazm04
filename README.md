@@ -107,8 +107,12 @@ Scraping service in one binary with a durable job queue and three engines that e
 
 **C · Hands-first VR** &nbsp;<sub>META VR START 2026</sub>
 
+<a href="https://github.com/xkazm04/garden-vr"><img src="assets/garden-vr.jpg" alt="garden-vr concept art: a glowing terrarium jar that asks what you would like to grow" width="100%" /></a>
+
 **[garden-vr](https://github.com/xkazm04/garden-vr)** &nbsp;<sub>UNITY · META QUEST</sub><br/>
 Two calm daily-ritual apps that grow a living garden from real habits.
+
+<a href="https://github.com/xkazm04/mage-arena"><img src="assets/mage-arena.jpg" alt="mage-arena storyboard: first-person view over an arena with torches" width="100%" /></a>
 
 **[mage-arena](https://github.com/xkazm04/mage-arena)** &nbsp;<sub>UNREAL ENGINE 5 · META QUEST</sub><br/>
 Seated spell duel played with your hands.
