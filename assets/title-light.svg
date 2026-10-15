@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-label="kazii, The Builder: 29,443 contributions in the last year">
+<style>
+text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,'Liberation Mono',monospace; }
+
+.cursor { animation: blink 1.4s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.f1 { animation: float 7s ease-in-out infinite; }
+.f3 { animation: float 7s ease-in-out -3.5s infinite; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+.flow { animation: flow 3s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -24; } }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<defs>
+<pattern id="minor" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#ECE6D9" stroke-width="1"/></pattern>
+<pattern id="major" width="120" height="120" patternUnits="userSpaceOnUse"><rect width="120" height="120" fill="url(#minor)"/><path d="M120 0H0V120" fill="none" stroke="#E0D8C7" stroke-width="1"/></pattern>
+<radialGradient id="lamp" cx="0.72" cy="0.38" r="0.62"><stop offset="0" stop-color="#B45309" stop-opacity="0.1"/><stop offset="1" stop-color="#B45309" stop-opacity="0"/></radialGradient>
+<pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V10" stroke="#B45309" stroke-width="2.2"/></pattern>
+<pattern id="hatch2" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><path d="M0 0V12" stroke="#1C1917" stroke-width="1.6"/></pattern>
+<pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.6" fill="#1C1917"/></pattern>
+</defs>
+<rect width="1200" height="560" fill="#F6F3EC"/>
+<rect width="1200" height="560" fill="url(#major)"/>
+<rect width="1200" height="560" fill="url(#lamp)"/>
+<rect x="16.5" y="16.5" width="1167" height="527" fill="none" stroke="#CFC6B3" stroke-width="1"/>
+<path d="M16 42V16H42" fill="none" stroke="#B45309" stroke-width="3"/>
+<path d="M1184 42V16H1158" fill="none" stroke="#B45309" stroke-width="3"/>
+<path d="M16 518V544H42" fill="none" stroke="#B45309" stroke-width="3"/>
+<path d="M1184 518V544H1158" fill="none" stroke="#B45309" stroke-width="3"/>
+<text x="56.0" y="70.0" font-size="22" letter-spacing="4" fill="#6B6459">SHEET 00 / PROFILE / REV B</text>
+<text x="1144.0" y="70.0" font-size="22" letter-spacing="4" text-anchor="end" fill="#B45309">GITHUB.COM/XKAZM04</text>
+<text x="48.0" y="278.0" font-size="196" font-weight="700" fill="#1C1917" textLength="540" lengthAdjust="spacing">kazii</text>
+<rect class="cursor" x="608" y="136" width="58" height="146" fill="#B45309"/>
+<text x="60.0" y="346.0" font-size="40" font-weight="700" letter-spacing="16" fill="#B45309">THE BUILDER</text>
+<path d="M60 372H530 M60 364V380 M530 364V380" stroke="#B45309" stroke-width="2" fill="none"/>
+<path d="M860.0 276.0L860.0 100.0" stroke="#6B6459" stroke-width="1.2" stroke-dasharray="6 6" fill="none" class="flow"/><path d="M963.9 336.0L963.9 160.0" stroke="#6B6459" stroke-width="1.2" stroke-dasharray="6 6" fill="none" class="flow"/><path d="M756.1 336.0L756.1 160.0" stroke="#6B6459" stroke-width="1.2" stroke-dasharray="6 6" fill="none" class="flow"/>
+<g class="f3"><path d="M756.1 336.0L860.0 396.0L860.0 375.2L756.1 315.2Z" fill="#EDE7DA" stroke="#1C1917" stroke-width="1.6" stroke-linejoin="round"/><path d="M963.9 336.0L860.0 396.0L860.0 375.2L963.9 315.2Z" fill="#E2DACB" stroke="#1C1917" stroke-width="1.6" stroke-linejoin="round"/><path d="M860.0 255.2L963.9 315.2L860.0 375.2L756.1 315.2Z" fill="#F6F3EC" stroke="#1C1917" stroke-width="1.6" stroke-linejoin="round"/></g>
+<g><path d="M756.1 264.0L860.0 324.0L860.0 303.2L756.1 243.2Z" fill="#EDE7DA" stroke="#1C1917" stroke-width="1.6" stroke-linejoin="round"/><path d="M963.9 264.0L860.0 324.0L860.0 303.2L963.9 243.2Z" fill="#E2DACB" stroke="#1C1917" stroke-width="1.6" stroke-linejoin="round"/><path d="M860.0 183.2L963.9 243.2L860.0 303.2L756.1 243.2Z" fill="#F6F3EC" stroke="#1C1917" stroke-width="1.6" stroke-linejoin="round"/></g>
+<g class="f1"><path d="M756.1 192.0L860.0 252.0L860.0 231.2L756.1 171.2Z" fill="#EDE7DA" stroke="#B45309" stroke-width="2" stroke-linejoin="round"/><path d="M963.9 192.0L860.0 252.0L860.0 231.2L963.9 171.2Z" fill="#E2DACB" stroke="#B45309" stroke-width="2" stroke-linejoin="round"/><path d="M860.0 111.2L963.9 171.2L860.0 231.2L756.1 171.2Z" fill="#B45309" stroke="#B45309" stroke-width="2" stroke-linejoin="round"/><path d="M860.0 111.2L963.9 171.2L860.0 231.2L756.1 171.2Z" fill="url(#hatch2)" opacity="0.18"/></g>
+<path d="M970 171H1024" stroke="#6B6459" stroke-width="1.2"/>
+<circle cx="968" cy="171" r="4" fill="#B45309"/>
+<text x="1033.9" y="179.2" font-size="22" font-weight="700" letter-spacing="3" fill="#B45309">GATE</text>
+<path d="M970 243H1024" stroke="#6B6459" stroke-width="1.2"/>
+<circle cx="968" cy="243" r="4" fill="#1C1917"/>
+<text x="1033.9" y="251.2" font-size="22" font-weight="700" letter-spacing="3" fill="#1C1917">AGENTS</text>
+<path d="M970 315H1024" stroke="#6B6459" stroke-width="1.2"/>
+<circle cx="968" cy="315" r="4" fill="#1C1917"/>
+<text x="1033.9" y="323.2" font-size="22" font-weight="700" letter-spacing="3" fill="#1C1917">DATA</text>
+<rect x="56.5" y="420.5" width="1087" height="96" fill="#F6F3EC" stroke="#CFC6B3" stroke-width="1.5"/>
+<text x="78.0" y="454.0" font-size="20" letter-spacing="2" fill="#6B6459">CONTRIBUTIONS / 12 MO</text>
+<text x="78.0" y="498.0" font-size="38" font-weight="700" fill="#B45309">29,443</text>
+<path d="M372.5 420V516" stroke="#CFC6B3" stroke-width="1.5"/>
+<text x="394.0" y="454.0" font-size="20" letter-spacing="2" fill="#6B6459">CURRENT STREAK</text>
+<text x="394.0" y="498.0" font-size="38" font-weight="700" fill="#1C1917">74 DAYS</text>
+<path d="M652.5 420V516" stroke="#CFC6B3" stroke-width="1.5"/>
+<text x="674.0" y="454.0" font-size="20" letter-spacing="2" fill="#6B6459">PUBLIC REPOS</text>
+<text x="674.0" y="498.0" font-size="38" font-weight="700" fill="#1C1917">56</text>
+<path d="M900.5 420V516" stroke="#CFC6B3" stroke-width="1.5"/>
+<text x="922.0" y="454.0" font-size="20" letter-spacing="2" fill="#6B6459">PUSHED / 30 DAYS</text>
+<text x="922.0" y="498.0" font-size="38" font-weight="700" fill="#1C1917">26</text>
+</svg>

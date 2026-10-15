@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Build log: 29,443 contributions in the last 12 months, drawn as weekly columns">
+<style>
+text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,'Liberation Mono',monospace; }
+
+.scan { animation: scan 12s linear infinite; }
+@keyframes scan { from { transform: translateX(0px); } to { transform: translateX(1088px); } }
+.now { animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .45; } }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<defs>
+<pattern id="minor" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#131820" stroke-width="1"/></pattern>
+<pattern id="major" width="120" height="120" patternUnits="userSpaceOnUse"><rect width="120" height="120" fill="url(#minor)"/><path d="M120 0H0V120" fill="none" stroke="#1B222B" stroke-width="1"/></pattern>
+<radialGradient id="lamp" cx="0.72" cy="0.38" r="0.62"><stop offset="0" stop-color="#F59E0B" stop-opacity="0.16"/><stop offset="1" stop-color="#F59E0B" stop-opacity="0"/></radialGradient>
+<pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V10" stroke="#F59E0B" stroke-width="2.2"/></pattern>
+<pattern id="hatch2" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><path d="M0 0V12" stroke="#E7E5E4" stroke-width="1.6"/></pattern>
+<pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.6" fill="#E7E5E4"/></pattern>
+</defs>
+<rect width="1200" height="720" fill="#0B0D10"/>
+<rect width="1200" height="720" fill="url(#major)"/>
+<rect width="1200" height="720" fill="url(#lamp)"/>
+<rect x="16.5" y="16.5" width="1167" height="687" fill="none" stroke="#2D3540" stroke-width="1"/>
+<path d="M16 42V16H42" fill="none" stroke="#F59E0B" stroke-width="3"/>
+<path d="M1184 42V16H1158" fill="none" stroke="#F59E0B" stroke-width="3"/>
+<path d="M16 678V704H42" fill="none" stroke="#F59E0B" stroke-width="3"/>
+<path d="M1184 678V704H1158" fill="none" stroke="#F59E0B" stroke-width="3"/>
+<text x="56" y="70" font-size="22" letter-spacing="4" fill="#8B949E">SHEET 02 / BUILD LOG</text>
+<text x="1144" y="70" font-size="22" letter-spacing="4" text-anchor="end" fill="#F59E0B">SHEET 02 / 05</text>
+<path d="M56 92H1144" stroke="#2D3540" stroke-width="1"/>
+<text x="50.0" y="232.0" font-size="136" font-weight="700" letter-spacing="-4" fill="#E7E5E4">29,443</text>
+<text x="58.0" y="274.0" font-size="22" letter-spacing="3" fill="#F59E0B">CONTRIBUTIONS IN THE LAST 12 MONTHS</text>
+<text x="1144.0" y="210.0" font-size="64" font-weight="700" text-anchor="end" fill="#F59E0B">74</text>
+<text x="1144.0" y="244.0" font-size="20" letter-spacing="2" text-anchor="end" fill="#8B949E">DAY STREAK</text>
+<text x="900.0" y="210.0" font-size="64" font-weight="700" text-anchor="end" fill="#E7E5E4">26/56</text>
+<text x="900.0" y="244.0" font-size="20" letter-spacing="2" text-anchor="end" fill="#8B949E">REPOS PUSHED / 30D</text>
+<rect x="59.9" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="80.4" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="101.0" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="121.5" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="142.0" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="162.5" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="183.1" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="203.6" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="224.1" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="244.7" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="265.2" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="285.7" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="306.2" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="326.8" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="347.3" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="367.8" y="579.6" width="12.7" height="10.4" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="388.4" y="579.9" width="12.7" height="10.1" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="408.9" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="429.4" y="587.2" width="12.7" height="2.8" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="449.9" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="470.5" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="491.0" y="573.3" width="12.7" height="16.7" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="511.5" y="579.9" width="12.7" height="10.1" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="532.1" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="552.6" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="573.1" y="582.7" width="12.7" height="7.3" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="593.6" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="614.2" y="588.0" width="12.7" height="2.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="634.7" y="587.4" width="12.7" height="2.6" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="655.2" y="575.1" width="12.7" height="14.9" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="675.7" y="586.9" width="12.7" height="3.1" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="696.3" y="569.9" width="12.7" height="20.1" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="716.8" y="550.8" width="12.7" height="39.2" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="737.3" y="546.2" width="12.7" height="43.8" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="757.9" y="529.0" width="12.7" height="61.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="778.4" y="534.1" width="12.7" height="55.9" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="798.9" y="557.2" width="12.7" height="32.8" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="819.4" y="572.2" width="12.7" height="17.8" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="840.0" y="565.2" width="12.7" height="24.8" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="860.5" y="538.2" width="12.7" height="51.8" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="881.0" y="580.3" width="12.7" height="9.7" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="901.6" y="544.3" width="12.7" height="45.7" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="922.1" y="560.1" width="12.7" height="29.9" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="942.6" y="549.4" width="12.7" height="40.6" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="963.1" y="566.7" width="12.7" height="23.3" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="983.7" y="485.5" width="12.7" height="104.5" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="1004.2" y="357.4" width="12.7" height="232.6" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="1024.7" y="515.9" width="12.7" height="74.1" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="1045.3" y="501.2" width="12.7" height="88.8" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="1065.8" y="410.7" width="12.7" height="179.3" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="1086.3" y="458.9" width="12.7" height="131.1" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="1106.8" y="340.0" width="12.7" height="250.0" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect x="1127.4" y="466.1" width="12.7" height="123.9" fill="url(#hatch)" stroke="#F59E0B" stroke-width="1.4"/>
+<rect class="now" x="1127.4" y="466.1" width="12.7" height="123.9" fill="#F59E0B"/>
+<path d="M48 590H1152" stroke="#E7E5E4" stroke-width="3"/>
+<path d="M97.1 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="101.1" y="628.0" font-size="20" fill="#8B949E">NOV</text>
+<path d="M199.7 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="203.7" y="628.0" font-size="20" fill="#8B949E">DEC</text>
+<path d="M281.8 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="285.8" y="628.0" font-size="20" fill="#8B949E">JAN</text>
+<path d="M384.5 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="388.5" y="628.0" font-size="20" fill="#8B949E">FEB</text>
+<path d="M466.6 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="470.6" y="628.0" font-size="20" fill="#8B949E">MAR</text>
+<path d="M548.7 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="552.7" y="628.0" font-size="20" fill="#8B949E">APR</text>
+<path d="M630.8 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="634.8" y="628.0" font-size="20" fill="#8B949E">MAY</text>
+<path d="M733.4 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="737.4" y="628.0" font-size="20" fill="#8B949E">JUN</text>
+<path d="M815.5 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="819.5" y="628.0" font-size="20" fill="#8B949E">JUL</text>
+<path d="M897.7 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="901.7" y="628.0" font-size="20" fill="#8B949E">AUG</text>
+<path d="M1000.3 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="1004.3" y="628.0" font-size="20" fill="#8B949E">SEP</text>
+<path d="M1082.4 590V602" stroke="#8B949E" stroke-width="1.5"/>
+<text x="1086.4" y="628.0" font-size="20" fill="#8B949E">OCT</text>
+<path d="M1113.2 332.0V300.0" stroke="#E7E5E4" stroke-width="1.4"/>
+<text x="1103.2" y="318.0" font-size="22" font-weight="700" text-anchor="end" fill="#E7E5E4">PEAK WEEK 4,154</text>
+<path d="M918.2 642V652H1144.0V642" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<text x="906.2" y="658.0" font-size="20" letter-spacing="2" text-anchor="end" fill="#F59E0B">74-DAY STREAK</text>
+<g class="scan"><path d="M56 328V590" stroke="#F59E0B" stroke-width="1.5" opacity=".55"/></g>
+</svg>

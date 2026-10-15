@@ -1,0 +1,315 @@
+{
+ "handle": "kazii",
+ "title": "The Builder",
+ "github": "https://github.com/xkazm04",
+ "linkedin": "https://www.linkedin.com/in/michalkazdan",
+ "intro": "I build local-first software: tools that run on your machine, keep your data there, and put AI agents to work on real projects. Most of it is TypeScript and Rust, with some C++ and C# when the target is a VR headset.",
+ "principles": [
+  {
+   "name": "Local-first by default",
+   "text": "State lives in SQLite on the user's machine. Nothing leaves unless they send it."
+  },
+  {
+   "name": "Agents do the work, people approve it",
+   "text": "Claude Code runs headless, behind gates a person controls."
+  },
+  {
+   "name": "Ship the whole thing",
+   "text": "Desktop app, backend, observability and the site that explains it."
+  }
+ ],
+ "flagships": [
+  "personas",
+  "vibeman",
+  "lighttrack",
+  "pumper",
+  "ascent",
+  "politicas"
+ ],
+ "project_groups": [
+  {
+   "letter": "A",
+   "name": "Agent Platforms & Dev Tooling",
+   "projects": [
+    {
+     "name": "personas",
+     "url": "https://github.com/xkazm04/personas",
+     "stack": "TAURI 2 · REACT 19 · SQLITE",
+     "note": "Desktop app to build AI agents, wire them to tools and run teams of them"
+    },
+    {
+     "name": "vibeman",
+     "url": "https://github.com/xkazm04/vibeman",
+     "stack": "NEXT.JS 16 · CLAUDE CODE · OLLAMA",
+     "note": "Project control room: up to four concurrent Claude Code sessions"
+    },
+    {
+     "name": "pof",
+     "url": "https://github.com/xkazm04/pof",
+     "stack": "NEXT.JS · UNREAL ENGINE 5",
+     "note": "UE5 C++ companion: checklists, quality evals, embedded Claude Code"
+    },
+    {
+     "name": "ascent",
+     "url": "https://github.com/xkazm04/ascent",
+     "stack": "TYPESCRIPT",
+     "note": "Scores how AI-native a team is, 0-100 across nine weighted dimensions"
+    }
+   ]
+  },
+  {
+   "letter": "B",
+   "name": "Rust Infrastructure",
+   "projects": [
+    {
+     "name": "lighttrack",
+     "url": "https://github.com/xkazm04/lighttrack",
+     "stack": "RUST · SQLITE / POSTGRES / FIRESTORE",
+     "note": "Self-hosted LLM observability with LLM-as-judge scoring, one container"
+    },
+    {
+     "name": "pumper",
+     "url": "https://github.com/xkazm04/pumper",
+     "stack": "RUST · SQLITE",
+     "note": "One-binary scraper, durable job queue, HTTP > browser > Claude Code"
+    }
+   ]
+  },
+  {
+   "letter": "C",
+   "name": "Hands-First Vr / Meta Vr Start 2026",
+   "projects": [
+    {
+     "name": "garden-vr",
+     "url": "https://github.com/xkazm04/garden-vr",
+     "stack": "UNITY · META QUEST",
+     "note": "Two calm daily-ritual apps that grow a living garden from real habits"
+    },
+    {
+     "name": "mage-arena",
+     "url": "https://github.com/xkazm04/mage-arena",
+     "stack": "UNREAL ENGINE 5 · META QUEST",
+     "note": "Seated spell duel played with your hands"
+    }
+   ]
+  },
+  {
+   "letter": "D",
+   "name": "Media & Data",
+   "projects": [
+    {
+     "name": "gravitone",
+     "url": "https://github.com/xkazm04/gravitone",
+     "stack": "PYTHON · ARM",
+     "note": "CPU-only TTS with voice cloning: 4.26x realtime on Graviton4"
+    },
+    {
+     "name": "stat-reel",
+     "url": "https://github.com/xkazm04/stat-reel",
+     "stack": "TYPESCRIPT",
+     "note": "Licensed sports data turned into 1-3 minute data-viz videos"
+    },
+    {
+     "name": "systedo-case",
+     "url": "https://github.com/xkazm04/systedo-case",
+     "stack": "TYPESCRIPT",
+     "note": "Ad intelligence on your machine: Google Ads, Sklik, Meta, TikTok"
+    },
+    {
+     "name": "MiSu",
+     "url": "https://www.youtube.com/watch?v=Kam3LOzbPoI",
+     "stack": "PROMPT ENGINEERING",
+     "note": "AI-generated music album. I told it to make great music, and it does"
+    }
+   ]
+  },
+  {
+   "letter": "E",
+   "name": "Civic & Experiments",
+   "projects": [
+    {
+     "name": "politicas",
+     "url": "https://github.com/xkazm04/politicas",
+     "stack": "TYPESCRIPT · CS / EN",
+     "note": "Czech politics: MP scoring, votes, money ties and budgets on one graph"
+    },
+    {
+     "name": "athena-portable",
+     "url": "https://github.com/xkazm04/athena-portable",
+     "stack": "PYTHON · HACKATHON",
+     "note": "Personal agent that works inside your web apps and asks before it acts"
+    },
+    {
+     "name": "paypal",
+     "url": "https://github.com/xkazm04/paypal",
+     "stack": "RUST · HACKATHON",
+     "note": "The Table: agent-to-agent haggling over PayPal"
+    }
+   ]
+  }
+ ],
+ "toolbox": [
+  {
+   "group": "Languages",
+   "tools": [
+    [
+     "TypeScript",
+     "typescript.svg"
+    ],
+    [
+     "Rust",
+     "rust.svg"
+    ],
+    [
+     "Python",
+     "python.svg"
+    ],
+    [
+     "C++",
+     "cplusplus.svg"
+    ],
+    [
+     "C#",
+     "dotnet.svg (no C# mark exists in Simple Icons; .NET is the nearest)"
+    ]
+   ]
+  },
+  {
+   "group": "Apps",
+   "tools": [
+    [
+     "React 19",
+     "react.svg"
+    ],
+    [
+     "Next.js 16",
+     "nextdotjs.svg"
+    ],
+    [
+     "Tauri 2",
+     "tauri.svg"
+    ],
+    [
+     "Tailwind v4",
+     "tailwindcss.svg"
+    ]
+   ]
+  },
+  {
+   "group": "Data",
+   "tools": [
+    [
+     "SQLite",
+     "sqlite.svg"
+    ],
+    [
+     "PostgreSQL",
+     "postgresql.svg"
+    ],
+    [
+     "Firestore",
+     "firebase.svg"
+    ]
+   ]
+  },
+  {
+   "group": "AI",
+   "tools": [
+    [
+     "Claude Code",
+     "claude.svg"
+    ],
+    [
+     "MCP",
+     "modelcontextprotocol.svg"
+    ],
+    [
+     "LLM-as-judge",
+     null
+    ],
+    [
+     "Ollama",
+     "ollama.svg"
+    ]
+   ]
+  },
+  {
+   "group": "XR",
+   "tools": [
+    [
+     "Unreal Engine 5",
+     "unrealengine.svg"
+    ],
+    [
+     "Unity",
+     "unity.svg"
+    ],
+    [
+     "Meta Quest",
+     "meta.svg"
+    ]
+   ]
+  }
+ ],
+ "politicas_figures": {
+  "source": "politicas README; deterministic scorers, all links pending_review; sources Hlidac statu, ARES, Registr smluv, psp.cz",
+  "people_in_graph": 7045,
+  "current_mps": 207,
+  "mps_with_company_ties": 73,
+  "companies": 196,
+  "public_contracts": 2287,
+  "contracts_value_czk_bn": 19.76,
+  "roll_call_ballots": 406000,
+  "laws_in_registry": 24774
+ },
+ "vr": [
+  {
+   "file": "images/vr/garden-jar.jpg",
+   "project": "garden-vr",
+   "kind": "concept art",
+   "caption": "a glowing terrarium jar asks what you would like to grow"
+  },
+  {
+   "file": "images/vr/garden-sundial.jpg",
+   "project": "garden-vr",
+   "kind": "concept art",
+   "caption": "sundial break: reach to each mark"
+  },
+  {
+   "file": "images/vr/garden-night-moss.jpg",
+   "project": "garden-vr",
+   "kind": "art reference",
+   "caption": "night-moss direction"
+  },
+  {
+   "file": "images/vr/garden-field-notebook.jpg",
+   "project": "garden-vr",
+   "kind": "art reference",
+   "caption": "field-notebook direction"
+  },
+  {
+   "file": "images/vr/arena-storyboard.jpg",
+   "project": "mage-arena",
+   "kind": "storyboard",
+   "caption": "seated first-person view over the arena"
+  },
+  {
+   "file": "images/vr/arena-water-bolt.jpg",
+   "project": "mage-arena",
+   "kind": "VFX concept",
+   "caption": "water bolt"
+  },
+  {
+   "file": "images/vr/arena-unblockable.jpg",
+   "project": "mage-arena",
+   "kind": "VFX concept",
+   "caption": "unblockable telegraph, chalk-slate style"
+  },
+  {
+   "file": "images/vr/arena-warden.jpg",
+   "project": "mage-arena",
+   "kind": "character turnaround",
+   "caption": "the warden"
+  }
+ ]
+}
