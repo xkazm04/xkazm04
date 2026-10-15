@@ -1,21 +1,32 @@
-"""Extra profile panels in the drafting-sheet look: architecture, project cards,
-build-log timeline, pulse dashboard, VR corner, toolbox strip, civic spotlight.
+"""Extra profile panels in the drafting-sheet look: architecture, project cards, parts list,
+build-log timeline, pulse dashboard, VR corner, toolbox stencil, civic spotlight, section dividers.
 
 Each renderer returns an SVG string for a theme from brand.THEMES. Dynamic ones
-take data from update_readme.py; the rest are static.
+take data from update_readme.py; the rest are static. Figures are numbered in page order
+and every one carries a title block (DWG = figure number).
 """
 
-from datetime import datetime
+import base64
+import math
+import os
+from datetime import datetime, timezone
 from html import escape
 
-from brand import STYLE, THEMES, _sheet
+from brand import STYLE, THEMES, _sheet, dim, title_block, vdim
 
 W = 1200
+REV = f"{datetime.now(timezone.utc):%Y.%m}"
 
 
 def _open(t, w, h, label, extra=""):
     return [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{escape(label)}">',
             STYLE, extra, _sheet(t, w, h)]
+
+
+def _close(o, t, h, dwg):
+    o.append(title_block(t, W, h, dwg, REV))
+    o.append("</svg>\n")
+    return "\n".join(o)
 
 
 def _title(t, text, y=64):
@@ -30,17 +41,27 @@ def _arrow(t, x1, y1, x2, y2, cls="", color=None, dash=""):
 
 
 def _ang(x1, y1, x2, y2):
-    import math
     return math.degrees(math.atan2(y2 - y1, x2 - x1))
+
+
+def _frac(points, i):
+    """Fraction of a polyline's length covered up to point i (for animateMotion keyPoints)."""
+    seg = [math.dist(a, b) for a, b in zip(points, points[1:])]
+    return sum(seg[:i]) / sum(seg)
+
+
+def _poly(points):
+    return "M" + "L".join(f"{x} {y}" for x, y in points)
 
 
 # --------------------------------------------------------------------------- architecture
 
 def render_architecture(theme):
     t = THEMES[theme]
-    h = 330
+    h = 384
     o = _open(t, W, h, "Local-first architecture: your machine holds SQLite, agents propose, a human approval gate decides")
-    o.append(_title(t, "FIG. 02 / LOCAL-FIRST ARCHITECTURE"))
+    o.append(_title(t, "FIG. 01 / LOCAL-FIRST ARCHITECTURE"))
+    o.append(dim(t, 56, 856, 80, "ALL STATE LOCAL", ext=92))
     # machine boundary
     o.append(f'<rect x="56.5" y="92.5" width="800" height="196" rx="4" fill="none" stroke="{t["accent"]}" stroke-dasharray="8 6"/>')
     o.append(f'<text x="72" y="112" font-size="11" letter-spacing="2" fill="{t["accent"]}">YOUR MACHINE</text>')
@@ -66,28 +87,49 @@ def render_architecture(theme):
     o.append(_arrow(t, 700, 190, 750, 190, "draw", t["accent"]))
     o.append(f'<path class="draw" d="M790 230V264H150V246" fill="none" stroke="{t["muted"]}" stroke-width="1.2" stroke-dasharray="5 5"/>')
     o.append(f'<text x="470" y="258" font-size="11" fill="{t["muted"]}">result written back locally</text>')
-    # animated token travelling the pipeline
-    o.append(f'<circle r="5" fill="{t["accent"]}" class="token"><animateMotion dur="5s" repeatCount="indefinite" path="M204 200L330 190L480 190L570 190L700 190L790 190"/></circle>')
+
+    # Animated flow on a 6s loop: one proposal is approved at the gate, acted on and written back
+    # to SQLite; a second (offset 3s) is rejected at the gate and goes no further.
+    dur = "6s"
+    ok = [(204, 200), (330, 190), (480, 190), (570, 190), (635, 190), (700, 190), (790, 190), (790, 264), (150, 264), (150, 246)]
+    g = _frac(ok, 4)
+    o.append(f'<circle r="5" fill="{t["accent"]}" opacity="0">'
+             f'<animateMotion dur="{dur}" repeatCount="indefinite" path="{_poly(ok)}" calcMode="linear" keyPoints="0;{g:.3f};{g:.3f};1;1" keyTimes="0;.3;.45;.92;1"/>'
+             f'<animate attributeName="opacity" dur="{dur}" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.03;.9;.94;1"/></circle>')
+    o.append(f'<circle cx="635" cy="190" r="0" fill="none" stroke="{t["accent"]}" stroke-width="1.5">'
+             f'<animate attributeName="r" dur="{dur}" repeatCount="indefinite" values="6;6;44;44" keyTimes="0;.3;.42;1"/>'
+             f'<animate attributeName="opacity" dur="{dur}" repeatCount="indefinite" values="0;0;.9;0;0" keyTimes="0;.299;.3;.42;1"/></circle>')
+    o.append(f'<text x="635" y="142" text-anchor="middle" font-size="10" letter-spacing="2" fill="{t["accent"]}" opacity="0">APPROVED'
+             f'<animate attributeName="opacity" dur="{dur}" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;.31;.34;.47;.52;1"/></text>')
+    o.append(f'<ellipse cx="{cx}" cy="{cy}" rx="54" ry="14" fill="none" stroke="{t["accent"]}" stroke-width="2.5" opacity="0">'
+             f'<animate attributeName="opacity" dur="{dur}" repeatCount="indefinite" values="0;0;1;0" keyTimes="0;.9;.93;1"/></ellipse>')
+    no = ok[:5]
+    o.append(f'<circle r="5" fill="{t["muted"]}" opacity="0">'
+             f'<animateMotion dur="{dur}" begin="3s" repeatCount="indefinite" path="{_poly(no)}" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.3;1"/>'
+             f'<animate attributeName="opacity" dur="{dur}" begin="3s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.03;.36;.44;1"/></circle>')
+    o.append(f'<text x="635" y="142" text-anchor="middle" font-size="10" letter-spacing="2" fill="{t["muted"]}" opacity="0">REJECTED'
+             f'<animate attributeName="opacity" dur="{dur}" begin="3s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;.31;.34;.42;.46;1"/></text>')
+
     # outside: only on explicit send
     o.append(f'<rect x="884.5" y="150.5" width="260" height="80" fill="none" stroke="{t["line"]}" stroke-dasharray="4 4"/>')
     o.append(f'<text x="1014" y="186" text-anchor="middle" font-size="14" fill="{t["ink"]}">cloud / third parties</text>')
     o.append(f'<text x="1014" y="208" text-anchor="middle" font-size="11" fill="{t["muted"]}">only what you send</text>')
     o.append(f'<path d="M830 190H884" stroke="{t["accent"]}" stroke-width="1.5" stroke-dasharray="3 5"/>')
     o.append(f'<text x="857" y="180" text-anchor="middle" font-size="16" fill="{t["accent"]}">?</text>')
-    o.append(f'<text x="56" y="312" font-size="11" fill="{t["muted"]}">Agents do the work, people approve it. Nothing leaves unless you send it.</text>')
-    o.append("</svg>\n")
-    return "\n".join(o)
+    o.append(f'<text x="56" y="322" font-size="11" fill="{t["muted"]}">Agents do the work, people approve it. Nothing leaves unless you send it.</text>')
+    return _close(o, t, h, "01")
 
 
-# --------------------------------------------------------------------------- project cards
+# --------------------------------------------------------------------------- project cards (exploded views)
 
+# (name, one-liner, layers top to bottom as (role, label))
 CARDS = [
-    ("personas", "AI agent desktop app", ["TAURI 2", "REACT 19", "SQLITE"]),
-    ("vibeman", "Control room for Claude Code", ["NEXT.JS 16", "OLLAMA"]),
-    ("lighttrack", "LLM observability + judge", ["RUST", "SQLITE / PG"]),
-    ("pumper", "Local-first scraping service", ["RUST", "SQLITE QUEUE"]),
-    ("ascent", "0-100 AI-maturity score", ["TYPESCRIPT", "9 DIMENSIONS"]),
-    ("politicas", "Czech politics accountability", ["TYPESCRIPT", "CS / EN"]),
+    ("personas", "AI agent desktop app", [("UI", "REACT 19"), ("SHELL", "TAURI 2 / RUST"), ("DATA", "SQLITE")]),
+    ("vibeman", "Control room for Claude Code", [("UI", "NEXT.JS 16"), ("RUN", "CLAUDE CODE x4"), ("LOCAL", "OLLAMA")]),
+    ("lighttrack", "LLM observability + judge", [("UI", "DASHBOARD"), ("CORE", "RUST / JUDGE"), ("DATA", "SQLITE / PG / FS")]),
+    ("pumper", "Local-first scraping service", [("API", "ONE BINARY"), ("CORE", "HTTP > BROWSER > CC"), ("DATA", "SQLITE QUEUE")]),
+    ("ascent", "0-100 AI-maturity score", [("OUT", "0-100 SCORE"), ("CORE", "9 DIMENSIONS"), ("IN", "REPO EVIDENCE")]),
+    ("politicas", "Czech politics accountability", [("UI", "CS / EN SITE"), ("CORE", "SCORERS"), ("DATA", "ENTITY GRAPH")]),
 ]
 
 
@@ -96,13 +138,24 @@ def _age(pushed, now):
     return d, ("today" if d == 0 else f"{d}d ago")
 
 
+def _slab(t, cx, cy, hl):
+    """One isometric layer: top face rhombus plus a 6px edge."""
+    hw, hh, th = 56, 13, 6
+    edge = (f'<path d="M{cx - hw} {cy}L{cx} {cy + hh}L{cx + hw} {cy}V{cy + th}L{cx} {cy + hh + th}L{cx - hw} {cy + th}Z" '
+            f'fill="{t["grid_major"]}" stroke="{t["muted"]}" stroke-width="1"/>')
+    top = (f'<path d="M{cx - hw} {cy}L{cx} {cy - hh}L{cx + hw} {cy}L{cx} {cy + hh}Z" fill="{t["bg"]}" '
+           f'stroke="{t["accent"] if hl else t["ink"]}" stroke-width="{1.6 if hl else 1.1}"/>')
+    tint = f'<path d="M{cx - hw} {cy}L{cx} {cy - hh}L{cx + hw} {cy}L{cx} {cy + hh}Z" fill="{t["accent"]}" opacity=".18"/>' if hl else ""
+    return edge + top + tint
+
+
 def render_cards(theme, pushed_by_name, now):
     t = THEMES[theme]
-    cw, ch, gap = 360, 150, 30
-    h = 92 + 2 * ch + gap + 40
-    o = _open(t, W, h, "Flagship project cards")
-    o.append(_title(t, "FIG. 03 / FLAGSHIPS"))
-    for i, (name, line, chips) in enumerate(CARDS):
+    cw, ch, gap = 360, 196, 30
+    h = 88 + 2 * ch + gap + 74
+    o = _open(t, W, h, "Flagship projects drawn as exploded views of their layers")
+    o.append(_title(t, "FIG. 05 / FLAGSHIPS / EXPLODED VIEWS"))
+    for i, (name, line, layers) in enumerate(CARDS):
         x = 56 + (i % 3) * (cw + gap - 4)
         y = 88 + (i // 3) * (ch + gap)
         p = pushed_by_name.get(name)
@@ -111,19 +164,108 @@ def render_cards(theme, pushed_by_name, now):
         o.append(f'<g class="fade" style="animation-delay:{i * 0.12:.2f}s">')
         o.append(f'<rect x="{x}.5" y="{y}.5" width="{cw}" height="{ch}" fill="{t["bg"]}" stroke="{t["line"]}"/>')
         o.append(f'<path d="M{x} {y + 18}V{y}H{x + 18}" fill="none" stroke="{t["accent"]}" stroke-width="2"/>')
-        o.append(f'<text x="{x + 22}" y="{y + 44}" font-size="22" font-weight="700" fill="{t["ink"]}">{escape(name)}</text>')
-        o.append(f'<text x="{x + 22}" y="{y + 70}" font-size="12" fill="{t["muted"]}">{escape(line)}</text>')
-        cx = x + 22
-        for c in chips:
-            cwid = 9 + len(c) * 7.2
-            o.append(f'<rect x="{cx}" y="{y + 88}" width="{cwid:.0f}" height="22" fill="none" stroke="{t["line"]}"/>'
-                     f'<text x="{cx + 6}" y="{y + 103}" font-size="10" letter-spacing="1" fill="{t["ink"]}">{c}</text>')
-            cx += cwid + 8
-        o.append(f'<circle cx="{x + 26}" cy="{y + 132}" r="4" fill="{dot}"/>'
-                 f'<text x="{x + 38}" y="{y + 136}" font-size="11" fill="{t["muted"]}">last push {label}</text>')
+        o.append(f'<text x="{x + 22}" y="{y + 40}" font-size="22" font-weight="700" fill="{t["ink"]}">{escape(name)}</text>')
+        o.append(f'<text x="{x + 22}" y="{y + 62}" font-size="12" fill="{t["muted"]}">{escape(line)}</text>')
+        lab = f"last push {label}"
+        o.append(f'<circle cx="{x + cw - 16 - len(lab) * 6.6 - 10:.0f}" cy="{y + 25}" r="4" fill="{dot}"/>'
+                 f'<text x="{x + cw - 16}" y="{y + 29}" text-anchor="end" font-size="11" fill="{t["muted"]}">{lab}</text>')
         o.append("</g>")
-    o.append("</svg>\n")
-    return "\n".join(o)
+        # exploded stack: guides first, then slabs bottom-up so upper layers overlap lower ones
+        sx, ys = x + 78, [y + 98, y + 132, y + 166]
+        o.append(f'<path d="M{sx - 56} {ys[0]}V{ys[2]} M{sx + 56} {ys[0]}V{ys[2]} M{sx} {ys[0] + 13}V{ys[2] + 13}" '
+                 f'stroke="{t["muted"]}" stroke-width=".8" stroke-dasharray="2 3" opacity=".7"/>')
+        delay = .3 + i * .12
+        for k in (2, 1, 0):
+            shift = (1 - k) * (ys[1] - ys[0])  # collapsed onto the middle layer, then pulled apart
+            anim = (f'<animateTransform attributeName="transform" type="translate" from="0 {shift}" to="0 0" '
+                    f'begin="{delay:.2f}s" dur=".9s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .7 .3 1"/>') if shift else ""
+            o.append(f'<g transform="translate(0 {shift})">{_slab(t, sx, ys[k], k == 0)}{anim}</g>' if shift else _slab(t, sx, ys[k], False))
+        for k, (role, lbl) in enumerate(layers):
+            ly = ys[k]
+            o.append(f'<g class="fade" style="animation-delay:{delay + .8:.2f}s">'
+                     f'<path d="M{sx + 56} {ly}H{x + 160}" stroke="{t["muted"]}" stroke-width=".8"/><circle cx="{sx + 56}" cy="{ly}" r="2" fill="{t["muted"]}"/>'
+                     f'<text x="{x + 168}" y="{ly + 4}" font-size="9" letter-spacing="1" fill="{t["muted"]}">{role} '
+                     f'<tspan font-size="11" fill="{t["accent"] if k == 0 else t["ink"]}">{escape(lbl)}</tspan></text></g>')
+    return _close(o, t, h, "05")
+
+
+# --------------------------------------------------------------------------- parts list (assemblies)
+
+ASSEMBLIES = [
+    ("A", "AGENT PLATFORMS & DEV TOOLING", [
+        ("personas", "https://github.com/xkazm04/personas", "TAURI 2 · REACT 19 · SQLITE", "Desktop app to build AI agents, wire them to tools and run teams of them"),
+        ("vibeman", "https://github.com/xkazm04/vibeman", "NEXT.JS 16 · CLAUDE CODE · OLLAMA", "Project control room: up to four concurrent Claude Code sessions"),
+        ("pof", "https://github.com/xkazm04/pof", "NEXT.JS · UNREAL ENGINE 5", "UE5 C++ companion: checklists, quality evals, embedded Claude Code"),
+        ("ascent", "https://github.com/xkazm04/ascent", "TYPESCRIPT", "Scores how AI-native a team is, 0-100 across nine weighted dimensions"),
+    ]),
+    ("B", "RUST INFRASTRUCTURE", [
+        ("lighttrack", "https://github.com/xkazm04/lighttrack", "RUST · SQLITE / POSTGRES / FIRESTORE", "Self-hosted LLM observability with LLM-as-judge scoring, one container"),
+        ("pumper", "https://github.com/xkazm04/pumper", "RUST · SQLITE", "One-binary scraper, durable job queue, HTTP > browser > Claude Code"),
+    ]),
+    ("C", "HANDS-FIRST VR / META VR START 2026", [
+        ("garden-vr", "https://github.com/xkazm04/garden-vr", "UNITY · META QUEST", "Two calm daily-ritual apps that grow a living garden from real habits"),
+        ("mage-arena", "https://github.com/xkazm04/mage-arena", "UNREAL ENGINE 5 · META QUEST", "Seated spell duel played with your hands"),
+    ]),
+    ("D", "MEDIA & DATA", [
+        ("gravitone", "https://github.com/xkazm04/gravitone", "PYTHON · ARM", "CPU-only TTS with voice cloning: 4.26x realtime on Graviton4"),
+        ("stat-reel", "https://github.com/xkazm04/stat-reel", "TYPESCRIPT", "Licensed sports data turned into 1-3 minute data-viz videos"),
+        ("systedo-case", "https://github.com/xkazm04/systedo-case", "TYPESCRIPT", "Ad intelligence on your machine: Google Ads, Sklik, Meta, TikTok"),
+        ("MiSu", "https://www.youtube.com/watch?v=Kam3LOzbPoI", "PROMPT ENGINEERING", "AI-generated music album. I told it to make great music, and it does"),
+    ]),
+    ("E", "CIVIC & EXPERIMENTS", [
+        ("politicas", "https://github.com/xkazm04/politicas", "TYPESCRIPT · CS / EN", "Czech politics: MP scoring, votes, money ties and budgets on one graph"),
+        ("athena-portable", "https://github.com/xkazm04/athena-portable", "PYTHON · HACKATHON", "Personal agent that works inside your web apps and asks before it acts"),
+        ("paypal", "https://github.com/xkazm04/paypal", "RUST · HACKATHON", "The Table: agent-to-agent haggling over PayPal"),
+    ]),
+]
+
+
+def render_parts(theme):
+    t = THEMES[theme]
+    row = 24
+    n = sum(1 + len(items) for _, _, items in ASSEMBLIES)
+    top = 92
+    body = top + 30
+    bottom = body + n * row
+    h = bottom + 92
+    cols = [(72, "ITEM"), (124, "PART"), (318, "MATERIAL"), (590, "NOTE")]
+    o = _open(t, W, h, "Parts list: every project grouped into sub-assemblies, with material and note")
+    o.append(_title(t, "FIG. 06 / PARTS LIST"))
+    o.append(f'<text x="{W - 56}" y="64" text-anchor="end" font-size="11" fill="{t["muted"]}">QTY {sum(len(i) for _, _, i in ASSEMBLIES)} / links below</text>')
+    o.append(f'<rect x="56.5" y="{top}.5" width="{W - 112}" height="{bottom - top}" fill="{t["bg"]}" stroke="{t["ink"]}" stroke-width="1.2"/>')
+    o.append(f'<path d="M56 {body}.5H{W - 56}" stroke="{t["ink"]}" stroke-width="1.2"/>')
+    for x, label in cols:
+        o.append(f'<text x="{x}" y="{top + 20}" font-size="10" letter-spacing="2" fill="{t["muted"]}">{label}</text>')
+    for x, _ in cols[1:]:
+        o.append(f'<path d="M{x - 12}.5 {top}V{bottom}" stroke="{t["line"]}"/>')
+    y, item = body, 0
+    for gi, (letter, gname, items) in enumerate(ASSEMBLIES):
+        o.append(f'<rect x="57" y="{y + 1}" width="{W - 114}" height="{row - 1}" fill="{t["grid_major"]}"/>'
+                 f'<text x="72" y="{y + 16}" font-size="11" font-weight="700" letter-spacing="2" fill="{t["accent"]}">{letter}</text>'
+                 f'<text x="124" y="{y + 16}" font-size="10" letter-spacing="2" fill="{t["ink"]}">SUB-ASSEMBLY / {escape(gname)}</text>')
+        y += row
+        for name, _, material, note in items:
+            item += 1
+            o.append(f'<g class="fade" style="animation-delay:{item * .04:.2f}s">'
+                     f'<path d="M56 {y + row}.5H{W - 56}" stroke="{t["line"]}" stroke-dasharray="2 3"/>'
+                     f'<text x="72" y="{y + 16}" font-size="11" fill="{t["accent"]}">{item:02d}</text>'
+                     f'<text x="124" y="{y + 16}" font-size="12" font-weight="700" fill="{t["ink"]}">{escape(name)}</text>'
+                     f'<text x="318" y="{y + 16}" font-size="9" letter-spacing="1" fill="{t["muted"]}">{escape(material)}</text>'
+                     f'<text x="590" y="{y + 16}" font-size="11" fill="{t["ink"]}">{escape(note)}</text></g>')
+            y += row
+    return _close(o, t, h, "06")
+
+
+def parts_links():
+    """README companion to the parts list: numbered links, one line per sub-assembly."""
+    lines, item = [], 0
+    for letter, _, items in ASSEMBLIES:
+        links = []
+        for name, url, _, _ in items:
+            item += 1
+            links.append(f'<a href="{url}">{item:02d} {escape(name)}</a>')
+        lines.append(f"<b>{letter}</b> &nbsp;" + " · ".join(links))
+    return '<p align="center"><sub>\n' + "<br/>\n".join(lines) + "\n</sub></p>"
 
 
 # --------------------------------------------------------------------------- timeline
@@ -131,7 +273,7 @@ def render_cards(theme, pushed_by_name, now):
 def render_timeline(theme, repos, lang_color, now):
     """repos: [(name, pushed_dt, language)] newest first."""
     t = THEMES[theme]
-    h = 310
+    h = 354
     o = _open(t, W, h, "Timeline of recent repository pushes")
     o.append(_title(t, "FIG. 04 / PUSH TIMELINE / LAST 12 MONTHS"))
     x0, x1, ay = 70, 1130, 190
@@ -143,8 +285,7 @@ def render_timeline(theme, repos, lang_color, now):
         x = x0 + frac * (x1 - x0)
         mo = ((now.month - 12 + m - 1) % 12) + 1
         o.append(f'<path d="M{x:.0f} {ay - 6}V{ay + 6}" stroke="{t["muted"]}"/>')
-        if m < 13:
-            o.append(f'<text x="{x:.0f}" y="{ay + 24}" text-anchor="middle" font-size="10" fill="{t["muted"]}">{datetime(2000, mo, 1):%b}</text>')
+        o.append(f'<text x="{x:.0f}" y="{ay + 24}" text-anchor="middle" font-size="10" fill="{t["muted"]}">{datetime(2000, mo, 1):%b}</text>')
     seen = {}
     for name, p, lang in repos:
         age = (now - p).days
@@ -161,8 +302,8 @@ def render_timeline(theme, repos, lang_color, now):
         o.append(f'<circle class="fade" style="animation-delay:{min(stack, 8) * .1:.1f}s" cx="{x:.0f}" cy="{y}" r="4.5" fill="{col}"/>')
     # newest pushes cluster on the right edge, so name them in one callout line
     recent = " · ".join(escape(n) for n, _, _ in repos[:6])
-    o.append(f'<path d="M{x1} {ay + 34}V270H{x1 - 24}" stroke="{t["line"]}" fill="none"/>')
-    o.append(f'<text x="{x1 - 34}" y="274" text-anchor="end" font-size="12" fill="{t["ink"]}"><tspan fill="{t["accent"]}">LATEST</tspan>  {recent}</text>')
+    o.append(f'<path d="M{x1} {ay + 34}V262H{x1 - 24}" stroke="{t["line"]}" fill="none"/>')
+    o.append(f'<text x="{x1 - 34}" y="266" text-anchor="end" font-size="12" fill="{t["ink"]}"><tspan fill="{t["accent"]}">LATEST</tspan>  {recent}</text>')
     # legend
     langs = []
     for _, _, l in repos:
@@ -174,17 +315,16 @@ def render_timeline(theme, repos, lang_color, now):
                  f'<text x="{lx + 16}" y="100" font-size="11" fill="{t["muted"]}">{escape(l)}</text>')
         lx += 30 + len(l) * 8
     o.append(f'<text x="{x1}" y="64" text-anchor="end" font-size="11" fill="{t["muted"]}">{len(repos)} repos pushed</text>')
-    o.append("</svg>\n")
-    return "\n".join(o)
+    return _close(o, t, h, "04")
 
 
 # --------------------------------------------------------------------------- pulse dashboard
 
 def render_pulse(theme, weeks, langs):
     t = THEMES[theme]
-    h = 360
+    h = 388
     o = _open(t, W, h, "Weekly contribution pulse and language donut")
-    o.append(_title(t, "FIG. 05 / PULSE"))
+    o.append(_title(t, "FIG. 03 / PULSE"))
     wk = [sum(w) for w in weeks][-26:]
     mx = max(wk) or 1
     cur = wk[-1] if wk else 0
@@ -199,15 +339,17 @@ def render_pulse(theme, weeks, langs):
                  f'<text x="{x}" y="156" font-size="30" font-weight="700" fill="{t["ink"]}">{val}</text>')
     # bars
     bx, by, bh, bw, bg = 56, 320, 120, 18, 5
-    o.append(f'<path d="M{bx} {by}H{bx + len(wk) * (bw + bg)}" stroke="{t["ink"]}"/>')
+    bars_end = bx + len(wk) * (bw + bg)
+    o.append(f'<path d="M{bx} {by}H{bars_end}" stroke="{t["ink"]}"/>')
     for i, v in enumerate(wk):
         hh = max(2, v / mx * bh)
         col = t["accent"] if i == len(wk) - 1 else t["heat"][3] if v >= avg else t["heat"][1]
         o.append(f'<rect class="fade" style="animation-delay:{i * .03:.2f}s" x="{bx + i * (bw + bg)}" y="{by - hh:.0f}" width="{bw}" height="{hh:.0f}" fill="{col}"/>')
-    o.append(f'<path d="M{bx} {by - avg / mx * bh:.0f}H{bx + len(wk) * (bw + bg)}" stroke="{t["muted"]}" stroke-dasharray="4 4"/>')
+    o.append(f'<path d="M{bx} {by - avg / mx * bh:.0f}H{bars_end}" stroke="{t["muted"]}" stroke-dasharray="4 4"/>')
+    if best:
+        o.append(vdim(t, bars_end + 18, by - bh, by, f"BEST {best}", ext=bars_end + 2))
     o.append(f'<text x="{bx}" y="{by + 20}" font-size="10" fill="{t["muted"]}">26 weeks of contributions, dashed = average</text>')
     # donut
-    import math
     cx, cy, r, sw = 930, 196, 80, 26
     circ = 2 * math.pi * r
     off = 0.0
@@ -221,115 +363,113 @@ def render_pulse(theme, weeks, langs):
         o.append(f'<rect x="1040" y="{ly - 9}" width="10" height="10" fill="{t["langs"][i]}"/>'
                  f'<text x="1058" y="{ly}" font-size="12" fill="{t["ink"]}">{escape(name)} <tspan fill="{t["muted"]}">{pct:.0f}%</tspan></text>')
     o.append(f'<text x="{cx}" y="{cy + 4}" text-anchor="middle" font-size="12" letter-spacing="2" fill="{t["muted"]}">CODE MIX</text>')
-    o.append("</svg>\n")
-    return "\n".join(o)
+    return _close(o, t, h, "03")
 
 
-# --------------------------------------------------------------------------- VR corner (synthetic frames)
+# --------------------------------------------------------------------------- VR corner (concept art)
 
-def _frame_garden(x, y, w, h, t, v=0):
-    """Stylised calm garden: dusk sky, hills, glowing plants, floating hand rings."""
-    cid = f"g{x}"
-    g = [f'<clipPath id="{cid}"><rect x="{x}" y="{y}" width="{w}" height="{h}"/></clipPath>',
-         f'<linearGradient id="{cid}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2A41"/><stop offset=".65" stop-color="#C2704A"/><stop offset="1" stop-color="#F4B860"/></linearGradient>',
-         f'<g clip-path="url(#{cid})">',
-         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="url(#{cid}s)"/>',
-         f'<circle cx="{x + w * (.72 - .4 * v)}" cy="{y + h * (.48 - .1 * v)}" r="26" fill="#FBE3A8" opacity=".9"/>',
-         f'<path d="M{x} {y + h * .72}Q{x + w * .3} {y + h * .52} {x + w * .55} {y + h * .70}T{x + w} {y + h * .64}V{y + h}H{x}Z" fill="#2F4A3A"/>',
-         f'<path d="M{x} {y + h * .84}Q{x + w * .4} {y + h * .70} {x + w} {y + h * .82}V{y + h}H{x}Z" fill="#1F3A2C"/>']
-    for i, (px, ph) in enumerate([(.18, 40), (.32, 62), (.48, 34), (.63, 70), (.80, 48)][: 5 - v]):
-        bx, by = x + w * (px + .05 * v * (i % 2)), y + h * .9
-        g.append(f'<path d="M{bx} {by}V{by - ph}" stroke="#7FB77E" stroke-width="2.5"/>')
-        g.append(f'<circle cx="{bx}" cy="{by - ph}" r="{7 + i % 3 * 2}" fill="#F7C5D0"/><circle cx="{bx}" cy="{by - ph}" r="3" fill="#FBE3A8"/>')
-    for i in range(14):
-        g.append(f'<circle cx="{x + 14 + (i * 53) % (w - 28)}" cy="{y + 20 + (i * 37) % int(h * .5)}" r="1.4" fill="#FBE3A8" opacity=".8"/>')
-    # hand pinch ring
-    hx, hy = x + w * (.44 + .2 * v), y + h * (.56 - .12 * v)
-    g.append(f'<circle cx="{hx}" cy="{hy}" r="22" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="3 4" opacity=".85"/>'
-             f'<circle cx="{hx}" cy="{hy}" r="4" fill="#FFFFFF"/>')
-    g.append("</g>")
-    return "".join(g)
+# Downscaled art from the garden-vr and mage-arena repos, kept in assets/vr. SVGs shown
+# through <img> can't load external files, so each frame is inlined as a data URI.
+VR_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "vr")
+VR_FRAMES = [("garden-vr", "Unity / Meta Quest", "frame 01 / what to grow", "garden-01.jpg"),
+             ("garden-vr", "Unity / Meta Quest", "frame 02 / sundial break", "garden-02.jpg"),
+             ("mage-arena", "UE5 / Meta Quest", "storyboard / seated duel", "arena-01.jpg"),
+             ("mage-arena", "UE5 / Meta Quest", "concept / unblockable", "arena-02.jpg")]
 
 
-def _frame_arena(x, y, w, h, t, v=0):
-    """Stylised seated duel: dark arena, glowing rune circle, spell bolts, opponent silhouette."""
-    cid = f"a{x}"
-    g = [f'<clipPath id="{cid}"><rect x="{x}" y="{y}" width="{w}" height="{h}"/></clipPath>',
-         f'<radialGradient id="{cid}r" cx=".5" cy=".55" r=".7"><stop offset="0" stop-color="#3B1F5C"/><stop offset="1" stop-color="#0A0712"/></radialGradient>',
-         f'<g clip-path="url(#{cid})">',
-         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="url(#{cid}r)"/>']
-    for k in range(5):
-        g.append(f'<path d="M{x + k * w / 4} {y}V{y + h * .6}" stroke="#2A1844" stroke-width="10"/>')
-    cx, cy = x + w / 2, y + h * .8
-    for rr, op in [(100, .9), (70, .6)]:
-        g.append(f'<ellipse cx="{cx}" cy="{cy}" rx="{rr}" ry="{rr * .22}" fill="none" stroke="{"#9B6BFF" if v == 0 else "#FF7A59"}" stroke-width="1.6" opacity="{op}"/>')
-    # opponent
-    ox, oy = x + w * (.5 + .18 * v), y + h * (.42 + .06 * v)
-    g.append(f'<path d="M{ox - 22} {oy + 50}Q{ox} {oy - 6} {ox + 22} {oy + 50}Z" fill="#05030A"/><circle cx="{ox}" cy="{oy - 8}" r="10" fill="#05030A"/>'
-             f'<circle cx="{ox - 4}" cy="{oy - 9}" r="1.6" fill="#7DF9FF"/><circle cx="{ox + 4}" cy="{oy - 9}" r="1.6" fill="#7DF9FF"/>')
-    # bolts
-    g.append(f'<path d="M{x + w * .18} {y + h * .9}L{x + w * .38} {y + h * .62}L{x + w * .30} {y + h * .60}L{ox - 24} {oy + 20}" fill="none" stroke="#7DF9FF" stroke-width="2.5"/>')
-    g.append(f'<circle cx="{x + w * .18}" cy="{y + h * .9}" r="9" fill="#7DF9FF" opacity=".35"/><circle cx="{x + w * .18}" cy="{y + h * .9}" r="4" fill="#E8FFFF"/>')
-    g.append(f'<path d="M{x + w * .82} {y + h * .9}L{x + w * .66} {y + h * .66}" fill="none" stroke="#FF7A59" stroke-width="2.5" stroke-dasharray="6 4"/>')
-    g.append("</g>")
-    return "".join(g)
+def _data_uri(name):
+    with open(os.path.join(VR_DIR, name), "rb") as f:
+        return "data:image/jpeg;base64," + base64.b64encode(f.read()).decode("ascii")
 
 
 def render_vr(theme):
     t = THEMES[theme]
-    h = 380
-    o = _open(t, W, h, "VR corner: synthetic example frames for garden-vr and mage-arena")
-    o.append(_title(t, "FIG. 06 / HANDS-FIRST VR"))
-    o.append(f'<text x="{W - 56}" y="64" text-anchor="end" font-size="11" fill="{t["muted"]}">SYNTHETIC FRAMES / replace with Quest captures</text>')
-    fw, fh = 262, 200
-    specs = [("garden-vr", "Unity / Meta Quest", "frame 01 / pinch to plant", _frame_garden),
-             ("garden-vr", "Unity / Meta Quest", "frame 02 / daily ritual", _frame_garden),
-             ("mage-arena", "UE5 / Meta Quest", "frame 01 / seated duel", _frame_arena),
-             ("mage-arena", "UE5 / Meta Quest", "frame 02 / spell cast", _frame_arena)]
-    for i, (name, sub, cap, fn) in enumerate(specs):
+    fw, fh = 262, 147
+    y = 92
+    h = y + fh + 152
+    o = _open(t, W, h, "VR corner: concept frames from garden-vr and mage-arena")
+    o.append(_title(t, "FIG. 07 / HANDS-FIRST VR"))
+    o.append(f'<text x="{W - 56}" y="64" text-anchor="end" font-size="11" fill="{t["muted"]}">CONCEPT FRAMES / Meta VR Start 2026</text>')
+    for i, (name, sub, cap, img) in enumerate(VR_FRAMES):
         x = 56 + i * (fw + 30)
-        y = 92
-        # offset second frame of each pair so they differ a bit
-        o.append(fn(x, y, fw, fh, t, i % 2))
+        o.append(f'<image class="fade" style="animation-delay:{i * .12:.2f}s" x="{x}" y="{y}" width="{fw}" height="{fh}" '
+                 f'preserveAspectRatio="xMidYMid slice" href="{_data_uri(img)}"/>')
         o.append(f'<rect x="{x}.5" y="{y}.5" width="{fw}" height="{fh}" fill="none" stroke="{t["ink"]}" stroke-width="1.2"/>')
         o.append(f'<path d="M{x} {y + 16}V{y}H{x + 16}" stroke="{t["accent"]}" stroke-width="2" fill="none"/>')
         o.append(f'<text x="{x}" y="{y + fh + 26}" font-size="14" font-weight="700" fill="{t["ink"]}">{name}</text>')
         o.append(f'<text x="{x}" y="{y + fh + 44}" font-size="11" fill="{t["muted"]}">{sub}</text>')
-        o.append(f'<text x="{x}" y="{y + fh + 62}" font-size="10" letter-spacing="1" fill="{t["accent"]}">{cap.upper()}</text>')
-    o.append("</svg>\n")
-    svg = "\n".join(o)
-    return svg
+        o.append(f'<text x="{x}" y="{y + fh + 62}" font-size="10" letter-spacing="1" fill="{t["accent"]}">{escape(cap.upper())}</text>')
+    return _close(o, t, h, "07")
 
 
-# --------------------------------------------------------------------------- toolbox strip
+# --------------------------------------------------------------------------- toolbox stencil
 
+# (category, cut-out shape, [(monogram, label, weight 1-3)]); weight sets the cut-out size.
 TOOLBOX = [
-    ("LANGUAGES", [("TS", "TypeScript"), ("Rs", "Rust"), ("Py", "Python"), ("C++", "C++"), ("C#", "C#")]),
-    ("APPS", [("Re", "React 19"), ("Nx", "Next.js 16"), ("Ta", "Tauri 2"), ("Tw", "Tailwind v4")]),
-    ("DATA", [("Sq", "SQLite"), ("Pg", "PostgreSQL"), ("Fs", "Firestore")]),
-    ("AI", [("CC", "Claude Code"), ("MC", "MCP"), ("LJ", "LLM-as-judge"), ("Ol", "Ollama")]),
-    ("XR", [("UE", "Unreal 5"), ("Un", "Unity"), ("MQ", "Meta Quest")]),
+    ("LANGUAGES", "circle", [("TS", "TypeScript", 3), ("Rs", "Rust", 3), ("Py", "Python", 2), ("C++", "C++", 1), ("C#", "C#", 1)]),
+    ("APPS", "square", [("Re", "React 19", 3), ("Nx", "Next.js 16", 3), ("Ta", "Tauri 2", 2), ("Tw", "Tailwind v4", 2)]),
+    ("DATA", "hex", [("Sq", "SQLite", 3), ("Pg", "PostgreSQL", 2), ("Fs", "Firestore", 1)]),
+    ("AI", "diamond", [("CC", "Claude Code", 3), ("MC", "MCP", 2), ("LJ", "LLM-as-judge", 2), ("Ol", "Ollama", 1)]),
+    ("XR", "visor", [("UE", "Unreal 5", 2), ("Un", "Unity", 2), ("MQ", "Meta Quest", 2)]),
 ]
+
+
+def _cutout(kind, cx, cy, s, attrs):
+    """Stencil hole of the given kind centred on (cx, cy); returns (svg element, half width)."""
+    if kind == "circle":
+        return f'<circle cx="{cx}" cy="{cy}" r="{s}" {attrs}/>', s
+    if kind == "square":
+        return f'<rect x="{cx - s}" y="{cy - s}" width="{2 * s}" height="{2 * s}" rx="6" {attrs}/>', s
+    if kind == "hex":
+        r = s * 1.1
+        pts = " ".join(f"{cx + r * math.cos(math.radians(a)):.1f},{cy + r * math.sin(math.radians(a)):.1f}" for a in range(0, 360, 60))
+        return f'<polygon points="{pts}" {attrs}/>', r
+    if kind == "diamond":
+        r = s * 1.25
+        return f'<polygon points="{cx},{cy - r} {cx + r},{cy} {cx},{cy + r} {cx - r},{cy}" {attrs}/>', r
+    rx = s * 1.4
+    return f'<rect x="{cx - rx:.1f}" y="{cy - s * .75:.1f}" width="{2 * rx:.1f}" height="{s * 1.5:.1f}" rx="{s * .75:.1f}" {attrs}/>', rx
 
 
 def render_toolbox(theme):
     t = THEMES[theme]
-    rows = len(TOOLBOX)
-    h = 92 + rows * 62 + 24
-    o = _open(t, W, h, "Toolbox: languages, apps, data, AI and XR tools")
-    o.append(_title(t, "FIG. 07 / TOOLBOX"))
-    for r, (cat, items) in enumerate(TOOLBOX):
-        y = 92 + r * 62
-        o.append(f'<text x="56" y="{y + 32}" font-size="11" letter-spacing="2" fill="{t["muted"]}">{cat}</text>')
-        for i, (mono, label) in enumerate(items):
-            x = 190 + i * 190
-            o.append(f'<g class="fade" style="animation-delay:{(r * 5 + i) * .04:.2f}s">'
-                     f'<rect x="{x}.5" y="{y}.5" width="44" height="44" fill="{t["bg"]}" stroke="{t["ink"]}" stroke-width="1.2"/>'
-                     f'<path d="M{x} {y + 8}V{y}H{x + 8}" stroke="{t["accent"]}" stroke-width="2" fill="none"/>'
-                     f'<text x="{x + 22}" y="{y + 28}" text-anchor="middle" font-size="15" font-weight="700" fill="{t["accent"]}">{escape(mono)}</text>'
-                     f'<text x="{x + 56}" y="{y + 27}" font-size="13" fill="{t["ink"]}">{escape(label)}</text></g>')
-    o.append("</svg>\n")
-    return "\n".join(o)
+    px, py, pw = 56, 92, W - 112
+    rh = 72
+    ph = len(TOOLBOX) * rh + 52
+    h = py + ph + 74
+    o = _open(t, W, h, "Toolbox drawn as a drafting stencil: languages, apps, data, AI and XR; bigger cut-outs are used more")
+    o.append(_title(t, "FIG. 09 / TOOLBOX STENCIL"))
+    holes, outlines, labels = [], [], []
+    for r, (cat, kind, items) in enumerate(TOOLBOX):
+        cy = py + 44 + r * rh
+        labels.append(f'<text x="{px + 26}" y="{cy + 4}" font-size="11" letter-spacing="2" fill="{t["accent"]}">{cat}</text>')
+        for i, (mono, label, wgt) in enumerate(items):
+            cx = px + 214 + i * 182
+            s = 11 + 4 * wgt
+            hole, half = _cutout(kind, cx, cy, s, 'fill="#000"')
+            holes.append(hole)
+            delay = f'style="animation-delay:{(r * 5 + i) * .04:.2f}s"'
+            shade, _ = _cutout(kind, cx + 1.5, cy + 1.5, s, f'fill="none" stroke="{t["accent"]}" stroke-opacity=".4" stroke-width="1.5"')
+            edge, _ = _cutout(kind, cx, cy, s, f'fill="none" stroke="{t["ink"]}" stroke-width="1.2"')
+            outlines.append(f'<g class="fade" {delay}>{shade}{edge}'
+                            f'<text x="{cx}" y="{cy + 4 + wgt}" text-anchor="middle" font-size="{10 + wgt}" font-weight="700" fill="{t["ink"]}">{escape(mono)}</text>'
+                            f'<text x="{cx + half + 12:.0f}" y="{cy + 4}" font-size="13" font-weight="{700 if wgt == 3 else 400}" '
+                            f'fill="{t["ink"] if wgt > 1 else t["muted"]}">{escape(label)}</text></g>')
+    hang = (px + pw - 34, py + 30)
+    holes.append(f'<circle cx="{hang[0]}" cy="{hang[1]}" r="10" fill="#000"/>')
+    # translucent plate with the holes masked out, so the drafting grid shows through them
+    o.append(f'<mask id="cut"><rect x="{px}" y="{py}" width="{pw}" height="{ph}" fill="#fff"/>{"".join(holes)}</mask>')
+    o.append(f'<rect x="{px}.5" y="{py}.5" width="{pw}" height="{ph}" rx="16" fill="{t["accent"]}" fill-opacity=".08" '
+             f'stroke="{t["accent"]}" stroke-opacity=".55" stroke-width="1.4" mask="url(#cut)"/>')
+    o.append(f'<rect x="{px + 5}.5" y="{py + 5}.5" width="{pw - 10}" height="{ph - 10}" rx="12" fill="none" stroke="{t["ink"]}" stroke-opacity=".12"/>')
+    o.append(f'<circle cx="{hang[0]}" cy="{hang[1]}" r="10" fill="none" stroke="{t["ink"]}" stroke-width="1.2"/>')
+    # millimetre scale along the top edge
+    ticks = "".join(f"M{x} {py + 5}v{8 if (x - px) % 50 == 0 else 4}" for x in range(px + 200, px + pw - 80, 10))
+    o.append(f'<path d="{ticks}" stroke="{t["muted"]}" stroke-width=".8"/>')
+    o.extend(labels)
+    o.extend(outlines)
+    o.append(f'<text x="{px + 26}" y="{py + ph - 18}" font-size="10" letter-spacing="1" fill="{t["muted"]}">CUT-OUT SIZE = HOW OFTEN I REACH FOR IT</text>')
+    return _close(o, t, h, "09")
 
 
 # --------------------------------------------------------------------------- civic spotlight
@@ -343,35 +483,60 @@ CIVIC = {
 
 def render_civic(theme):
     t = THEMES[theme]
-    h = 340
+    h = 400
     c = CIVIC
     o = _open(t, W, h, "politicas: Czech public-accountability knowledge graph in numbers")
     o.append(_title(t, "FIG. 08 / SPOTLIGHT / POLITICAS"))
     o.append(f'<text x="{W - 56}" y="64" text-anchor="end" font-size="11" fill="{t["muted"]}">source: Hlidac statu, ARES, Registr smluv, psp.cz / all links pending_review</text>')
     o.append(f'<text x="56" y="112" font-size="26" font-weight="700" fill="{t["ink"]}">Follow the money, with receipts</text>')
     o.append(f'<text x="56" y="136" font-size="12" fill="{t["muted"]}">Chamber sweep: MP to company to public contract, joined on IC, human-gated.</text>')
+    o.append(f'<text x="56" y="154" font-size="10" fill="{t["muted"]}">bar length is log scale; numbers are exact</text>')
     # funnel bars (log-ish scaled for readability, true values printed)
     stages = [("PEOPLE IN GRAPH", c["people"], f'{c["people"]:,}'),
               ("CURRENT MPs", c["mps"], f'{c["mps"]}'),
               ("MPs WITH COMPANY TIES", c["sweep_mps"], f'{c["sweep_mps"]}'),
               ("COMPANIES", c["companies"], f'{c["companies"]}'),
               ("PUBLIC CONTRACTS", c["contracts"], f'{c["contracts"]:,}')]
-    import math
     mxl = math.log10(c["people"])
+    wd = 0
     for i, (lab, v, txt) in enumerate(stages):
-        y = 170 + i * 30
+        y = 174 + i * 30
         wd = 520 * math.log10(v) / mxl
         col = t["accent"] if i >= 2 else t["heat"][3]
         o.append(f'<text x="56" y="{y + 12}" font-size="10" letter-spacing="1" fill="{t["muted"]}">{lab}</text>')
         o.append(f'<rect class="fade" style="animation-delay:{i * .12:.2f}s" x="250" y="{y}" width="{wd:.0f}" height="16" fill="{col}" opacity="{1 if i >= 2 else .75}"/>')
         o.append(f'<text x="{250 + wd + 8:.0f}" y="{y + 13}" font-size="13" font-weight="700" fill="{t["ink"]}">{txt}</text>')
-    o.append(f'<text x="250" y="{170 + 5 * 30 + 4}" font-size="10" fill="{t["muted"]}">bar length is log scale; numbers are exact</text>')
+    last = 174 + 4 * 30 + 16
+    o.append(dim(t, 250, round(250 + wd), last + 22, f'{c["contracts"]:,} CONTRACTS = ~{c["czk_bn"]:.2f}B CZK', ext=last + 2))
     # big stats
     big = [(f'~{c["czk_bn"]:.2f}B', "CZK in contracts traced"), (f'{c["ballots"] // 1000}k', "roll-call ballots"), (f'{c["laws"]:,}', "laws in e-Sbirka registry")]
     for i, (v, lab) in enumerate(big):
-        y = 190 + i * 40
+        y = 194 + i * 40
         o.append(f'<text x="880" y="{y}" font-size="30" font-weight="700" fill="{t["accent"] if i == 0 else t["ink"]}">{v}</text>'
                  f'<text x="880" y="{y + 16}" font-size="11" fill="{t["muted"]}">{lab}</text>')
-    o.append(f'<path d="M840 160V300" stroke="{t["line"]}"/>')
-    o.append("</svg>\n")
+    o.append(f'<path d="M840 164V304" stroke="{t["line"]}"/>')
+    return _close(o, t, h, "08")
+
+
+# --------------------------------------------------------------------------- section dividers
+
+def render_divider(theme, num, total=4):
+    """Ruler strip between README sections, drawn on a transparent background so it sits on
+    GitHub's page colour. num is "01".."04" or "END"."""
+    t = THEMES[theme]
+    w, h = W, 48
+    x0, x1, y = 76, w - 150, 30
+    label = "END" if num == "END" else f"§ {num}"
+    right = "END OF SHEET" if num == "END" else f"SECTION {num} / {total:02d}"
+    ticks = "".join(f"M{x} {y}v-{12 if (x - x0) % 120 == 0 else 7 if (x - x0) % 60 == 0 else 4}" for x in range(x0, x1 + 1, 12))
+    o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{escape(right.lower())}">', STYLE,
+         f'<text x="0" y="{y + 5}" font-size="15" font-weight="700" fill="{t["accent"]}">{label}</text>',
+         f'<path class="draw" d="M{x0} {y}H{x1}" stroke="{t["muted"]}" stroke-width="1"/>',
+         f'<path d="{ticks}" stroke="{t["muted"]}" stroke-width="1"/>',
+         f'<text x="{w}" y="{y + 5}" text-anchor="end" font-size="11" letter-spacing="2" fill="{t["muted"]}">{right}</text>',
+         # a reading-head marker sliding along the scale
+         f'<g><path d="M0 {y - 16}l-5 -8h10z" fill="{t["accent"]}"/><path d="M0 {y - 16}V{y + 4}" stroke="{t["accent"]}" stroke-width="1"/>'
+         f'<animateTransform attributeName="transform" type="translate" values="{x0} 0;{x1} 0;{x0} 0" dur="14s" repeatCount="indefinite" '
+         f'calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/></g>',
+         "</svg>\n"]
     return "\n".join(o)

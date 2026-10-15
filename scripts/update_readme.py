@@ -3,7 +3,9 @@
 
 - assets/header-{dark,light}.svg  drafting-sheet header (REV = current month)
 - assets/stats-{dark,light}.svg   build log: contributions, heatmap, language mix
+- assets/<panel>-{dark,light}.svg the figures and section dividers from panels.py
 - README BUILDLOG block           most recently pushed public repos
+- README PARTS block              numbered links that go with the parts-list figure
 
 Uses only the standard library. Reads GITHUB_TOKEN from the environment.
 """
@@ -25,6 +27,7 @@ ASSETS = "assets"
 RECENT_COUNT = 8
 LANG_ORDER = ["TypeScript", "Rust", "Python", "C#", "C++", "JavaScript"]
 SKIP_REPOS = {USERNAME}
+DIVIDERS = ["01", "02", "03", "04", "END"]
 # Markup, config and build glue that would drown out the real languages.
 NON_CODE = {"HTML", "CSS", "SCSS", "Shell", "PowerShell", "Batchfile", "Dockerfile", "NSIS",
             "Just", "HCL", "Go Template", "Makefile", "CMake", "ShaderLab", "HLSL", "PLpgSQL"}
@@ -121,6 +124,7 @@ def main():
         "pushed_30d": sum(1 for r in repos["nodes"] if pushed(r) >= now - timedelta(days=30)),
         "streak": current_streak(days),
         "weeks": weeks,
+        "week_dates": [[d["date"] for d in w["contributionDays"]] for w in cal["weeks"]],
         "langs": language_mix(repos["nodes"]),
         "updated": f"{now:%Y-%m-%d}",
     }
@@ -140,12 +144,15 @@ def main():
         out = {
             "architecture": panels.render_architecture(theme),
             "cards": panels.render_cards(theme, pushed_by_name, now),
+            "parts": panels.render_parts(theme),
             "timeline": panels.render_timeline(theme, timeline_repos, lang_color, now),
             "pulse": panels.render_pulse(theme, weeks, stats["langs"]),
             "vr": panels.render_vr(theme),
             "toolbox": panels.render_toolbox(theme),
             "civic": panels.render_civic(theme),
         }
+        for num in DIVIDERS:
+            out[f"divider-{num.lower()}"] = panels.render_divider(theme, num)
         for name, svg in out.items():
             with open(f"{ASSETS}/{name}-{theme}.svg", "w", encoding="utf-8", newline="\n") as f:
                 f.write(svg)
@@ -162,8 +169,9 @@ def main():
     with open(README, encoding="utf-8") as f:
         content = f.read()
     content = replace_block(content, "BUILDLOG", buildlog)
+    content = replace_block(content, "PARTS", panels.parts_links())
     # Bust GitHub's image cache for the regenerated SVGs.
-    content = re.sub(r"(assets/(?:header|stats|architecture|cards|timeline|pulse|vr|toolbox|civic)-(?:dark|light)\.svg)(\?v=\d+)?", rf"\1?v={now:%Y%m%d}", content)
+    content = re.sub(r"(assets/[\w-]+-(?:dark|light)\.svg)(\?v=\d+)?", rf"\1?v={now:%Y%m%d}", content)
     with open(README, "w", encoding="utf-8", newline="\n") as f:
         f.write(content)
 

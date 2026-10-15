@@ -1,5 +1,6 @@
 """Brand palette and SVG renderers for the profile: blueprint / drafting-sheet look."""
 
+from datetime import datetime
 from html import escape
 
 FONT = "'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace"
@@ -63,6 +64,52 @@ def _sheet(t, w, h):
 {''.join(marks)}"""
 
 
+def title_block(t, w, h, dwg, rev):
+    """Drawing-sheet title block in the bottom-right corner; panels leave ~48px free for it."""
+    cells = [("DWG", dwg), ("REV", rev), ("SCALE", "1:1"), ("DRAWN", "kazii")]
+    widths = [92, 124, 104, 116]
+    x0, y0, hh = w - 56 - sum(widths), h - 62, 30
+    out = [f'<g class="fade" style="animation-delay:.6s"><rect x="{x0}.5" y="{y0}.5" width="{sum(widths)}" height="{hh}" fill="{t["bg"]}" stroke="{t["line"]}"/>']
+    x = x0
+    for i, ((label, value), cw) in enumerate(zip(cells, widths)):
+        if i:
+            out.append(f'<path d="M{x}.5 {y0}V{y0 + hh}" stroke="{t["line"]}"/>')
+        col = t["accent"] if label == "REV" else t["ink"]
+        out.append(f'<text x="{x + 10}" y="{y0 + 19}" font-size="9" letter-spacing="1" fill="{t["muted"]}">{label} '
+                   f'<tspan font-size="11" font-weight="700" letter-spacing="0" fill="{col}">{escape(str(value))}</tspan></text>')
+        x += cw
+    out.append("</g>")
+    return "".join(out)
+
+
+def dim(t, x1, x2, y, label, ext=None):
+    """Horizontal dimension line from x1 to x2 at y, extension lines from y=ext, label centred on it."""
+    c = t["muted"]
+    out = []
+    if ext is not None:
+        d = 6 if ext > y else -6
+        out.append(f'<path d="M{x1} {ext}V{y - d} M{x2} {ext}V{y - d}" stroke="{c}" stroke-width=".8"/>')
+    out.append(f'<path d="M{x1} {y}H{x2}" stroke="{c}" stroke-width=".8"/>'
+               f'<path d="M{x1} {y}l7 -3v6z M{x2} {y}l-7 -3v6z" fill="{c}"/>')
+    lw = len(label) * 6.6 + 14
+    cx = (x1 + x2) / 2
+    out.append(f'<rect x="{cx - lw / 2:.1f}" y="{y - 8}" width="{lw:.1f}" height="16" fill="{t["bg"]}"/>'
+               f'<text x="{cx:.1f}" y="{y + 4}" text-anchor="middle" font-size="10" letter-spacing="1" fill="{t["accent"]}">{escape(label)}</text>')
+    return "".join(out)
+
+
+def vdim(t, x, y1, y2, label, ext=None):
+    """Vertical dimension line from y1 to y2 at x, extension lines from x=ext, label to its right."""
+    c = t["muted"]
+    out = []
+    if ext is not None:
+        out.append(f'<path d="M{ext} {y1}H{x + 6} M{ext} {y2}H{x + 6}" stroke="{c}" stroke-width=".8"/>')
+    out.append(f'<path d="M{x} {y1}V{y2}" stroke="{c}" stroke-width=".8"/>'
+               f'<path d="M{x} {y1}l-3 7h6z M{x} {y2}l-3 -7h6z" fill="{c}"/>'
+               f'<text x="{x + 10}" y="{(y1 + y2) / 2 + 4:.0f}" font-size="10" letter-spacing="1" fill="{t["accent"]}">{escape(label)}</text>')
+    return "".join(out)
+
+
 def render_header(theme, rev):
     t = THEMES[theme]
     w, h = 1200, 280
@@ -102,14 +149,35 @@ def _levels(days):
     return [q(0.25), q(0.5), q(0.75)]
 
 
+def _longest_run(weeks):
+    """Longest run of active days as (length, (week, day) start, (week, day) end); the latest wins ties."""
+    best, run, start = (0, None, None), 0, None
+    for wi, wk in enumerate(weeks):
+        for di, c in enumerate(wk):
+            if c:
+                if not run:
+                    start = (wi, di)
+                run += 1
+                if run >= best[0]:
+                    best = (run, start, (wi, di))
+            else:
+                run = 0
+    return best
+
+
+def _short(d):
+    return f"{datetime.strptime(d, '%Y-%m-%d'):%b} {int(d[8:])}"
+
+
 def render_stats(theme, s):
-    """s: year, total, repos, pushed_30d, streak, weeks (list of 7-int lists), langs [(name, pct)], updated."""
+    """s: year, total, repos, pushed_30d, streak, weeks (list of 7-int lists), week_dates (matching
+    lists of ISO dates), langs [(name, pct)], updated."""
     t = THEMES[theme]
-    w, h = 1200, 340
+    w, h = 1200, 392
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" '
            f'aria-label="{s["total"]:,} contributions in {s["year"]}">', STYLE, _sheet(t, w, h)]
 
-    out.append(f'<text x="56" y="72" font-size="13" letter-spacing="3" fill="{t["accent"]}">BUILD LOG / {s["year"]}</text>')
+    out.append(f'<text x="56" y="72" font-size="13" letter-spacing="3" fill="{t["accent"]}">FIG. 02 / BUILD LOG / {s["year"]}</text>')
     out.append(f'<text x="52" y="148" font-size="64" font-weight="700" fill="{t["ink"]}">{s["total"]:,}</text>')
     out.append(f'<text x="56" y="178" font-size="14" fill="{t["muted"]}">contributions this year</text>')
     for i, (label, value) in enumerate([("PUBLIC REPOS", s["repos"]), ("PUSHED 30D", s["pushed_30d"]), ("STREAK", f'{s["streak"]}d')]):
@@ -120,27 +188,54 @@ def render_stats(theme, s):
 
     # Contribution heatmap, last 53 weeks
     weeks = s["weeks"][-53:]
+    dates = s["week_dates"][-53:]
     flat = [c for wk in weeks for c in wk]
     l1, l2, l3 = _levels(flat)
     x0, y0, cell, gap = 520, 64, 10, 2
-    out.append(f'<text x="{x0}" y="52" font-size="11" letter-spacing="2" fill="{t["muted"]}">LAST 52 WEEKS</text>')
+    step = cell + gap
+    x_end = x0 + len(weeks) * step - gap
+    y_end = y0 + 7 * step - gap
+    out.append(dim(t, x0, x_end, 42, f"52 WEEKS / {sum(flat):,} CONTRIBUTIONS", ext=y0 - 4))
     for wi, wk in enumerate(weeks):
         for di, c in enumerate(wk):
             lvl = 0 if c == 0 else 1 if c <= l1 else 2 if c <= l2 else 3 if c <= l3 else 4
-            out.append(f'<rect x="{x0 + wi * (cell + gap)}" y="{y0 + di * (cell + gap)}" width="{cell}" height="{cell}" rx="1.5" fill="{t["heat"][lvl]}"/>')
+            out.append(f'<rect x="{x0 + wi * step}" y="{y0 + di * step}" width="{cell}" height="{cell}" rx="1.5" fill="{t["heat"][lvl]}"/>')
+
+    # Callout: the busiest week, outlined, with a leader line to its note
+    sums = [sum(wk) for wk in weeks]
+    if sums and max(sums):
+        pw = max(range(len(sums)), key=lambda i: (sums[i], i))
+        lx = x0 + pw * step + cell / 2
+        right = pw < 32
+        tx = lx + (16 if right else -16)
+        anchor = "start" if right else "end"
+        out.append(f'<rect class="fade" x="{lx - cell / 2 - 2.5}" y="{y0 - 2.5}" width="{cell + 5}" height="{y_end - y0 + 5}" fill="none" stroke="{t["accent"]}" stroke-width="1.5"/>'
+                   f'<path d="M{lx} {y_end + 3}V170H{tx - 4 if right else tx + 4}" fill="none" stroke="{t["accent"]}"/>'
+                   f'<text x="{tx}" y="174" text-anchor="{anchor}" font-size="11" fill="{t["ink"]}"><tspan fill="{t["accent"]}" letter-spacing="1">PEAK WEEK</tspan> '
+                   f'{_short(dates[pw][0])} / {sums[pw]} contributions</text>')
+
+    # Bracket under the longest run of active days
+    run, a, b = _longest_run(weeks)
+    if run > 1:
+        sx, ex = x0 + a[0] * step, x0 + b[0] * step + cell
+        cx = min(max((sx + ex) / 2, x0 + 200), x_end - 200)
+        out.append(f'<path d="M{sx} 186V192H{ex}V186" fill="none" stroke="{t["ink"]}"/>'
+                   f'<text x="{cx:.0f}" y="210" text-anchor="middle" font-size="11" fill="{t["ink"]}"><tspan fill="{t["accent"]}" letter-spacing="1">LONGEST RUN</tspan> '
+                   f'{run} days / {_short(dates[a[0]][a[1]])} to {_short(dates[b[0]][b[1]])}</text>')
 
     # Language mix
-    bar_w, bx, by = 636, x0, 196
+    bar_w, bx, by = 636, x0, 250
     out.append(f'<text x="{bx}" y="{by - 12}" font-size="11" letter-spacing="2" fill="{t["muted"]}">MATERIALS (BY CODE SIZE)</text>')
     cx = bx
     for i, (name, pct) in enumerate(s["langs"]):
         seg = bar_w * pct / 100
         out.append(f'<rect x="{cx:.1f}" y="{by}" width="{max(seg - 2, 1):.1f}" height="10" fill="{t["langs"][i]}"/>')
         cx += seg
-        lx, ly = bx + (i % 3) * 212, by + 40 + (i // 3) * 26
+        lx, ly = bx + (i % 3) * 212, by + 36 + (i // 3) * 24
         out.append(f'<rect x="{lx}" y="{ly - 9}" width="10" height="10" fill="{t["langs"][i]}"/>')
         out.append(f'<text x="{lx + 18}" y="{ly}" font-size="13" fill="{t["ink"]}">{escape(name)} <tspan fill="{t["muted"]}">{pct:.0f}%</tspan></text>')
 
-    out.append(f'<text x="56" y="306" font-size="11" fill="{t["muted"]}">regenerated {escape(s["updated"])} / github.com/xkazm04</text>')
+    out.append(f'<text x="56" y="{h - 40}" font-size="11" fill="{t["muted"]}">regenerated {escape(s["updated"])} / github.com/xkazm04</text>')
+    out.append(title_block(t, w, h, "02", s["updated"][:7].replace("-", ".")))
     out.append("</svg>\n")
     return "\n".join(out)

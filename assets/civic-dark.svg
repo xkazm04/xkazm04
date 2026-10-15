@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="politicas: Czech public-accountability knowledge graph in numbers">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="politicas: Czech public-accountability knowledge graph in numbers">
 <style>
   text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace; }
   .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.6s ease-out .2s forwards; }
@@ -21,32 +21,34 @@
     <path d="M120 0H0V120" fill="none" stroke="#1E252E" stroke-width="1"/>
   </pattern>
 </defs>
-<rect width="1200" height="340" fill="#0B0D10"/>
-<rect width="1200" height="340" fill="url(#major)"/>
-<rect x="16.5" y="16.5" width="1167" height="307" fill="none" stroke="#2D3540"/>
-<path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 306V324H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 306V324H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<rect width="1200" height="400" fill="#0B0D10"/>
+<rect width="1200" height="400" fill="url(#major)"/>
+<rect x="16.5" y="16.5" width="1167" height="367" fill="none" stroke="#2D3540"/>
+<path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 366V384H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 366V384H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
 <text x="56" y="64" font-size="13" letter-spacing="3" fill="#F59E0B">FIG. 08 / SPOTLIGHT / POLITICAS</text>
 <text x="1144" y="64" text-anchor="end" font-size="11" fill="#8B949E">source: Hlidac statu, ARES, Registr smluv, psp.cz / all links pending_review</text>
 <text x="56" y="112" font-size="26" font-weight="700" fill="#E7E5E4">Follow the money, with receipts</text>
 <text x="56" y="136" font-size="12" fill="#8B949E">Chamber sweep: MP to company to public contract, joined on IC, human-gated.</text>
-<text x="56" y="182" font-size="10" letter-spacing="1" fill="#8B949E">PEOPLE IN GRAPH</text>
-<rect class="fade" style="animation-delay:0.00s" x="250" y="170" width="520" height="16" fill="#C97A06" opacity="0.75"/>
-<text x="778" y="183" font-size="13" font-weight="700" fill="#E7E5E4">7,045</text>
-<text x="56" y="212" font-size="10" letter-spacing="1" fill="#8B949E">CURRENT MPs</text>
-<rect class="fade" style="animation-delay:0.12s" x="250" y="200" width="313" height="16" fill="#C97A06" opacity="0.75"/>
-<text x="571" y="213" font-size="13" font-weight="700" fill="#E7E5E4">207</text>
-<text x="56" y="242" font-size="10" letter-spacing="1" fill="#8B949E">MPs WITH COMPANY TIES</text>
-<rect class="fade" style="animation-delay:0.24s" x="250" y="230" width="252" height="16" fill="#F59E0B" opacity="1"/>
-<text x="510" y="243" font-size="13" font-weight="700" fill="#E7E5E4">73</text>
-<text x="56" y="272" font-size="10" letter-spacing="1" fill="#8B949E">COMPANIES</text>
-<rect class="fade" style="animation-delay:0.36s" x="250" y="260" width="310" height="16" fill="#F59E0B" opacity="1"/>
-<text x="568" y="273" font-size="13" font-weight="700" fill="#E7E5E4">196</text>
-<text x="56" y="302" font-size="10" letter-spacing="1" fill="#8B949E">PUBLIC CONTRACTS</text>
-<rect class="fade" style="animation-delay:0.48s" x="250" y="290" width="454" height="16" fill="#F59E0B" opacity="1"/>
-<text x="712" y="303" font-size="13" font-weight="700" fill="#E7E5E4">2,287</text>
-<text x="250" y="324" font-size="10" fill="#8B949E">bar length is log scale; numbers are exact</text>
-<text x="880" y="190" font-size="30" font-weight="700" fill="#F59E0B">~19.76B</text><text x="880" y="206" font-size="11" fill="#8B949E">CZK in contracts traced</text>
-<text x="880" y="230" font-size="30" font-weight="700" fill="#E7E5E4">406k</text><text x="880" y="246" font-size="11" fill="#8B949E">roll-call ballots</text>
-<text x="880" y="270" font-size="30" font-weight="700" fill="#E7E5E4">24,774</text><text x="880" y="286" font-size="11" fill="#8B949E">laws in e-Sbirka registry</text>
-<path d="M840 160V300" stroke="#2D3540"/>
+<text x="56" y="154" font-size="10" fill="#8B949E">bar length is log scale; numbers are exact</text>
+<text x="56" y="186" font-size="10" letter-spacing="1" fill="#8B949E">PEOPLE IN GRAPH</text>
+<rect class="fade" style="animation-delay:0.00s" x="250" y="174" width="520" height="16" fill="#C97A06" opacity="0.75"/>
+<text x="778" y="187" font-size="13" font-weight="700" fill="#E7E5E4">7,045</text>
+<text x="56" y="216" font-size="10" letter-spacing="1" fill="#8B949E">CURRENT MPs</text>
+<rect class="fade" style="animation-delay:0.12s" x="250" y="204" width="313" height="16" fill="#C97A06" opacity="0.75"/>
+<text x="571" y="217" font-size="13" font-weight="700" fill="#E7E5E4">207</text>
+<text x="56" y="246" font-size="10" letter-spacing="1" fill="#8B949E">MPs WITH COMPANY TIES</text>
+<rect class="fade" style="animation-delay:0.24s" x="250" y="234" width="252" height="16" fill="#F59E0B" opacity="1"/>
+<text x="510" y="247" font-size="13" font-weight="700" fill="#E7E5E4">73</text>
+<text x="56" y="276" font-size="10" letter-spacing="1" fill="#8B949E">COMPANIES</text>
+<rect class="fade" style="animation-delay:0.36s" x="250" y="264" width="310" height="16" fill="#F59E0B" opacity="1"/>
+<text x="568" y="277" font-size="13" font-weight="700" fill="#E7E5E4">196</text>
+<text x="56" y="306" font-size="10" letter-spacing="1" fill="#8B949E">PUBLIC CONTRACTS</text>
+<rect class="fade" style="animation-delay:0.48s" x="250" y="294" width="454" height="16" fill="#F59E0B" opacity="1"/>
+<text x="712" y="307" font-size="13" font-weight="700" fill="#E7E5E4">2,287</text>
+<path d="M250 312V338 M704 312V338" stroke="#8B949E" stroke-width=".8"/><path d="M250 332H704" stroke="#8B949E" stroke-width=".8"/><path d="M250 332l7 -3v6z M704 332l-7 -3v6z" fill="#8B949E"/><rect x="374.3" y="324" width="205.4" height="16" fill="#0B0D10"/><text x="477.0" y="336" text-anchor="middle" font-size="10" letter-spacing="1" fill="#F59E0B">2,287 CONTRACTS = ~19.76B CZK</text>
+<text x="880" y="194" font-size="30" font-weight="700" fill="#F59E0B">~19.76B</text><text x="880" y="210" font-size="11" fill="#8B949E">CZK in contracts traced</text>
+<text x="880" y="234" font-size="30" font-weight="700" fill="#E7E5E4">406k</text><text x="880" y="250" font-size="11" fill="#8B949E">roll-call ballots</text>
+<text x="880" y="274" font-size="30" font-weight="700" fill="#E7E5E4">24,774</text><text x="880" y="290" font-size="11" fill="#8B949E">laws in e-Sbirka registry</text>
+<path d="M840 164V304" stroke="#2D3540"/>
+<g class="fade" style="animation-delay:.6s"><rect x="708.5" y="338.5" width="436" height="30" fill="#0B0D10" stroke="#2D3540"/><text x="718" y="357" font-size="9" letter-spacing="1" fill="#8B949E">DWG <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#E7E5E4">08</tspan></text><path d="M800.5 338V368" stroke="#2D3540"/><text x="810" y="357" font-size="9" letter-spacing="1" fill="#8B949E">REV <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#F59E0B">2026.10</tspan></text><path d="M924.5 338V368" stroke="#2D3540"/><text x="934" y="357" font-size="9" letter-spacing="1" fill="#8B949E">SCALE <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#E7E5E4">1:1</tspan></text><path d="M1028.5 338V368" stroke="#2D3540"/><text x="1038" y="357" font-size="9" letter-spacing="1" fill="#8B949E">DRAWN <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#E7E5E4">kazii</tspan></text></g>
 </svg>

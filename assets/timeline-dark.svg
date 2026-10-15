@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="310" viewBox="0 0 1200 310" role="img" aria-label="Timeline of recent repository pushes">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="354" viewBox="0 0 1200 354" role="img" aria-label="Timeline of recent repository pushes">
 <style>
   text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace; }
   .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.6s ease-out .2s forwards; }
@@ -21,10 +21,10 @@
     <path d="M120 0H0V120" fill="none" stroke="#1E252E" stroke-width="1"/>
   </pattern>
 </defs>
-<rect width="1200" height="310" fill="#0B0D10"/>
-<rect width="1200" height="310" fill="url(#major)"/>
-<rect x="16.5" y="16.5" width="1167" height="277" fill="none" stroke="#2D3540"/>
-<path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 276V294H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 276V294H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<rect width="1200" height="354" fill="#0B0D10"/>
+<rect width="1200" height="354" fill="url(#major)"/>
+<rect x="16.5" y="16.5" width="1167" height="321" fill="none" stroke="#2D3540"/>
+<path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 320V338H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 320V338H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
 <text x="56" y="64" font-size="13" letter-spacing="3" fill="#F59E0B">FIG. 04 / PUSH TIMELINE / LAST 12 MONTHS</text>
 <path d="M70 190H1130" stroke="#E7E5E4" stroke-width="1.5"/>
 <path d="M70 184V196" stroke="#8B949E"/>
@@ -59,12 +59,12 @@
 <circle class="fade" style="animation-delay:0.1s" cx="1130" cy="163" r="4.5" fill="#5B6672"/>
 <path d="M1130 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.2s" cx="1130" cy="150" r="4.5" fill="#F59E0B"/>
-<path d="M1130 190V137" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.3s" cx="1130" cy="137" r="4.5" fill="#F59E0B"/>
-<path d="M1130 190V124" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.4s" cx="1130" cy="124" r="4.5" fill="#F59E0B"/>
-<path d="M1119 190V176" stroke="#8B949E" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.5s" cx="1119" cy="176" r="4.5" fill="#8B949E"/>
+<path d="M1130 190V137" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.3s" cx="1130" cy="137" r="4.5" fill="#8B949E"/>
+<path d="M1130 190V124" stroke="#7DA7C9" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.4s" cx="1130" cy="124" r="4.5" fill="#7DA7C9"/>
+<path d="M1119 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.5s" cx="1119" cy="176" r="4.5" fill="#F59E0B"/>
 <path d="M1119 190V163" stroke="#E2683C" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.6s" cx="1119" cy="163" r="4.5" fill="#E2683C"/>
 <path d="M1119 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
@@ -79,20 +79,20 @@
 <circle class="fade" style="animation-delay:0.8s" cx="1108" cy="163" r="4.5" fill="#F59E0B"/>
 <path d="M1108 190V150" stroke="#E2683C" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.8s" cx="1108" cy="150" r="4.5" fill="#E2683C"/>
-<path d="M1108 190V137" stroke="#8B949E" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.8s" cx="1108" cy="137" r="4.5" fill="#8B949E"/>
+<path d="M1108 190V137" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1108" cy="137" r="4.5" fill="#F59E0B"/>
 <path d="M1108 190V124" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.8s" cx="1108" cy="124" r="4.5" fill="#F59E0B"/>
 <path d="M1097 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.8s" cx="1097" cy="176" r="4.5" fill="#F59E0B"/>
-<path d="M1097 190V163" stroke="#8B949E" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.8s" cx="1097" cy="163" r="4.5" fill="#8B949E"/>
-<path d="M1094 190V150" stroke="#7DA7C9" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.8s" cx="1094" cy="150" r="4.5" fill="#7DA7C9"/>
-<path d="M1094 190V137" stroke="#D6C6A5" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.8s" cx="1094" cy="137" r="4.5" fill="#D6C6A5"/>
-<path d="M1091 190V124" stroke="#E2683C" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.8s" cx="1091" cy="124" r="4.5" fill="#E2683C"/>
+<path d="M1094 190V163" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1094" cy="163" r="4.5" fill="#8B949E"/>
+<path d="M1094 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1094" cy="150" r="4.5" fill="#F59E0B"/>
+<path d="M1094 190V137" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1094" cy="137" r="4.5" fill="#8B949E"/>
+<path d="M1094 190V124" stroke="#D6C6A5" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.8s" cx="1094" cy="124" r="4.5" fill="#D6C6A5"/>
 <path d="M1080 190V176" stroke="#E2683C" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.8s" cx="1080" cy="176" r="4.5" fill="#E2683C"/>
 <path d="M1113 190V176" stroke="#E2683C" stroke-width="1" opacity=".6"/>
@@ -103,16 +103,16 @@
 <circle class="fade" style="animation-delay:0.0s" cx="1086" cy="176" r="4.5" fill="#F59E0B"/>
 <path d="M1063 190V176" stroke="#7DA7C9" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.0s" cx="1063" cy="176" r="4.5" fill="#7DA7C9"/>
-<path d="M924 190V176" stroke="#8B949E" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.0s" cx="924" cy="176" r="4.5" fill="#8B949E"/>
+<path d="M921 190V176" stroke="#8B949E" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="921" cy="176" r="4.5" fill="#8B949E"/>
 <path d="M898 190V176" stroke="#7DA7C9" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.0s" cx="898" cy="176" r="4.5" fill="#7DA7C9"/>
-<path d="M892 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.1s" cx="892" cy="163" r="4.5" fill="#F59E0B"/>
-<path d="M889 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.2s" cx="889" cy="150" r="4.5" fill="#F59E0B"/>
-<path d="M889 190V137" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.3s" cx="889" cy="137" r="4.5" fill="#F59E0B"/>
+<path d="M889 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.1s" cx="889" cy="163" r="4.5" fill="#F59E0B"/>
+<path d="M886 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.2s" cx="886" cy="150" r="4.5" fill="#F59E0B"/>
+<path d="M886 190V137" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.3s" cx="886" cy="137" r="4.5" fill="#F59E0B"/>
 <path d="M779 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.0s" cx="779" cy="176" r="4.5" fill="#F59E0B"/>
 <path d="M700 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
@@ -121,8 +121,8 @@
 <circle class="fade" style="animation-delay:0.1s" cx="700" cy="163" r="4.5" fill="#F59E0B"/>
 <path d="M700 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.2s" cx="700" cy="150" r="4.5" fill="#F59E0B"/>
-<path d="M584 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.0s" cx="584" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M581 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="581" cy="176" r="4.5" fill="#F59E0B"/>
 <path d="M558 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.0s" cx="558" cy="176" r="4.5" fill="#F59E0B"/>
 <path d="M439 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
@@ -135,8 +135,8 @@
 <circle class="fade" style="animation-delay:0.0s" cx="410" cy="176" r="4.5" fill="#F59E0B"/>
 <path d="M389 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.0s" cx="389" cy="176" r="4.5" fill="#F59E0B"/>
-<path d="M378 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.0s" cx="378" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M375 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="375" cy="176" r="4.5" fill="#F59E0B"/>
 <path d="M375 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.1s" cx="375" cy="163" r="4.5" fill="#F59E0B"/>
 <path d="M343 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
@@ -145,21 +145,22 @@
 <circle class="fade" style="animation-delay:0.0s" cx="317" cy="176" r="4.5" fill="#7DA7C9"/>
 <path d="M276 190V176" stroke="#8B949E" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.0s" cx="276" cy="176" r="4.5" fill="#8B949E"/>
-<path d="M247 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
-<circle class="fade" style="animation-delay:0.0s" cx="247" cy="176" r="4.5" fill="#F59E0B"/>
+<path d="M244 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
+<circle class="fade" style="animation-delay:0.0s" cx="244" cy="176" r="4.5" fill="#F59E0B"/>
 <path d="M227 190V176" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.0s" cx="227" cy="176" r="4.5" fill="#F59E0B"/>
 <path d="M224 190V163" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.1s" cx="224" cy="163" r="4.5" fill="#F59E0B"/>
 <path d="M221 190V150" stroke="#F59E0B" stroke-width="1" opacity=".6"/>
 <circle class="fade" style="animation-delay:0.2s" cx="221" cy="150" r="4.5" fill="#F59E0B"/>
-<path d="M1130 224V270H1106" stroke="#2D3540" fill="none"/>
-<text x="1096" y="274" text-anchor="end" font-size="12" fill="#E7E5E4"><tspan fill="#F59E0B">LATEST</tspan>  gravitone-gcloud · ai-registry · pof · personas · afterlife · firetv</text>
+<path d="M1130 224V262H1106" stroke="#2D3540" fill="none"/>
+<text x="1096" y="266" text-anchor="end" font-size="12" fill="#E7E5E4"><tspan fill="#F59E0B">LATEST</tspan>  personas · ai-registry · paypal · firetv · athena-portable · bp</text>
 <circle cx="61" cy="96" r="5" fill="#F59E0B"/><text x="72" y="100" font-size="11" fill="#8B949E">TypeScript</text>
 <circle cx="171" cy="96" r="5" fill="#5B6672"/><text x="182" y="100" font-size="11" fill="#8B949E">JavaScript</text>
 <circle cx="281" cy="96" r="5" fill="#8B949E"/><text x="292" y="100" font-size="11" fill="#8B949E">HTML</text>
-<circle cx="343" cy="96" r="5" fill="#E2683C"/><text x="354" y="100" font-size="11" fill="#8B949E">Rust</text>
-<circle cx="405" cy="96" r="5" fill="#8B949E"/><text x="416" y="100" font-size="11" fill="#8B949E">C++</text>
-<circle cx="459" cy="96" r="5" fill="#7DA7C9"/><text x="470" y="100" font-size="11" fill="#8B949E">Python</text>
+<circle cx="343" cy="96" r="5" fill="#7DA7C9"/><text x="354" y="100" font-size="11" fill="#8B949E">Python</text>
+<circle cx="421" cy="96" r="5" fill="#E2683C"/><text x="432" y="100" font-size="11" fill="#8B949E">Rust</text>
+<circle cx="483" cy="96" r="5" fill="#8B949E"/><text x="494" y="100" font-size="11" fill="#8B949E">C++</text>
 <text x="1130" y="64" text-anchor="end" font-size="11" fill="#8B949E">55 repos pushed</text>
+<g class="fade" style="animation-delay:.6s"><rect x="708.5" y="292.5" width="436" height="30" fill="#0B0D10" stroke="#2D3540"/><text x="718" y="311" font-size="9" letter-spacing="1" fill="#8B949E">DWG <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#E7E5E4">04</tspan></text><path d="M800.5 292V322" stroke="#2D3540"/><text x="810" y="311" font-size="9" letter-spacing="1" fill="#8B949E">REV <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#F59E0B">2026.10</tspan></text><path d="M924.5 292V322" stroke="#2D3540"/><text x="934" y="311" font-size="9" letter-spacing="1" fill="#8B949E">SCALE <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#E7E5E4">1:1</tspan></text><path d="M1028.5 292V322" stroke="#2D3540"/><text x="1038" y="311" font-size="9" letter-spacing="1" fill="#8B949E">DRAWN <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#E7E5E4">kazii</tspan></text></g>
 </svg>

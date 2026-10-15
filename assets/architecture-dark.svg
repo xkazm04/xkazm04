@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="Local-first architecture: your machine holds SQLite, agents propose, a human approval gate decides">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="384" viewBox="0 0 1200 384" role="img" aria-label="Local-first architecture: your machine holds SQLite, agents propose, a human approval gate decides">
 <style>
   text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace; }
   .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.6s ease-out .2s forwards; }
@@ -21,11 +21,12 @@
     <path d="M120 0H0V120" fill="none" stroke="#1E252E" stroke-width="1"/>
   </pattern>
 </defs>
-<rect width="1200" height="330" fill="#0B0D10"/>
-<rect width="1200" height="330" fill="url(#major)"/>
-<rect x="16.5" y="16.5" width="1167" height="297" fill="none" stroke="#2D3540"/>
-<path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 296V314H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 296V314H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
-<text x="56" y="64" font-size="13" letter-spacing="3" fill="#F59E0B">FIG. 02 / LOCAL-FIRST ARCHITECTURE</text>
+<rect width="1200" height="384" fill="#0B0D10"/>
+<rect width="1200" height="384" fill="url(#major)"/>
+<rect x="16.5" y="16.5" width="1167" height="351" fill="none" stroke="#2D3540"/>
+<path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 350V368H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 350V368H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<text x="56" y="64" font-size="13" letter-spacing="3" fill="#F59E0B">FIG. 01 / LOCAL-FIRST ARCHITECTURE</text>
+<path d="M56 92V74 M856 92V74" stroke="#8B949E" stroke-width=".8"/><path d="M56 80H856" stroke="#8B949E" stroke-width=".8"/><path d="M56 80l7 -3v6z M856 80l-7 -3v6z" fill="#8B949E"/><rect x="399.5" y="72" width="113.0" height="16" fill="#0B0D10"/><text x="456.0" y="84" text-anchor="middle" font-size="10" letter-spacing="1" fill="#F59E0B">ALL STATE LOCAL</text>
 <rect x="56.5" y="92.5" width="800" height="196" rx="4" fill="none" stroke="#F59E0B" stroke-dasharray="8 6"/>
 <text x="72" y="112" font-size="11" letter-spacing="2" fill="#F59E0B">YOUR MACHINE</text>
 <text x="884" y="112" font-size="11" letter-spacing="2" fill="#8B949E">OUTSIDE</text>
@@ -38,11 +39,17 @@
 <path class="draw" d="M700 190L750 190" stroke="#F59E0B" stroke-width="1.5" fill="none"/><path d="M750 190l-8 -4v8z" fill="#F59E0B" transform="rotate(0.0 750 190)"/>
 <path class="draw" d="M790 230V264H150V246" fill="none" stroke="#8B949E" stroke-width="1.2" stroke-dasharray="5 5"/>
 <text x="470" y="258" font-size="11" fill="#8B949E">result written back locally</text>
-<circle r="5" fill="#F59E0B" class="token"><animateMotion dur="5s" repeatCount="indefinite" path="M204 200L330 190L480 190L570 190L700 190L790 190"/></circle>
+<circle r="5" fill="#F59E0B" opacity="0"><animateMotion dur="6s" repeatCount="indefinite" path="M204 200L330 190L480 190L570 190L635 190L700 190L790 190L790 264L150 264L150 246" calcMode="linear" keyPoints="0;0.327;0.327;1;1" keyTimes="0;.3;.45;.92;1"/><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.03;.9;.94;1"/></circle>
+<circle cx="635" cy="190" r="0" fill="none" stroke="#F59E0B" stroke-width="1.5"><animate attributeName="r" dur="6s" repeatCount="indefinite" values="6;6;44;44" keyTimes="0;.3;.42;1"/><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;.9;0;0" keyTimes="0;.299;.3;.42;1"/></circle>
+<text x="635" y="142" text-anchor="middle" font-size="10" letter-spacing="2" fill="#F59E0B" opacity="0">APPROVED<animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;.31;.34;.47;.52;1"/></text>
+<ellipse cx="150" cy="170" rx="54" ry="14" fill="none" stroke="#F59E0B" stroke-width="2.5" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;0" keyTimes="0;.9;.93;1"/></ellipse>
+<circle r="5" fill="#8B949E" opacity="0"><animateMotion dur="6s" begin="3s" repeatCount="indefinite" path="M204 200L330 190L480 190L570 190L635 190" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.3;1"/><animate attributeName="opacity" dur="6s" begin="3s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.03;.36;.44;1"/></circle>
+<text x="635" y="142" text-anchor="middle" font-size="10" letter-spacing="2" fill="#8B949E" opacity="0">REJECTED<animate attributeName="opacity" dur="6s" begin="3s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;.31;.34;.42;.46;1"/></text>
 <rect x="884.5" y="150.5" width="260" height="80" fill="none" stroke="#2D3540" stroke-dasharray="4 4"/>
 <text x="1014" y="186" text-anchor="middle" font-size="14" fill="#E7E5E4">cloud / third parties</text>
 <text x="1014" y="208" text-anchor="middle" font-size="11" fill="#8B949E">only what you send</text>
 <path d="M830 190H884" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3 5"/>
 <text x="857" y="180" text-anchor="middle" font-size="16" fill="#F59E0B">?</text>
-<text x="56" y="312" font-size="11" fill="#8B949E">Agents do the work, people approve it. Nothing leaves unless you send it.</text>
+<text x="56" y="322" font-size="11" fill="#8B949E">Agents do the work, people approve it. Nothing leaves unless you send it.</text>
+<g class="fade" style="animation-delay:.6s"><rect x="708.5" y="322.5" width="436" height="30" fill="#0B0D10" stroke="#2D3540"/><text x="718" y="341" font-size="9" letter-spacing="1" fill="#8B949E">DWG <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#E7E5E4">01</tspan></text><path d="M800.5 322V352" stroke="#2D3540"/><text x="810" y="341" font-size="9" letter-spacing="1" fill="#8B949E">REV <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#F59E0B">2026.10</tspan></text><path d="M924.5 322V352" stroke="#2D3540"/><text x="934" y="341" font-size="9" letter-spacing="1" fill="#8B949E">SCALE <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#E7E5E4">1:1</tspan></text><path d="M1028.5 322V352" stroke="#2D3540"/><text x="1038" y="341" font-size="9" letter-spacing="1" fill="#8B949E">DRAWN <tspan font-size="11" font-weight="700" letter-spacing="0" fill="#E7E5E4">kazii</tspan></text></g>
 </svg>

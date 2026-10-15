@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="48" viewBox="0 0 1200 48" role="img" aria-label="section 03 / 04">
+<style>
+  text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace; }
+  .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.6s ease-out .2s forwards; }
+  .cursor { animation: blink 1.1s steps(1) infinite; }
+  .fade { opacity: 0; animation: fade .8s ease-out forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes fade { to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .draw, .cursor, .fade { animation: none; stroke-dashoffset: 0; opacity: 1; }
+  }
+</style>
+<text x="0" y="35" font-size="15" font-weight="700" fill="#B45309">§ 03</text>
+<path class="draw" d="M76 30H1050" stroke="#6B6459" stroke-width="1"/>
+<path d="M76 30v-12M88 30v-4M100 30v-4M112 30v-4M124 30v-4M136 30v-7M148 30v-4M160 30v-4M172 30v-4M184 30v-4M196 30v-12M208 30v-4M220 30v-4M232 30v-4M244 30v-4M256 30v-7M268 30v-4M280 30v-4M292 30v-4M304 30v-4M316 30v-12M328 30v-4M340 30v-4M352 30v-4M364 30v-4M376 30v-7M388 30v-4M400 30v-4M412 30v-4M424 30v-4M436 30v-12M448 30v-4M460 30v-4M472 30v-4M484 30v-4M496 30v-7M508 30v-4M520 30v-4M532 30v-4M544 30v-4M556 30v-12M568 30v-4M580 30v-4M592 30v-4M604 30v-4M616 30v-7M628 30v-4M640 30v-4M652 30v-4M664 30v-4M676 30v-12M688 30v-4M700 30v-4M712 30v-4M724 30v-4M736 30v-7M748 30v-4M760 30v-4M772 30v-4M784 30v-4M796 30v-12M808 30v-4M820 30v-4M832 30v-4M844 30v-4M856 30v-7M868 30v-4M880 30v-4M892 30v-4M904 30v-4M916 30v-12M928 30v-4M940 30v-4M952 30v-4M964 30v-4M976 30v-7M988 30v-4M1000 30v-4M1012 30v-4M1024 30v-4M1036 30v-12M1048 30v-4" stroke="#6B6459" stroke-width="1"/>
+<text x="1200" y="35" text-anchor="end" font-size="11" letter-spacing="2" fill="#6B6459">SECTION 03 / 04</text>
+<g><path d="M0 14l-5 -8h10z" fill="#B45309"/><path d="M0 14V34" stroke="#B45309" stroke-width="1"/><animateTransform attributeName="transform" type="translate" values="76 0;1050 0;76 0" dur="14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/></g>
+</svg>
