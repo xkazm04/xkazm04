@@ -26,10 +26,10 @@
 <rect x="16.5" y="16.5" width="1167" height="327" fill="none" stroke="#2D3540"/>
 <path d="M16 34V16H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 34V16H1166" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M16 326V344H34" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M1184 326V344H1166" fill="none" stroke="#F59E0B" stroke-width="2"/>
 <text x="56" y="64" font-size="13" letter-spacing="3" fill="#F59E0B">FIG. 05 / PULSE</text>
-<path d="M56 100H184" stroke="#2D3540"/><text x="56" y="122" font-size="10" letter-spacing="2" fill="#8B949E">THIS WEEK</text><text x="56" y="156" font-size="30" font-weight="700" fill="#E7E5E4">1100</text>
-<path d="M206 100H334" stroke="#2D3540"/><text x="206" y="122" font-size="10" letter-spacing="2" fill="#8B949E">AVG / WEEK</text><text x="206" y="156" font-size="30" font-weight="700" fill="#E7E5E4">964</text>
-<path d="M356 100H484" stroke="#2D3540"/><text x="356" y="122" font-size="10" letter-spacing="2" fill="#8B949E">BEST WEEK</text><text x="356" y="156" font-size="30" font-weight="700" fill="#E7E5E4">4148</text>
-<path d="M506 100H634" stroke="#2D3540"/><text x="506" y="122" font-size="10" letter-spacing="2" fill="#8B949E">ACTIVE DAYS 26W</text><text x="506" y="156" font-size="30" font-weight="700" fill="#E7E5E4">158</text>
+<path d="M56 100H184" stroke="#2D3540"/><text x="56" y="122" font-size="10" letter-spacing="2" fill="#8B949E">THIS WEEK</text><text x="56" y="156" font-size="30" font-weight="700" fill="#E7E5E4">1795</text>
+<path d="M206 100H334" stroke="#2D3540"/><text x="206" y="122" font-size="10" letter-spacing="2" fill="#8B949E">AVG / WEEK</text><text x="206" y="156" font-size="30" font-weight="700" fill="#E7E5E4">991</text>
+<path d="M356 100H484" stroke="#2D3540"/><text x="356" y="122" font-size="10" letter-spacing="2" fill="#8B949E">BEST WEEK</text><text x="356" y="156" font-size="30" font-weight="700" fill="#E7E5E4">4150</text>
+<path d="M506 100H634" stroke="#2D3540"/><text x="506" y="122" font-size="10" letter-spacing="2" fill="#8B949E">ACTIVE DAYS 26W</text><text x="506" y="156" font-size="30" font-weight="700" fill="#E7E5E4">159</text>
 <path d="M56 320H654" stroke="#E7E5E4"/>
 <rect class="fade" style="animation-delay:0.00s" x="56" y="318" width="18" height="2" fill="#4A2F0A"/>
 <rect class="fade" style="animation-delay:0.03s" x="79" y="318" width="18" height="2" fill="#4A2F0A"/>
@@ -51,26 +51,26 @@
 <rect class="fade" style="animation-delay:0.51s" x="447" y="309" width="18" height="11" fill="#4A2F0A"/>
 <rect class="fade" style="animation-delay:0.54s" x="470" y="270" width="18" height="50" fill="#C97A06"/>
 <rect class="fade" style="animation-delay:0.57s" x="493" y="208" width="18" height="112" fill="#C97A06"/>
-<rect class="fade" style="animation-delay:0.60s" x="516" y="292" width="18" height="28" fill="#C97A06"/>
+<rect class="fade" style="animation-delay:0.60s" x="516" y="292" width="18" height="28" fill="#4A2F0A"/>
 <rect class="fade" style="animation-delay:0.63s" x="539" y="278" width="18" height="42" fill="#C97A06"/>
 <rect class="fade" style="animation-delay:0.66s" x="562" y="234" width="18" height="86" fill="#C97A06"/>
 <rect class="fade" style="animation-delay:0.69s" x="585" y="257" width="18" height="63" fill="#C97A06"/>
 <rect class="fade" style="animation-delay:0.72s" x="608" y="200" width="18" height="120" fill="#C97A06"/>
-<rect class="fade" style="animation-delay:0.75s" x="631" y="288" width="18" height="32" fill="#F59E0B"/>
-<path d="M56 292H654" stroke="#8B949E" stroke-dasharray="4 4"/>
+<rect class="fade" style="animation-delay:0.75s" x="631" y="268" width="18" height="52" fill="#F59E0B"/>
+<path d="M56 291H654" stroke="#8B949E" stroke-dasharray="4 4"/>
 <text x="56" y="340" font-size="10" fill="#8B949E">26 weeks of contributions, dashed = average</text>
 <circle cx="930" cy="196" r="80" fill="none" stroke="#151A21" stroke-width="26"/>
-<circle cx="930" cy="196" r="80" fill="none" stroke="#F59E0B" stroke-width="26" stroke-dasharray="352.0 502.7" stroke-dashoffset="-0.0" transform="rotate(-90 930 196)"/>
+<circle cx="930" cy="196" r="80" fill="none" stroke="#F59E0B" stroke-width="26" stroke-dasharray="351.0 502.7" stroke-dashoffset="-0.0" transform="rotate(-90 930 196)"/>
 <rect x="1040" y="103" width="10" height="10" fill="#F59E0B"/><text x="1058" y="112" font-size="12" fill="#E7E5E4">TypeScript <tspan fill="#8B949E">70%</tspan></text>
-<circle cx="930" cy="196" r="80" fill="none" stroke="#E2683C" stroke-width="26" stroke-dasharray="73.8 502.7" stroke-dashoffset="-354.0" transform="rotate(-90 930 196)"/>
+<circle cx="930" cy="196" r="80" fill="none" stroke="#E2683C" stroke-width="26" stroke-dasharray="74.2 502.7" stroke-dashoffset="-353.0" transform="rotate(-90 930 196)"/>
 <rect x="1040" y="127" width="10" height="10" fill="#E2683C"/><text x="1058" y="136" font-size="12" fill="#E7E5E4">Rust <tspan fill="#8B949E">15%</tspan></text>
-<circle cx="930" cy="196" r="80" fill="none" stroke="#7DA7C9" stroke-width="26" stroke-dasharray="32.1 502.7" stroke-dashoffset="-429.7" transform="rotate(-90 930 196)"/>
+<circle cx="930" cy="196" r="80" fill="none" stroke="#7DA7C9" stroke-width="26" stroke-dasharray="32.6 502.7" stroke-dashoffset="-429.2" transform="rotate(-90 930 196)"/>
 <rect x="1040" y="151" width="10" height="10" fill="#7DA7C9"/><text x="1058" y="160" font-size="12" fill="#E7E5E4">JavaScript <tspan fill="#8B949E">7%</tspan></text>
-<circle cx="930" cy="196" r="80" fill="none" stroke="#D6C6A5" stroke-width="26" stroke-dasharray="25.3 502.7" stroke-dashoffset="-463.8" transform="rotate(-90 930 196)"/>
+<circle cx="930" cy="196" r="80" fill="none" stroke="#D6C6A5" stroke-width="26" stroke-dasharray="25.5 502.7" stroke-dashoffset="-463.8" transform="rotate(-90 930 196)"/>
 <rect x="1040" y="175" width="10" height="10" fill="#D6C6A5"/><text x="1058" y="184" font-size="12" fill="#E7E5E4">Python <tspan fill="#8B949E">5%</tspan></text>
 <circle cx="930" cy="196" r="80" fill="none" stroke="#8B949E" stroke-width="26" stroke-dasharray="3.7 502.7" stroke-dashoffset="-491.2" transform="rotate(-90 930 196)"/>
 <rect x="1040" y="199" width="10" height="10" fill="#8B949E"/><text x="1058" y="208" font-size="12" fill="#E7E5E4">C++ <tspan fill="#8B949E">1%</tspan></text>
-<circle cx="930" cy="196" r="80" fill="none" stroke="#5B6672" stroke-width="26" stroke-dasharray="3.8 502.7" stroke-dashoffset="-496.9" transform="rotate(-90 930 196)"/>
+<circle cx="930" cy="196" r="80" fill="none" stroke="#5B6672" stroke-width="26" stroke-dasharray="3.7 502.7" stroke-dashoffset="-496.9" transform="rotate(-90 930 196)"/>
 <rect x="1040" y="223" width="10" height="10" fill="#5B6672"/><text x="1058" y="232" font-size="12" fill="#E7E5E4">Other <tspan fill="#8B949E">1%</tspan></text>
 <text x="930" y="200" text-anchor="middle" font-size="12" letter-spacing="2" fill="#8B949E">CODE MIX</text>
 </svg>
