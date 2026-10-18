@@ -57,7 +57,7 @@ text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consola
 <path d="M446.0 376H754.0" stroke="#CFC6B3" stroke-width="1"/>
 <text x="446.0" y="422.0" font-size="36" font-weight="700" fill="#1C1917">vibeman</text>
 <circle cx="653.2" cy="415" r="5" fill="#6B6459"/>
-<text x="754.0" y="422.0" font-size="20" text-anchor="end" fill="#6B6459">85D AGO</text>
+<text x="754.0" y="422.0" font-size="20" text-anchor="end" fill="#6B6459">86D AGO</text>
 <rect x="792.5" y="120.5" width="352" height="330" fill="#F6F3EC" stroke="#CFC6B3" stroke-width="1.5"/>
 <path d="M792.0 142V120H814.0" fill="none" stroke="#B45309" stroke-width="3"/>
 <text x="814.0" y="162.0" font-size="22" font-weight="700" letter-spacing="2" fill="#B45309">B-05</text>
@@ -68,7 +68,7 @@ text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consola
 <path d="M814.0 376H1122.0" stroke="#CFC6B3" stroke-width="1"/>
 <text x="814.0" y="422.0" font-size="36" font-weight="700" fill="#1C1917">lighttrack</text>
 <circle cx="1033.6" cy="415" r="5" fill="#B45309"/>
-<text x="1122.0" y="422.0" font-size="20" text-anchor="end" fill="#6B6459">3D AGO</text>
+<text x="1122.0" y="422.0" font-size="20" text-anchor="end" fill="#6B6459">4D AGO</text>
 <rect x="56.5" y="474.5" width="352" height="330" fill="#F6F3EC" stroke="#CFC6B3" stroke-width="1.5"/>
 <path d="M56.0 496V474H78.0" fill="none" stroke="#B45309" stroke-width="3"/>
 <text x="78.0" y="516.0" font-size="22" font-weight="700" letter-spacing="2" fill="#B45309">B-06</text>
@@ -79,7 +79,7 @@ text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consola
 <path d="M78.0 730H386.0" stroke="#CFC6B3" stroke-width="1"/>
 <text x="78.0" y="776.0" font-size="36" font-weight="700" fill="#1C1917">pumper</text>
 <circle cx="297.6" cy="769" r="5" fill="#B45309"/>
-<text x="386.0" y="776.0" font-size="20" text-anchor="end" fill="#6B6459">2D AGO</text>
+<text x="386.0" y="776.0" font-size="20" text-anchor="end" fill="#6B6459">3D AGO</text>
 <rect x="424.5" y="474.5" width="352" height="330" fill="#F6F3EC" stroke="#CFC6B3" stroke-width="1.5"/>
 <path d="M424.0 496V474H446.0" fill="none" stroke="#B45309" stroke-width="3"/>
 <text x="446.0" y="516.0" font-size="22" font-weight="700" letter-spacing="2" fill="#B45309">A-04</text>
@@ -88,7 +88,7 @@ text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consola
 <path d="M446.0 730H754.0" stroke="#CFC6B3" stroke-width="1"/>
 <text x="446.0" y="776.0" font-size="36" font-weight="700" fill="#1C1917">ascent</text>
 <circle cx="665.6" cy="769" r="5" fill="#B45309"/>
-<text x="754.0" y="776.0" font-size="20" text-anchor="end" fill="#6B6459">3D AGO</text>
+<text x="754.0" y="776.0" font-size="20" text-anchor="end" fill="#6B6459">4D AGO</text>
 <rect x="792.5" y="474.5" width="352" height="330" fill="#F6F3EC" stroke="#CFC6B3" stroke-width="1.5"/>
 <path d="M792.0 496V474H814.0" fill="none" stroke="#B45309" stroke-width="3"/>
 <text x="814.0" y="516.0" font-size="22" font-weight="700" letter-spacing="2" fill="#B45309">E-13</text>
@@ -97,6 +97,6 @@ text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consola
 <path d="M814.0 730H1122.0" stroke="#CFC6B3" stroke-width="1"/>
 <text x="814.0" y="776.0" font-size="36" font-weight="700" fill="#1C1917">politicas</text>
 <circle cx="1033.6" cy="769" r="5" fill="#B45309"/>
-<text x="1122.0" y="776.0" font-size="20" text-anchor="end" fill="#6B6459">2D AGO</text>
+<text x="1122.0" y="776.0" font-size="20" text-anchor="end" fill="#6B6459">3D AGO</text>
 <text x="1144.0" y="844.0" font-size="20" letter-spacing="2" text-anchor="end" fill="#6B6459">DOT: LAST PUSH, AMBER WITHIN 7 DAYS</text>
 </svg>
