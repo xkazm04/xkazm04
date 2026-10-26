@@ -1,7 +1,7 @@
 <a href="https://github.com/xkazm04">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261025" />
-  <img alt="kazii, The Builder. 36,102 contributions in the last 12 months, 84-day streak, 58 public repos" src="assets/title-dark.svg?v=20261025" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261026" />
+  <img alt="kazii, The Builder. 37,988 contributions in the last 12 months, 85-day streak, 59 public repos" src="assets/title-dark.svg?v=20261026" width="100%" />
 </picture>
 </a>
 
@@ -12,8 +12,8 @@
 I build local-first software: tools that run on your machine, keep your data there, and put AI agents to work on real projects. Most of it is TypeScript and Rust, with some C++ and C# when the target is a VR headset.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261025" />
-  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261025" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261026" />
+  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261026" width="100%" />
 </picture>
 
 1. **Local-first by default.** State lives in SQLite on the user's machine. Nothing leaves unless they send it.
@@ -21,30 +21,30 @@ I build local-first software: tools that run on your machine, keep your data the
 3. **Ship the whole thing.** Desktop app, backend, observability and the site that explains it.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261025" />
-  <img alt="Build log: 36,102 contributions in the last 12 months as weekly columns, 84-day streak" src="assets/log-dark.svg?v=20261025" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261026" />
+  <img alt="Build log: 37,988 contributions in the last 12 months as weekly columns, 85-day streak" src="assets/log-dark.svg?v=20261026" width="100%" />
 </picture>
 
 <details>
-<summary><b>Latest pushes</b> &nbsp;<sub>27 of 58 public repos pushed in the last 30 days</sub></summary>
+<summary><b>Latest pushes</b> &nbsp;<sub>28 of 59 public repos pushed in the last 30 days</sub></summary>
 
+- `2026-10-26` &nbsp;**[castle-control](https://github.com/xkazm04/castle-control)** &nbsp;<sub>RUST</sub>
+- `2026-10-26` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
+- `2026-10-25` &nbsp;**[athena-portable](https://github.com/xkazm04/athena-portable)** &nbsp;<sub>PYTHON</sub> &nbsp;Athena: a personal AI agent that works inside your web apps and asks before it acts. NVIDIA Nemotron on Nebius Token Factory red-teams her gate.
+- `2026-10-25` &nbsp;**[afterlife](https://github.com/xkazm04/afterlife)** &nbsp;<sub>TYPESCRIPT</sub>
+- `2026-10-25` &nbsp;**[gravitone-gcloud](https://github.com/xkazm04/gravitone-gcloud)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Content creation studio prototyped UI-first — Next.js 16, React 19, Tailwind v4.
 - `2026-10-25` &nbsp;**[mage-arena](https://github.com/xkazm04/mage-arena)** &nbsp;<sub>C++</sub> &nbsp;Seated, hands-first spell duel for Meta Quest (Unreal Engine 5.8) - Meta VR Start Developer Competition 2026
-- `2026-10-25` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
-- `2026-10-24` &nbsp;**[shadowrunr](https://github.com/xkazm04/shadowrunr)** &nbsp;<sub>RUST</sub>
-- `2026-10-24` &nbsp;**[athena-portable](https://github.com/xkazm04/athena-portable)** &nbsp;<sub>PYTHON</sub> &nbsp;Athena: a personal AI agent that works inside your web apps and asks before it acts. NVIDIA Nemotron on Nebius Token Factory red-teams her gate.
-- `2026-10-24` &nbsp;**[paypal](https://github.com/xkazm04/paypal)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;The Table: agent-to-agent haggling over PayPal, hackathon project
-- `2026-10-24` &nbsp;**[personas](https://github.com/xkazm04/personas)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Local-first desktop app for building AI agents, connecting them to your tools, running them on triggers, and orchestrating teams of them on real software projects.
-- `2026-10-24` &nbsp;**[kp](https://github.com/xkazm04/kp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;open-source hiring workspace
-- `2026-10-24` &nbsp;**[ascent](https://github.com/xkazm04/ascent)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Scores how AI-native a team's engineering is — a 0-100 maturity score across 9 weighted dimensions, with evidence and a prioritized path to the next level.
+- `2026-10-25` &nbsp;**[ai-registry](https://github.com/xkazm04/ai-registry)** &nbsp;<sub>JAVASCRIPT</sub> &nbsp;Example AI development registry - skills, practices and org memory that ascent onboards, indexes and tracks.
+- `2026-10-25` &nbsp;**[personas](https://github.com/xkazm04/personas)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Local-first desktop app for building AI agents, connecting them to your tools, running them on triggers, and orchestrating teams of them on real software projects.
 
-Code by size: TypeScript 68.8% · Rust 15.8% · JavaScript 7.7% · Python 5.7% · C++ 1.2% · Other 0.8%
+Code by size: TypeScript 68.5% · Rust 15.7% · JavaScript 7.9% · Python 5.8% · C++ 1.3% · Other 0.8%
 
 </details>
 
 <a href="https://github.com/xkazm04?tab=repositories">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261025" />
-  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261025" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261026" />
+  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261026" width="100%" />
 </picture>
 </a>
 
@@ -100,8 +100,8 @@ Code by size: TypeScript 68.8% · Rust 15.8% · JavaScript 7.7% · Python 5.7% �
 
 <a href="https://github.com/xkazm04/garden-vr">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261025" />
-  <img alt="garden-vr concept art: a glowing terrarium jar asks what you would like to grow. mage-arena storyboard: seated first-person view over the arena" src="assets/vr-dark.svg?v=20261025" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261026" />
+  <img alt="garden-vr concept art: a glowing terrarium jar asks what you would like to grow. mage-arena storyboard: seated first-person view over the arena" src="assets/vr-dark.svg?v=20261026" width="100%" />
 </picture>
 </a>
 
@@ -109,8 +109,8 @@ Code by size: TypeScript 68.8% · Rust 15.8% · JavaScript 7.7% · Python 5.7% �
 **[mage-arena](https://github.com/xkazm04/mage-arena)** Seated spell duel played with your hands. <sub>Right: storyboard, seated first-person view over the arena.</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261025" />
-  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261025" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261026" />
+  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261026" width="100%" />
 </picture>
 
-<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-10-25</sub></p>
+<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-10-26</sub></p>
