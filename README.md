@@ -1,7 +1,7 @@
 <a href="https://github.com/xkazm04">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261028" />
-  <img alt="kazii, The Builder. 38,695 contributions in the last 12 months, 87-day streak, 61 public repos" src="assets/title-dark.svg?v=20261028" width="100%" />
+  <img alt="kazii, The Builder. 39,174 contributions in the last 12 months, 87-day streak, 61 public repos" src="assets/title-dark.svg?v=20261028" width="100%" />
 </picture>
 </a>
 
@@ -22,22 +22,22 @@ I build local-first software: tools that run on your machine, keep your data the
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261028" />
-  <img alt="Build log: 38,695 contributions in the last 12 months as weekly columns, 87-day streak" src="assets/log-dark.svg?v=20261028" width="100%" />
+  <img alt="Build log: 39,174 contributions in the last 12 months as weekly columns, 87-day streak" src="assets/log-dark.svg?v=20261028" width="100%" />
 </picture>
 
 <details>
 <summary><b>Latest pushes</b> &nbsp;<sub>30 of 61 public repos pushed in the last 30 days</sub></summary>
 
+- `2026-10-28` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
 - `2026-10-28` &nbsp;**[castle-control](https://github.com/xkazm04/castle-control)** &nbsp;<sub>RUST</sub>
-- `2026-10-28` &nbsp;**[mage-arena](https://github.com/xkazm04/mage-arena)** &nbsp;<sub>C++</sub> &nbsp;Seated, hands-first spell duel for Meta Quest (Unreal Engine 5.8) - Meta VR Start Developer Competition 2026
-- `2026-10-27` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
-- `2026-10-27` &nbsp;**[athena-portable](https://github.com/xkazm04/athena-portable)** &nbsp;<sub>PYTHON</sub> &nbsp;Athena: a personal AI agent that works inside your web apps and asks before it acts. NVIDIA Nemotron on Nebius Token Factory red-teams her gate.
-- `2026-10-27` &nbsp;**[dowser](https://github.com/xkazm04/dowser)** &nbsp;<sub>JAVASCRIPT</sub>
-- `2026-10-27` &nbsp;**[ai-registry](https://github.com/xkazm04/ai-registry)** &nbsp;<sub>JAVASCRIPT</sub> &nbsp;Example AI development registry - skills, practices and org memory that ascent onboards, indexes and tracks.
-- `2026-10-27` &nbsp;**[mage-arena-pc](https://github.com/xkazm04/mage-arena-pc)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Mage Arena (PC): elemental battle-mage action RPG - campaign and gameplay design docs
-- `2026-10-27` &nbsp;**[garden-vr](https://github.com/xkazm04/garden-vr)** &nbsp;<sub>C#</sub> &nbsp;Two calm, hands-first daily-ritual apps (Unity, Meta Quest) that grow a living garden from real habits. Meta VR Start Developer Competition 2026.
+- `2026-10-28` &nbsp;**[dowser](https://github.com/xkazm04/dowser)** &nbsp;<sub>JAVASCRIPT</sub>
+- `2026-10-28` &nbsp;**[athena-muse](https://github.com/xkazm04/athena-muse)** &nbsp;<sub>PYTHON</sub>
+- `2026-10-28` &nbsp;**[kp](https://github.com/xkazm04/kp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;open-source hiring workspace
+- `2026-10-28` &nbsp;**[shadowrunr](https://github.com/xkazm04/shadowrunr)** &nbsp;<sub>RUST</sub>
+- `2026-10-28` &nbsp;**[garden-vr](https://github.com/xkazm04/garden-vr)** &nbsp;<sub>C#</sub> &nbsp;Two calm, hands-first daily-ritual apps (Unity, Meta Quest) that grow a living garden from real habits. Meta VR Start Developer Competition 2026.
+- `2026-10-28` &nbsp;**[pumper](https://github.com/xkazm04/pumper)** &nbsp;<sub>RUST</sub> &nbsp;Local-first scraping service — one Rust binary, durable SQLite job queue, three pluggable scrape engines (HTTP, browser, Claude Code).
 
-Code by size: TypeScript 68.3% · Rust 15.7% · JavaScript 8.1% · Python 5.9% · C++ 1.3% · Other 0.8%
+Code by size: TypeScript 68.2% · Rust 15.7% · JavaScript 8.1% · Python 5.9% · C++ 1.3% · Other 0.8%
 
 </details>
 
@@ -53,10 +53,10 @@ Code by size: TypeScript 68.3% · Rust 15.7% · JavaScript 8.1% · Python 5.9% �
 - <sub>B-05</sub> **[lighttrack](https://github.com/xkazm04/lighttrack)** Self-hosted LLM observability with LLM-as-judge scoring, one container. <sub>RUST · SQLITE / POSTGRES / FIRESTORE</sub>
 - <sub>B-06</sub> **[pumper](https://github.com/xkazm04/pumper)** One-binary scraper, durable job queue, HTTP > browser > Claude Code. <sub>RUST · SQLITE</sub>
 - <sub>A-04</sub> **[ascent](https://github.com/xkazm04/ascent)** Scores how AI-native a team is, 0-100 across nine weighted dimensions. <sub>TYPESCRIPT</sub>
-- <sub>E-13</sub> **[politicas](https://github.com/xkazm04/politicas)** Czech politics: MP scoring, votes, money ties and budgets on one graph. <sub>TYPESCRIPT · CS / EN</sub>
+- <sub>E-14</sub> **[politicas](https://github.com/xkazm04/politicas)** Czech politics: MP scoring, votes, money ties and budgets on one graph. <sub>TYPESCRIPT · CS / EN</sub>
 
 <details>
-<summary><b>Parts list</b> &nbsp;<sub>all 15 projects in 5 sub-assemblies</sub></summary>
+<summary><b>Parts list</b> &nbsp;<sub>all 16 projects in 5 sub-assemblies</sub></summary>
 
 **A · Agent Platforms & Dev Tooling**
 
@@ -72,21 +72,22 @@ Code by size: TypeScript 68.3% · Rust 15.7% · JavaScript 8.1% · Python 5.9% �
 
 **C · Hands-First VR / Meta VR Start 2026**
 
-- <sub>C-07</sub> **[garden-vr](https://github.com/xkazm04/garden-vr)** Two calm daily-ritual apps that grow a living garden from real habits <sub>UNITY · META QUEST</sub>
-- <sub>C-08</sub> **[mage-arena](https://github.com/xkazm04/mage-arena)** Seated spell duel played with your hands <sub>UNREAL ENGINE 5 · META QUEST</sub>
+- <sub>C-07</sub> **[bp](https://github.com/xkazm04/bp)** A whole software product as a blueprint on a backlit light table; an AI lamp asks you to approve its next move <sub>UNREAL ENGINE 5.8 · META QUEST · TYPESCRIPT</sub>
+- <sub>C-08</sub> **[garden-vr](https://github.com/xkazm04/garden-vr)** Two calm daily-ritual apps that grow a living garden from real habits <sub>UNITY · META QUEST</sub>
+- <sub>C-09</sub> **[mage-arena](https://github.com/xkazm04/mage-arena)** Seated spell duel played with your hands <sub>UNREAL ENGINE 5 · META QUEST</sub>
 
 **D · Media & Data**
 
-- <sub>D-09</sub> **[gravitone](https://github.com/xkazm04/gravitone)** CPU-only TTS with voice cloning: 4.26x realtime on Graviton4 <sub>PYTHON · ARM</sub>
-- <sub>D-10</sub> **[stat-reel](https://github.com/xkazm04/stat-reel)** Licensed sports data turned into 1-3 minute data-viz videos <sub>TYPESCRIPT</sub>
-- <sub>D-11</sub> **[systedo-case](https://github.com/xkazm04/systedo-case)** Ad intelligence on your machine: Google Ads, Sklik, Meta, TikTok <sub>TYPESCRIPT</sub>
-- <sub>D-12</sub> **[MiSu](https://www.youtube.com/watch?v=Kam3LOzbPoI)** AI-generated music album. I told it to make great music, and it does <sub>PROMPT ENGINEERING</sub>
+- <sub>D-10</sub> **[gravitone](https://github.com/xkazm04/gravitone)** CPU-only TTS with voice cloning: 4.26x realtime on Graviton4 <sub>PYTHON · ARM</sub>
+- <sub>D-11</sub> **[stat-reel](https://github.com/xkazm04/stat-reel)** Licensed sports data turned into 1-3 minute data-viz videos <sub>TYPESCRIPT</sub>
+- <sub>D-12</sub> **[systedo-case](https://github.com/xkazm04/systedo-case)** Ad intelligence on your machine: Google Ads, Sklik, Meta, TikTok <sub>TYPESCRIPT</sub>
+- <sub>D-13</sub> **[MiSu](https://www.youtube.com/watch?v=Kam3LOzbPoI)** AI-generated music album. I told it to make great music, and it does <sub>PROMPT ENGINEERING</sub>
 
 **E · Civic & Experiments**
 
-- <sub>E-13</sub> **[politicas](https://github.com/xkazm04/politicas)** Czech politics: MP scoring, votes, money ties and budgets on one graph <sub>TYPESCRIPT · CS / EN</sub>
-- <sub>E-14</sub> **[athena-portable](https://github.com/xkazm04/athena-portable)** Personal agent that works inside your web apps and asks before it acts <sub>PYTHON · HACKATHON</sub>
-- <sub>E-15</sub> **[paypal](https://github.com/xkazm04/paypal)** The Table: agent-to-agent haggling over PayPal <sub>RUST · HACKATHON</sub>
+- <sub>E-14</sub> **[politicas](https://github.com/xkazm04/politicas)** Czech politics: MP scoring, votes, money ties and budgets on one graph <sub>TYPESCRIPT · CS / EN</sub>
+- <sub>E-15</sub> **[athena-portable](https://github.com/xkazm04/athena-portable)** Personal agent that works inside your web apps and asks before it acts <sub>PYTHON · HACKATHON</sub>
+- <sub>E-16</sub> **[paypal](https://github.com/xkazm04/paypal)** The Table: agent-to-agent haggling over PayPal <sub>RUST · HACKATHON</sub>
 
 **politicas in numbers**
 
@@ -98,15 +99,15 @@ Code by size: TypeScript 68.3% · Rust 15.7% · JavaScript 8.1% · Python 5.9% �
 
 </details>
 
-<a href="https://github.com/xkazm04/garden-vr">
+<a href="https://github.com/xkazm04/bp">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261028" />
-  <img alt="garden-vr concept art: a glowing terrarium jar asks what you would like to grow. mage-arena storyboard: seated first-person view over the arena" src="assets/vr-dark.svg?v=20261028" width="100%" />
+  <img alt="bp concept art: the product as a blueprint on a backlit light table, the lamp agent asking for a decision. bp in-engine capture: the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card" src="assets/vr-dark.svg?v=20261028" width="100%" />
 </picture>
 </a>
 
-**[garden-vr](https://github.com/xkazm04/garden-vr)** Two calm daily-ritual apps that grow a living garden from real habits. <sub>Left: concept art, a glowing terrarium jar asks what you would like to grow.</sub><br/>
-**[mage-arena](https://github.com/xkazm04/mage-arena)** Seated spell duel played with your hands. <sub>Right: storyboard, seated first-person view over the arena.</sub>
+**[bp](https://github.com/xkazm04/bp)** A whole software product as a blueprint on a backlit light table; an AI lamp asks you to approve its next move.<br/>
+<sub>Left: concept art, the product as a blueprint on a backlit light table, the lamp agent asking for a decision. Right: in-engine capture, the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261028" />
