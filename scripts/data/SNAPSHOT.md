@@ -12,7 +12,8 @@
 | `project_groups[]` | all projects in groups A-E: `{letter, name, projects: [{name, url, stack, note}]}`; item numbers run across groups |
 | `toolbox[]` | `{group, tools: [[label, logo file in logos/ or null]]}`; null draws the LLM-as-judge scales glyph |
 | `politicas_figures` | the figures in the parts-list table, with their source line |
-| `vr[]` | `{file, project, kind, caption}`; the VR sheet inlines `garden-jar.jpg` and `arena-storyboard.jpg` from `images/vr/` |
+| `vr[]` | `{file, project, kind, caption, title?, sub?}`; on the VR sheet `title` names a plate (default: the project) and `sub` is the line under it (default: the project's stack) |
+| `vr_sheet` | the two `vr[]` files the VR sheet inlines from `images/vr/`, left then right; the README links the left one's project |
 
 ## `S` - the snapshot, built from the GitHub GraphQL API by `update_readme.snapshot()`
 

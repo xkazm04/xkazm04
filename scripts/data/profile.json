@@ -80,6 +80,12 @@
    "name": "Hands-First Vr / Meta Vr Start 2026",
    "projects": [
     {
+     "name": "bp",
+     "url": "https://github.com/xkazm04/bp",
+     "stack": "UNREAL ENGINE 5.8 · META QUEST · TYPESCRIPT",
+     "note": "A whole software product as a blueprint on a backlit light table; an AI lamp asks you to approve its next move"
+    },
+    {
      "name": "garden-vr",
      "url": "https://github.com/xkazm04/garden-vr",
      "stack": "UNITY · META QUEST",
@@ -264,6 +270,22 @@
  },
  "vr": [
   {
+   "file": "images/vr/bp-concept.jpg",
+   "project": "bp",
+   "title": "bp · the target",
+   "kind": "concept art",
+   "caption": "the product as a blueprint on a backlit light table, the lamp agent asking for a decision",
+   "sub": "CONCEPT · THE LOOK TO MATCH"
+  },
+  {
+   "file": "images/vr/bp-table.jpg",
+   "project": "bp",
+   "title": "bp · in the engine",
+   "kind": "in-engine capture",
+   "caption": "the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card",
+   "sub": "UNREAL ENGINE 5.8 · META QUEST"
+  },
+  {
    "file": "images/vr/garden-jar.jpg",
    "project": "garden-vr",
    "kind": "concept art",
@@ -311,5 +333,9 @@
    "kind": "character turnaround",
    "caption": "the warden"
   }
+ ],
+ "vr_sheet": [
+  "images/vr/bp-concept.jpg",
+  "images/vr/bp-table.jpg"
  ]
 }

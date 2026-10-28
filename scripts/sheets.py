@@ -521,7 +521,7 @@ def sheet_assemblies(t, P, S):
 # ---------------------------------------------------------------- sheet 04: VR plates
 
 def sheet_vr(t, P):
-    picks = ["images/vr/garden-jar.jpg", "images/vr/arena-storyboard.jpg"]
+    picks = P["vr_sheet"]
     vr = {v["file"]: v for v in P["vr"]}
     groups = {p["name"]: p for g in P["project_groups"] for p in g["projects"]}
     pw, ph = 528, 297
@@ -545,11 +545,11 @@ def sheet_vr(t, P):
         kw = tw(kind, 20) + 28
         b.append(f'<rect x="{x + 14}" y="{y + 14}" width="{kw:.0f}" height="36" fill="{t["bg"]}" opacity=".88"/>')
         b.append(text(x + 28, y + 39, kind, 20, t["accent"], ls=1, weight=700))
-        b.append(text(x, y + ph + 62, v["project"], 36, t["ink"], weight=700))
-        stack = groups[v["project"]]["stack"]
+        b.append(text(x, y + ph + 62, v.get("title", v["project"]), 36, t["ink"], weight=700))
+        stack = v.get("sub", groups[v["project"]]["stack"])
         b.append(text(x, y + ph + 98, stack, 20, t["muted"], ls=2))
-    return sheet(t, h, "SHEET 04 / HANDS-FIRST VR", b, "", sheet_no=4,
-                 label="Hands-first VR: garden-vr concept art and mage-arena storyboard")
+    label = " and ".join(f'{vr[f]["project"]} {vr[f]["kind"]}' for f in picks)
+    return sheet(t, h, "SHEET 04 / HANDS-FIRST VR", b, "", sheet_no=4, label=f"Hands-first VR: {label}")
 
 
 # ---------------------------------------------------------------- sheet 05: standard parts
@@ -673,12 +673,12 @@ def readme(P, S, version=""):
     L.append("</details>")
     L.append("")
     vr = {v["file"]: v for v in P["vr"]}
-    gj, ab = vr["images/vr/garden-jar.jpg"], vr["images/vr/arena-storyboard.jpg"]
-    gv, ma = idx["garden-vr"][2], idx["mage-arena"][2]
-    L.append(pic("vr", f'garden-vr {gj["kind"]}: {gj["caption"]}. mage-arena {ab["kind"]}: {ab["caption"]}', gv["url"]))
+    left, right = (vr[f] for f in P["vr_sheet"])
+    proj = idx[left["project"]][2]
+    L.append(pic("vr", f'{left["project"]} {left["kind"]}: {left["caption"]}. {right["project"]} {right["kind"]}: {right["caption"]}', proj["url"]))
     L.append("")
-    L.append(f'**[garden-vr]({gv["url"]})** {gv["note"]}. <sub>Left: {gj["kind"]}, {gj["caption"]}.</sub><br/>')
-    L.append(f'**[mage-arena]({ma["url"]})** {ma["note"]}. <sub>Right: {ab["kind"]}, {ab["caption"]}.</sub>')
+    L.append(f'**[{proj["name"]}]({proj["url"]})** {proj["note"]}.<br/>')
+    L.append(f'<sub>Left: {left["kind"]}, {left["caption"]}. Right: {right["kind"]}, {right["caption"]}.</sub>')
     L.append("")
     L.append(pic("toolbox", "Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest"))
     L.append("")
