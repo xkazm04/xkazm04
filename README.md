@@ -1,7 +1,7 @@
 <a href="https://github.com/xkazm04">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261029" />
-  <img alt="kazii, The Builder. 39,210 contributions in the last 12 months, 88-day streak, 61 public repos" src="assets/title-dark.svg?v=20261029" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261030" />
+  <img alt="kazii, The Builder. 39,341 contributions in the last 12 months, 89-day streak, 61 public repos" src="assets/title-dark.svg?v=20261030" width="100%" />
 </picture>
 </a>
 
@@ -12,8 +12,8 @@
 I build local-first software: tools that run on your machine, keep your data there, and put AI agents to work on real projects. Most of it is TypeScript and Rust, with some C++ and C# when the target is a VR headset.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261029" />
-  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261029" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261030" />
+  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261030" width="100%" />
 </picture>
 
 1. **Local-first by default.** State lives in SQLite on the user's machine. Nothing leaves unless they send it.
@@ -21,30 +21,30 @@ I build local-first software: tools that run on your machine, keep your data the
 3. **Ship the whole thing.** Desktop app, backend, observability and the site that explains it.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261029" />
-  <img alt="Build log: 39,210 contributions in the last 12 months as weekly columns, 88-day streak" src="assets/log-dark.svg?v=20261029" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261030" />
+  <img alt="Build log: 39,341 contributions in the last 12 months as weekly columns, 89-day streak" src="assets/log-dark.svg?v=20261030" width="100%" />
 </picture>
 
 <details>
-<summary><b>Latest pushes</b> &nbsp;<sub>30 of 61 public repos pushed in the last 30 days</sub></summary>
+<summary><b>Latest pushes</b> &nbsp;<sub>29 of 61 public repos pushed in the last 30 days</sub></summary>
 
-- `2026-10-28` &nbsp;**[dowser](https://github.com/xkazm04/dowser)** &nbsp;<sub>JAVASCRIPT</sub>
-- `2026-10-28` &nbsp;**[ai-registry](https://github.com/xkazm04/ai-registry)** &nbsp;<sub>JAVASCRIPT</sub> &nbsp;Example AI development registry - skills, practices and org memory that ascent onboards, indexes and tracks.
-- `2026-10-28` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
-- `2026-10-28` &nbsp;**[castle-control](https://github.com/xkazm04/castle-control)** &nbsp;<sub>RUST</sub>
-- `2026-10-28` &nbsp;**[athena-muse](https://github.com/xkazm04/athena-muse)** &nbsp;<sub>PYTHON</sub>
-- `2026-10-28` &nbsp;**[kp](https://github.com/xkazm04/kp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;open-source hiring workspace
-- `2026-10-28` &nbsp;**[shadowrunr](https://github.com/xkazm04/shadowrunr)** &nbsp;<sub>RUST</sub>
-- `2026-10-28` &nbsp;**[garden-vr](https://github.com/xkazm04/garden-vr)** &nbsp;<sub>C#</sub> &nbsp;Two calm, hands-first daily-ritual apps (Unity, Meta Quest) that grow a living garden from real habits. Meta VR Start Developer Competition 2026.
+- `2026-10-30` &nbsp;**[shadowrunr](https://github.com/xkazm04/shadowrunr)** &nbsp;<sub>RUST</sub>
+- `2026-10-30` &nbsp;**[paypal](https://github.com/xkazm04/paypal)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;The Table: agent-to-agent haggling over PayPal, hackathon project
+- `2026-10-29` &nbsp;**[castle-control](https://github.com/xkazm04/castle-control)** &nbsp;<sub>RUST</sub>
+- `2026-10-29` &nbsp;**[dowser](https://github.com/xkazm04/dowser)** &nbsp;<sub>JAVASCRIPT</sub>
+- `2026-10-29` &nbsp;**[ai-registry](https://github.com/xkazm04/ai-registry)** &nbsp;<sub>JAVASCRIPT</sub> &nbsp;Example AI development registry - skills, practices and org memory that ascent onboards, indexes and tracks.
+- `2026-10-29` &nbsp;**[pof](https://github.com/xkazm04/pof)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;AI-powered companion for building Unreal Engine 5 C++ games — checklists, feature tracking, and quality evaluation from prototype to polish.
+- `2026-10-29` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
+- `2026-10-29` &nbsp;**[mage-arena](https://github.com/xkazm04/mage-arena)** &nbsp;<sub>C++</sub> &nbsp;Seated, hands-first spell duel for Meta Quest (Unreal Engine 5.8) - Meta VR Start Developer Competition 2026
 
-Code by size: TypeScript 68.1% · Rust 15.7% · JavaScript 8.2% · Python 5.9% · C++ 1.3% · Other 0.8%
+Code by size: TypeScript 68% · Rust 15.7% · JavaScript 8.3% · Python 5.9% · C++ 1.3% · Other 0.8%
 
 </details>
 
 <a href="https://github.com/xkazm04?tab=repositories">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261029" />
-  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261029" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261030" />
+  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261030" width="100%" />
 </picture>
 </a>
 
@@ -101,8 +101,8 @@ Code by size: TypeScript 68.1% · Rust 15.7% · JavaScript 8.2% · Python 5.9% �
 
 <a href="https://github.com/xkazm04/bp">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261029" />
-  <img alt="bp concept art: the product as a blueprint on a backlit light table, the lamp agent asking for a decision. bp in-engine capture: the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card" src="assets/vr-dark.svg?v=20261029" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261030" />
+  <img alt="bp concept art: the product as a blueprint on a backlit light table, the lamp agent asking for a decision. bp in-engine capture: the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card" src="assets/vr-dark.svg?v=20261030" width="100%" />
 </picture>
 </a>
 
@@ -110,8 +110,8 @@ Code by size: TypeScript 68.1% · Rust 15.7% · JavaScript 8.2% · Python 5.9% �
 <sub>Left: concept art, the product as a blueprint on a backlit light table, the lamp agent asking for a decision. Right: in-engine capture, the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card.</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261029" />
-  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261029" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261030" />
+  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261030" width="100%" />
 </picture>
 
-<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-10-29</sub></p>
+<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-10-30</sub></p>
