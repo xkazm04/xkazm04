@@ -73,13 +73,13 @@ text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consola
 <text x="810.0" y="604.0" font-size="24" fill="#E7E5E4">Meta Quest</text>
 <text x="56.0" y="704.0" font-size="22" font-weight="700" letter-spacing="3" fill="#F59E0B">MATERIAL</text>
 <rect x="276.0" y="680" width="590.2" height="30" fill="url(#hatch)" stroke="#E7E5E4" stroke-width="1.2"/>
-<rect x="866.2" y="680" width="136.3" height="30" fill="url(#hatch2)" stroke="#E7E5E4" stroke-width="1.2"/>
-<rect x="1002.5" y="680" width="72.0" height="30" fill="url(#dots)" stroke="#E7E5E4" stroke-width="1.2"/>
+<rect x="866.2" y="680" width="135.4" height="30" fill="url(#hatch2)" stroke="#E7E5E4" stroke-width="1.2"/>
+<rect x="1001.6" y="680" width="72.9" height="30" fill="url(#dots)" stroke="#E7E5E4" stroke-width="1.2"/>
 <rect x="1074.6" y="680" width="51.2" height="30" fill="#1C232C" stroke="#E7E5E4" stroke-width="1.2"/>
 <rect x="1125.8" y="680" width="11.3" height="30" fill="#2D3540" stroke="#E7E5E4" stroke-width="1.2"/>
 <rect x="1137.1" y="680" width="6.9" height="30" fill="#2D3540" stroke="#E7E5E4" stroke-width="1.2"/>
 <text x="276.0" y="746.0" font-size="20" fill="#E7E5E4">TypeScript 68%</text>
-<text x="483.6" y="746.0" font-size="20" fill="#8B949E">Rust 15.7%</text>
-<text x="641.6" y="746.0" font-size="20" fill="#8B949E">JavaScript 8.3%</text>
+<text x="483.6" y="746.0" font-size="20" fill="#8B949E">Rust 15.6%</text>
+<text x="641.6" y="746.0" font-size="20" fill="#8B949E">JavaScript 8.4%</text>
 <text x="861.6" y="746.0" font-size="20" fill="#8B949E">+3 more 8.0%</text>
 </svg>
