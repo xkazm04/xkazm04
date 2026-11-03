@@ -1,7 +1,7 @@
 <a href="https://github.com/xkazm04">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261102" />
-  <img alt="kazii, The Builder. 42,043 contributions in the last 12 months, 92-day streak, 62 public repos" src="assets/title-dark.svg?v=20261102" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261103" />
+  <img alt="kazii, The Builder. 42,218 contributions in the last 12 months, 93-day streak, 62 public repos" src="assets/title-dark.svg?v=20261103" width="100%" />
 </picture>
 </a>
 
@@ -12,8 +12,8 @@
 I build local-first software: tools that run on your machine, keep your data there, and put AI agents to work on real projects. Most of it is TypeScript and Rust, with some C++ and C# when the target is a VR headset.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261102" />
-  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261102" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261103" />
+  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261103" width="100%" />
 </picture>
 
 1. **Local-first by default.** State lives in SQLite on the user's machine. Nothing leaves unless they send it.
@@ -21,30 +21,30 @@ I build local-first software: tools that run on your machine, keep your data the
 3. **Ship the whole thing.** Desktop app, backend, observability and the site that explains it.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261102" />
-  <img alt="Build log: 42,043 contributions in the last 12 months as weekly columns, 92-day streak" src="assets/log-dark.svg?v=20261102" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261103" />
+  <img alt="Build log: 42,218 contributions in the last 12 months as weekly columns, 93-day streak" src="assets/log-dark.svg?v=20261103" width="100%" />
 </picture>
 
 <details>
 <summary><b>Latest pushes</b> &nbsp;<sub>30 of 62 public repos pushed in the last 30 days</sub></summary>
 
-- `2026-11-02` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
-- `2026-11-02` &nbsp;**[dowser](https://github.com/xkazm04/dowser)** &nbsp;<sub>JAVASCRIPT</sub>
-- `2026-11-02` &nbsp;**[castle-control](https://github.com/xkazm04/castle-control)** &nbsp;<sub>TYPESCRIPT</sub>
-- `2026-11-02` &nbsp;**[systedo-case](https://github.com/xkazm04/systedo-case)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Adamant — AI ad intelligence on your machine: measure, triage and generate ad assets across Google Ads, Sklik, Meta and TikTok.
-- `2026-11-02` &nbsp;**[lighttrack](https://github.com/xkazm04/lighttrack)** &nbsp;<sub>RUST</sub> &nbsp;Self-hosted LLM observability and LLM-as-judge scoring. Your data stays in your own SQLite, Postgres or Firestore.
-- `2026-11-02` &nbsp;**[pumper](https://github.com/xkazm04/pumper)** &nbsp;<sub>RUST</sub> &nbsp;Local-first scraping service — one Rust binary, durable SQLite job queue, three pluggable scrape engines (HTTP, browser, Claude Code).
-- `2026-11-02` &nbsp;**[kp](https://github.com/xkazm04/kp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;open-source hiring workspace
-- `2026-11-02` &nbsp;**[politicas](https://github.com/xkazm04/politicas)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Public-accountability platform for Czech politics — MP scoring, voting records, money ties and budgets on one entity graph. Bilingual CS/EN.
+- `2026-11-03` &nbsp;**[castle-control](https://github.com/xkazm04/castle-control)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;OSS package with customizable features for Twitch streamers
+- `2026-11-03` &nbsp;**[ai-registry](https://github.com/xkazm04/ai-registry)** &nbsp;<sub>JAVASCRIPT</sub> &nbsp;Example AI development registry - skills, practices and org memory that ascent onboards, indexes and tracks.
+- `2026-11-03` &nbsp;**[shadowrunr](https://github.com/xkazm04/shadowrunr)** &nbsp;<sub>RUST</sub>
+- `2026-11-03` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
+- `2026-11-03` &nbsp;**[shadowrunner](https://github.com/xkazm04/shadowrunner)** &nbsp;<sub>TYPESCRIPT</sub>
+- `2026-11-03` &nbsp;**[personas-web](https://github.com/xkazm04/personas-web)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Marketing site, dashboard and API routes for Personas — a platform for building and orchestrating multi-agent AI pipelines.
+- `2026-11-03` &nbsp;**[paypal](https://github.com/xkazm04/paypal)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;The Table: agent-to-agent haggling over PayPal, hackathon project
+- `2026-11-02` &nbsp;**[athena-muse](https://github.com/xkazm04/athena-muse)** &nbsp;<sub>PYTHON</sub>
 
-Code by size: TypeScript 68% · Rust 15.4% · JavaScript 8.4% · Python 6.1% · C++ 1.3% · Other 0.8%
+Code by size: TypeScript 68% · Rust 15.4% · JavaScript 8.4% · Python 6.1% · C++ 1.3% · Other 0.7%
 
 </details>
 
 <a href="https://github.com/xkazm04?tab=repositories">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261102" />
-  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261102" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261103" />
+  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261103" width="100%" />
 </picture>
 </a>
 
@@ -101,8 +101,8 @@ Code by size: TypeScript 68% · Rust 15.4% · JavaScript 8.4% · Python 6.1% · 
 
 <a href="https://github.com/xkazm04/bp">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261102" />
-  <img alt="bp concept art: the product as a blueprint on a backlit light table, the lamp agent asking for a decision. bp in-engine capture: the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card" src="assets/vr-dark.svg?v=20261102" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261103" />
+  <img alt="bp concept art: the product as a blueprint on a backlit light table, the lamp agent asking for a decision. bp in-engine capture: the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card" src="assets/vr-dark.svg?v=20261103" width="100%" />
 </picture>
 </a>
 
@@ -110,8 +110,8 @@ Code by size: TypeScript 68% · Rust 15.4% · JavaScript 8.4% · Python 6.1% · 
 <sub>Left: concept art, the product as a blueprint on a backlit light table, the lamp agent asking for a decision. Right: in-engine capture, the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card.</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261102" />
-  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261102" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261103" />
+  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261103" width="100%" />
 </picture>
 
-<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-11-02</sub></p>
+<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-11-03</sub></p>
