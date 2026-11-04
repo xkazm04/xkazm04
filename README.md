@@ -1,7 +1,7 @@
 <a href="https://github.com/xkazm04">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261104" />
-  <img alt="kazii, The Builder. 42,878 contributions in the last 12 months, 94-day streak, 62 public repos" src="assets/title-dark.svg?v=20261104" width="100%" />
+  <img alt="kazii, The Builder. 49,228 contributions in the last 12 months, 94-day streak, 62 public repos" src="assets/title-dark.svg?v=20261104" width="100%" />
 </picture>
 </a>
 
@@ -22,22 +22,22 @@ I build local-first software: tools that run on your machine, keep your data the
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261104" />
-  <img alt="Build log: 42,878 contributions in the last 12 months as weekly columns, 94-day streak" src="assets/log-dark.svg?v=20261104" width="100%" />
+  <img alt="Build log: 49,228 contributions in the last 12 months as weekly columns, 94-day streak" src="assets/log-dark.svg?v=20261104" width="100%" />
 </picture>
 
 <details>
 <summary><b>Latest pushes</b> &nbsp;<sub>30 of 62 public repos pushed in the last 30 days</sub></summary>
 
+- `2026-11-04` &nbsp;**[athena-muse](https://github.com/xkazm04/athena-muse)** &nbsp;<sub>PYTHON</sub>
+- `2026-11-04` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
+- `2026-11-04` &nbsp;**[dowser](https://github.com/xkazm04/dowser)** &nbsp;<sub>JAVASCRIPT</sub>
+- `2026-11-04` &nbsp;**[pof](https://github.com/xkazm04/pof)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;AI-powered companion for building Unreal Engine 5 C++ games — checklists, feature tracking, and quality evaluation from prototype to polish.
+- `2026-11-04` &nbsp;**[shadowrunner](https://github.com/xkazm04/shadowrunner)** &nbsp;<sub>TYPESCRIPT</sub>
 - `2026-11-04` &nbsp;**[paypal](https://github.com/xkazm04/paypal)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;The Table: agent-to-agent haggling over PayPal, hackathon project
 - `2026-11-03` &nbsp;**[ai-registry](https://github.com/xkazm04/ai-registry)** &nbsp;<sub>JAVASCRIPT</sub> &nbsp;Example AI development registry - skills, practices and org memory that ascent onboards, indexes and tracks.
-- `2026-11-03` &nbsp;**[bp](https://github.com/xkazm04/bp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;bípípí
-- `2026-11-03` &nbsp;**[athena-muse](https://github.com/xkazm04/athena-muse)** &nbsp;<sub>PYTHON</sub>
 - `2026-11-03` &nbsp;**[ascent](https://github.com/xkazm04/ascent)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Scores how AI-native a team's engineering is — a 0-100 maturity score across 9 weighted dimensions, with evidence and a prioritized path to the next level.
-- `2026-11-03` &nbsp;**[personas-web](https://github.com/xkazm04/personas-web)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Marketing site, dashboard and API routes for Personas — a platform for building and orchestrating multi-agent AI pipelines.
-- `2026-11-03` &nbsp;**[pof](https://github.com/xkazm04/pof)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;AI-powered companion for building Unreal Engine 5 C++ games — checklists, feature tracking, and quality evaluation from prototype to polish.
-- `2026-11-03` &nbsp;**[kp](https://github.com/xkazm04/kp)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;open-source hiring workspace
 
-Code by size: TypeScript 68.1% · Rust 15.3% · JavaScript 8.4% · Python 6.1% · C++ 1.3% · Other 0.7%
+Code by size: TypeScript 68% · Rust 15.3% · JavaScript 8.5% · Python 6.2% · C++ 1.3% · Other 0.7%
 
 </details>
 
