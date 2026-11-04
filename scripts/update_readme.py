@@ -5,7 +5,8 @@ The fetch is turned into a snapshot (the shape sheets.build reads; see snapshot(
 sheets.build writes README.md and assets/{title,spec,log,assemblies,vr,toolbox}-{dark,light}.svg.
 The owner's own content lives in scripts/data/profile.json.
 
-Uses only the standard library. Reads GITHUB_TOKEN from the environment.
+Uses only the standard library. Reads PROFILE_TOKEN (a PAT of the profile user, so
+private contributions are counted like the native heatmap) or falls back to GITHUB_TOKEN.
 """
 
 import json
@@ -22,6 +23,11 @@ SKIP_REPOS = {USERNAME}
 # Markup, config and build glue that would drown out the real languages.
 NON_CODE = {"HTML", "CSS", "SCSS", "Shell", "PowerShell", "Batchfile", "Dockerfile", "NSIS",
             "Just", "HCL", "Go Template", "Makefile", "CMake", "ShaderLab", "HLSL", "PLpgSQL"}
+
+# The Actions GITHUB_TOKEN acts as a bot, so the contribution calendar omits private
+# repositories. A personal token owned by the profile user (PROFILE_TOKEN) is
+# treated as the user and returns the same numbers as the native heatmap.
+TOKEN = os.environ.get("PROFILE_TOKEN") or os.environ["GITHUB_TOKEN"]
 
 QUERY = """
 query($login: String!) {
@@ -51,7 +57,7 @@ def graphql(query, variables):
         "https://api.github.com/graphql",
         data=json.dumps({"query": query, "variables": variables}).encode(),
         headers={
-            "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
+            "Authorization": f"Bearer {TOKEN}",
             "Content-Type": "application/json",
         },
     )

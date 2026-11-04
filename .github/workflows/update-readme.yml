@@ -32,6 +32,8 @@ jobs:
         run: python scripts/update_readme.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # PAT (read:user) so private contributions are included in the heatmap
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
 
       - name: Commit and push
         run: |
