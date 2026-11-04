@@ -1,7 +1,7 @@
 <a href="https://github.com/xkazm04">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261104" />
-  <img alt="kazii, The Builder. 49,228 contributions in the last 12 months, 94-day streak, 62 public repos" src="assets/title-dark.svg?v=20261104" width="100%" />
+  <img alt="kazii, The Builder. 49,229 contributions in the last 12 months, 94-day streak, 62 public repos" src="assets/title-dark.svg?v=20261104" width="100%" />
 </picture>
 </a>
 
@@ -22,7 +22,7 @@ I build local-first software: tools that run on your machine, keep your data the
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261104" />
-  <img alt="Build log: 49,228 contributions in the last 12 months as weekly columns, 94-day streak" src="assets/log-dark.svg?v=20261104" width="100%" />
+  <img alt="Build log: 49,229 contributions in the last 12 months as weekly columns, 94-day streak" src="assets/log-dark.svg?v=20261104" width="100%" />
 </picture>
 
 <details>
