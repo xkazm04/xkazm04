@@ -1,7 +1,7 @@
 <a href="https://github.com/xkazm04">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261104" />
-  <img alt="kazii, The Builder. 49,229 contributions in the last 12 months, 94-day streak, 62 public repos" src="assets/title-dark.svg?v=20261104" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261105" />
+  <img alt="kazii, The Builder. 49,971 contributions in the last 12 months, 95-day streak, 62 public repos" src="assets/title-dark.svg?v=20261105" width="100%" />
 </picture>
 </a>
 
@@ -12,8 +12,8 @@
 I build local-first software: tools that run on your machine, keep your data there, and put AI agents to work on real projects. Most of it is TypeScript and Rust, with some C++ and C# when the target is a VR headset.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261104" />
-  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261104" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261105" />
+  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261105" width="100%" />
 </picture>
 
 1. **Local-first by default.** State lives in SQLite on the user's machine. Nothing leaves unless they send it.
@@ -21,8 +21,8 @@ I build local-first software: tools that run on your machine, keep your data the
 3. **Ship the whole thing.** Desktop app, backend, observability and the site that explains it.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261104" />
-  <img alt="Build log: 49,229 contributions in the last 12 months as weekly columns, 94-day streak" src="assets/log-dark.svg?v=20261104" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261105" />
+  <img alt="Build log: 49,971 contributions in the last 12 months as weekly columns, 95-day streak" src="assets/log-dark.svg?v=20261105" width="100%" />
 </picture>
 
 <details>
@@ -43,8 +43,8 @@ Code by size: TypeScript 68% · Rust 15.3% · JavaScript 8.5% · Python 6.2% · 
 
 <a href="https://github.com/xkazm04?tab=repositories">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261104" />
-  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261104" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261105" />
+  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261105" width="100%" />
 </picture>
 </a>
 
@@ -101,8 +101,8 @@ Code by size: TypeScript 68% · Rust 15.3% · JavaScript 8.5% · Python 6.2% · 
 
 <a href="https://github.com/xkazm04/bp">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261104" />
-  <img alt="bp concept art: the product as a blueprint on a backlit light table, the lamp agent asking for a decision. bp in-engine capture: the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card" src="assets/vr-dark.svg?v=20261104" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261105" />
+  <img alt="bp concept art: the product as a blueprint on a backlit light table, the lamp agent asking for a decision. bp in-engine capture: the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card" src="assets/vr-dark.svg?v=20261105" width="100%" />
 </picture>
 </a>
 
@@ -110,8 +110,8 @@ Code by size: TypeScript 68% · Rust 15.3% · JavaScript 8.5% · Python 6.2% · 
 <sub>Left: concept art, the product as a blueprint on a backlit light table, the lamp agent asking for a decision. Right: in-engine capture, the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card.</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261104" />
-  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261104" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261105" />
+  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261105" width="100%" />
 </picture>
 
-<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-11-04</sub></p>
+<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-11-05</sub></p>
