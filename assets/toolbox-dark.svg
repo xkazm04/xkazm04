@@ -76,8 +76,8 @@ text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consola
 <rect x="838.5" y="680" width="122.4" height="30" fill="url(#hatch2)" stroke="#E7E5E4" stroke-width="1.2"/>
 <rect x="960.9" y="680" width="79.0" height="30" fill="url(#dots)" stroke="#E7E5E4" stroke-width="1.2"/>
 <rect x="1039.8" y="680" width="54.7" height="30" fill="#1C232C" stroke="#E7E5E4" stroke-width="1.2"/>
-<rect x="1094.5" y="680" width="28.6" height="30" fill="#2D3540" stroke="#E7E5E4" stroke-width="1.2"/>
-<rect x="1123.2" y="680" width="20.8" height="30" fill="#2D3540" stroke="#E7E5E4" stroke-width="1.2"/>
+<rect x="1094.5" y="680" width="27.8" height="30" fill="#2D3540" stroke="#E7E5E4" stroke-width="1.2"/>
+<rect x="1122.3" y="680" width="21.7" height="30" fill="#2D3540" stroke="#E7E5E4" stroke-width="1.2"/>
 <text x="276.0" y="746.0" font-size="20" fill="#E7E5E4">TypeScript 64.8%</text>
 <text x="508.4" y="746.0" font-size="20" fill="#8B949E">Rust 14.1%</text>
 <text x="666.4" y="746.0" font-size="20" fill="#8B949E">JavaScript 9.1%</text>
