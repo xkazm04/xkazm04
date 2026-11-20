@@ -73,13 +73,13 @@ text { font-family: 'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consola
 <text x="810.0" y="604.0" font-size="24" fill="#1C1917">Meta Quest</text>
 <text x="56.0" y="704.0" font-size="22" font-weight="700" letter-spacing="3" fill="#B45309">MATERIAL</text>
 <rect x="276.0" y="680" width="562.5" height="30" fill="url(#hatch)" stroke="#1C1917" stroke-width="1.2"/>
-<rect x="838.5" y="680" width="122.4" height="30" fill="url(#hatch2)" stroke="#1C1917" stroke-width="1.2"/>
-<rect x="960.9" y="680" width="79.0" height="30" fill="url(#dots)" stroke="#1C1917" stroke-width="1.2"/>
-<rect x="1039.8" y="680" width="54.7" height="30" fill="#E2DACB" stroke="#1C1917" stroke-width="1.2"/>
-<rect x="1094.5" y="680" width="27.8" height="30" fill="#CFC6B3" stroke="#1C1917" stroke-width="1.2"/>
-<rect x="1122.3" y="680" width="21.7" height="30" fill="#CFC6B3" stroke="#1C1917" stroke-width="1.2"/>
+<rect x="838.5" y="680" width="121.5" height="30" fill="url(#hatch2)" stroke="#1C1917" stroke-width="1.2"/>
+<rect x="960.0" y="680" width="79.0" height="30" fill="url(#dots)" stroke="#1C1917" stroke-width="1.2"/>
+<rect x="1039.0" y="680" width="54.7" height="30" fill="#E2DACB" stroke="#1C1917" stroke-width="1.2"/>
+<rect x="1093.7" y="680" width="27.8" height="30" fill="#CFC6B3" stroke="#1C1917" stroke-width="1.2"/>
+<rect x="1121.4" y="680" width="22.6" height="30" fill="#CFC6B3" stroke="#1C1917" stroke-width="1.2"/>
 <text x="276.0" y="746.0" font-size="20" fill="#1C1917">TypeScript 64.8%</text>
-<text x="508.4" y="746.0" font-size="20" fill="#6B6459">Rust 14.1%</text>
-<text x="666.4" y="746.0" font-size="20" fill="#6B6459">JavaScript 9.1%</text>
-<text x="886.4" y="746.0" font-size="20" fill="#6B6459">+3 more 12.0%</text>
+<text x="508.4" y="746.0" font-size="20" fill="#6B6459">Rust 14%</text>
+<text x="641.6" y="746.0" font-size="20" fill="#6B6459">JavaScript 9.1%</text>
+<text x="861.6" y="746.0" font-size="20" fill="#6B6459">+3 more 12.1%</text>
 </svg>
