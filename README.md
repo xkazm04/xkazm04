@@ -1,7 +1,7 @@
 <a href="https://github.com/xkazm04">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261123" />
-  <img alt="kazii, The Builder. 62,735 contributions in the last 12 months, 113-day streak, 69 public repos" src="assets/title-dark.svg?v=20261123" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/title-light.svg?v=20261124" />
+  <img alt="kazii, The Builder. 63,139 contributions in the last 12 months, 114-day streak, 69 public repos" src="assets/title-dark.svg?v=20261124" width="100%" />
 </picture>
 </a>
 
@@ -12,8 +12,8 @@
 I build local-first software: tools that run on your machine, keep your data there, and put AI agents to work on real projects. Most of it is TypeScript and Rust, with some C++ and C# when the target is a VR headset.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261123" />
-  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261123" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/spec-light.svg?v=20261124" />
+  <img alt="Specification: state in SQLite on your machine, agents do the work, a person approves what ships" src="assets/spec-dark.svg?v=20261124" width="100%" />
 </picture>
 
 1. **Local-first by default.** State lives in SQLite on the user's machine. Nothing leaves unless they send it.
@@ -21,30 +21,30 @@ I build local-first software: tools that run on your machine, keep your data the
 3. **Ship the whole thing.** Desktop app, backend, observability and the site that explains it.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261123" />
-  <img alt="Build log: 62,735 contributions in the last 12 months as weekly columns, 113-day streak" src="assets/log-dark.svg?v=20261123" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/log-light.svg?v=20261124" />
+  <img alt="Build log: 63,139 contributions in the last 12 months as weekly columns, 114-day streak" src="assets/log-dark.svg?v=20261124" width="100%" />
 </picture>
 
 <details>
-<summary><b>Latest pushes</b> &nbsp;<sub>34 of 69 public repos pushed in the last 30 days</sub></summary>
+<summary><b>Latest pushes</b> &nbsp;<sub>33 of 69 public repos pushed in the last 30 days</sub></summary>
 
-- `2026-11-23` &nbsp;**[dp](https://github.com/xkazm04/dp)** &nbsp;<sub>KOTLIN</sub> &nbsp;Blueprint for PICO: your codebase as a building on your desk, steered through an agent swarm. PICO Spatial SDK (Kotlin).
+- `2026-11-24` &nbsp;**[distill](https://github.com/xkazm04/distill)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Only what matters on the page: focus view, English wizard for any-language forms, generated layouts. On-device first with Firebase AI Logic hybrid inference.
+- `2026-11-24` &nbsp;**[shadowrunner](https://github.com/xkazm04/shadowrunner)** &nbsp;<sub>TYPESCRIPT</sub>
+- `2026-11-24` &nbsp;**[rtai](https://github.com/xkazm04/rtai)** &nbsp;<sub>GDSCRIPT</sub> &nbsp;RTAI: Uprising - a top-down open-city action game about a factory robot haunted by its dead line. Godot 4.7.2 on a deterministic C++ city sim, for Steam.
+- `2026-11-24` &nbsp;**[personas-web](https://github.com/xkazm04/personas-web)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Marketing site, dashboard and API routes for Personas — a platform for building and orchestrating multi-agent AI pipelines.
 - `2026-11-23` &nbsp;**[plumbline](https://github.com/xkazm04/plumbline)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Keep an agentic website true after it ships: publisher signatures, a three-checker gate and a drift watch for the Open Agentic Web.
-- `2026-11-23` &nbsp;**[distill](https://github.com/xkazm04/distill)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Only what matters on the page: focus view, English wizard for any-language forms, generated layouts. On-device first with Firebase AI Logic hybrid inference.
-- `2026-11-23` &nbsp;**[gravitone-gcloud](https://github.com/xkazm04/gravitone-gcloud)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Content creation studio prototyped UI-first — Next.js 16, React 19, Tailwind v4.
-- `2026-11-23` &nbsp;**[rtai](https://github.com/xkazm04/rtai)** &nbsp;<sub>GDSCRIPT</sub> &nbsp;RTAI: Uprising - a top-down open-city action game about a factory robot haunted by its dead line. Godot 4.7.2 on a deterministic C++ city sim, for Steam.
 - `2026-11-23` &nbsp;**[thirdlife](https://github.com/xkazm04/thirdlife)** &nbsp;<sub>GDSCRIPT</sub> &nbsp;Do not go outside
-- `2026-11-23` &nbsp;**[lighttrack](https://github.com/xkazm04/lighttrack)** &nbsp;<sub>RUST</sub> &nbsp;Self-hosted LLM observability and LLM-as-judge scoring. Your data stays in your own SQLite, Postgres or Firestore.
-- `2026-11-23` &nbsp;**[pumper](https://github.com/xkazm04/pumper)** &nbsp;<sub>RUST</sub> &nbsp;Local-first scraping service — one Rust binary, durable SQLite job queue, three pluggable scrape engines (HTTP, browser, Claude Code).
+- `2026-11-23` &nbsp;**[dp](https://github.com/xkazm04/dp)** &nbsp;<sub>KOTLIN</sub> &nbsp;Blueprint for PICO: your codebase as a building on your desk, steered through an agent swarm. PICO Spatial SDK (Kotlin).
+- `2026-11-23` &nbsp;**[gravitone-gcloud](https://github.com/xkazm04/gravitone-gcloud)** &nbsp;<sub>TYPESCRIPT</sub> &nbsp;Content creation studio prototyped UI-first — Next.js 16, React 19, Tailwind v4.
 
-Code by size: TypeScript 64.3% · Rust 13.8% · JavaScript 9.1% · Python 6.4% · C++ 3.2% · Other 3.2%
+Code by size: TypeScript 64.4% · Rust 13.7% · JavaScript 9.1% · Python 6.4% · C++ 3.2% · Other 3.2%
 
 </details>
 
 <a href="https://github.com/xkazm04?tab=repositories">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261123" />
-  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261123" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/assemblies-light.svg?v=20261124" />
+  <img alt="Assemblies: six flagship projects drawn as isometric parts" src="assets/assemblies-dark.svg?v=20261124" width="100%" />
 </picture>
 </a>
 
@@ -101,8 +101,8 @@ Code by size: TypeScript 64.3% · Rust 13.8% · JavaScript 9.1% · Python 6.4% �
 
 <a href="https://github.com/xkazm04/bp">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261123" />
-  <img alt="bp concept art: the product as a blueprint on a backlit light table, the lamp agent asking for a decision. bp in-engine capture: the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card" src="assets/vr-dark.svg?v=20261123" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/vr-light.svg?v=20261124" />
+  <img alt="bp concept art: the product as a blueprint on a backlit light table, the lamp agent asking for a decision. bp in-engine capture: the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card" src="assets/vr-dark.svg?v=20261124" width="100%" />
 </picture>
 </a>
 
@@ -110,8 +110,8 @@ Code by size: TypeScript 64.3% · Rust 13.8% · JavaScript 9.1% · Python 6.4% �
 <sub>Left: concept art, the product as a blueprint on a backlit light table, the lamp agent asking for a decision. Right: in-engine capture, the same table in Unreal 5.8, drawn from a real product's plan, pins and decision card.</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261123" />
-  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261123" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/toolbox-light.svg?v=20261124" />
+  <img alt="Standard parts: TypeScript, Rust, Python, C++, C#, React 19, Next.js 16, Tauri 2, Tailwind v4, SQLite, PostgreSQL, Firestore, Claude Code, MCP, LLM-as-judge, Ollama, Unreal Engine 5, Unity, Meta Quest" src="assets/toolbox-dark.svg?v=20261124" width="100%" />
 </picture>
 
-<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-11-23</sub></p>
+<p align="center"><sub>kazii · The Builder · sheets regenerated daily from live GitHub data · last fetch 2026-11-24</sub></p>
